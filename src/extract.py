@@ -25,8 +25,6 @@ class SocialETL:
             ("miao", "stop the war"),
         ]
         df = pd.DataFrame(roows, columns=["a", "text"])
-        print(df.info())
-        print(df)
         # transformation
 
         return df
