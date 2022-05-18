@@ -43,7 +43,7 @@ class SocialETL:
         search_results = t.search_recent(
             query=self.query,
         secrets-implementation
-            max_results=100,
+            max_results=100
         )
 
         # Default options for Dataframe converter
