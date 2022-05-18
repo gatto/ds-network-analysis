@@ -1,5 +1,4 @@
 import datetime
-import os
 from pathlib import Path
 
 import pandas as pd
@@ -30,12 +29,9 @@ class SocialETL:
     query: str = field(default="slavaukraini")
     df: pd.DataFrame = field(init=False)
 
-    # get emails and password from environment variables
-
     @df.default
     def _df_default(self):
-        print(os.environ.get("API_KEY"))
-        t = Twarc2(bearer_token=os.environ.get("API_KEY"))
+        t = Twarc2(bearer_token=self.secret)
 
         # Start and end times must be in UTC
         # start_time = datetime.datetime(2022, 3, 21, 0, 0, 0, 0, datetime.timezone.utc)
