@@ -14,6 +14,10 @@ try:
 except ModuleNotFoundError:
     DATA_PATH = "data/"
 
+our_secret = os.environ.get("API_KEY")
+    print(f"our secret is {our_secret}")
+    print(os.environ)
+
 
 @define
 class OneTweet:
@@ -75,8 +79,3 @@ class SocialETL:
         except FileNotFoundError:
             pipi = pd.read_csv(my_csv)
         return pipi
-
-
-our_secret = os.environ.get("API_KEY")
-print(f"our secret is {our_secret}")
-print(os.environ)
