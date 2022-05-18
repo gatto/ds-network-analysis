@@ -73,8 +73,7 @@ class SocialETL:
             return False
 
     def _get_local_credentials(self):
-        my_secret_path = Path(f"my_secrets.txt")
-        print(f"We are in {Path(__file__).parent.resolve()}")
+        my_secret_path = Path().cwd().parent() / "data/my_secrets.txt"
         try:
             with open(my_secret_path) as f:
                 print(f"Reading secret from {my_secret_path}…")
