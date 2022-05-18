@@ -1,5 +1,6 @@
 import datetime
 import os
+import platform
 from pathlib import Path
 
 import pandas as pd
@@ -14,6 +15,7 @@ try:
 except ModuleNotFoundError:
     DATA_PATH = "data/"
 
+print(platform.python_version())
 our_secret = os.environ.get("API_KEY")
 print(f"our secret is {our_secret}")
 print(os.environ)
