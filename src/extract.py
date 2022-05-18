@@ -6,6 +6,7 @@ from pathlib import Path
 import pandas as pd
 import pkg_resources
 from attrs import define, field
+from rich.progress import track
 from twarc.client2 import Twarc2
 from twarc.expansions import ensure_flattened
 from twarc_csv import DataFrameConverter
@@ -27,8 +28,9 @@ class OneTweet:
 
 @define
 class SocialETL:
-    secret: str = field(default=None)
     query: str = field(default="slavaukraini")
+    pages: int = field(default=1)
+    secret: str = field(default=None)
     df: pd.DataFrame = field(init=False)
 
     @df.default
@@ -42,26 +44,25 @@ class SocialETL:
         # search_results is a generator, max_results is max tweets per page, 100 max for full archive search with all expansions.
         search_results = t.search_recent(
             query=self.query,
-        secrets-implementation
-            max_results=100
+            max_results=100,
         )
 
         # Default options for Dataframe converter
         converter = DataFrameConverter()
 
-        # Get all results page by page:
-        for page in search_results:
-            # Do something with the whole page of results:
-            # print(page)
-            # or alternatively, "flatten" results returning 1 tweet at a time, with expansions inline:
-            df = converter.process([page])
+        i = 1
+        for page in track(search_results, description="Downloading tweets…"):
+            miao = converter.process([page])
+
+            try:
+                df = pd.concat([df, miao], ignore_index=True)
+            except NameError:
+                df = miao
 
             # Stop iteration prematurely, to only get 1 page of results.
-            break
-
-            for tweet in ensure_flattened(page):
-                # Do something with the tweet
-                print(tweet)
+            if i == self.pages:
+                break
+            i += 1
 
         # TODO: transformation
 
