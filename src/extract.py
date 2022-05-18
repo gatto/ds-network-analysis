@@ -27,7 +27,6 @@ class OneTweet:
 class SocialETL:
     secret: str = field()
     query: str = field(default="slavaukraini")
-    max_results: int = field(default=10)
     df: pd.DataFrame = field(init=False)
 
     @df.default
@@ -41,7 +40,7 @@ class SocialETL:
         # search_results is a generator, max_results is max tweets per page, 100 max for full archive search with all expansions.
         search_results = t.search_recent(
             query=self.query,
-            max_results=self.max_results,
+            max_results=1000,
         )
 
         # Default options for Dataframe converter
