@@ -15,11 +15,6 @@ try:
 except ModuleNotFoundError:
     DATA_PATH = "data/"
 
-print(platform.python_version())
-our_secret = os.environ.get("API_KEY")
-print(f"our secret is {our_secret}")
-print(os.environ)
-
 
 @define
 class OneTweet:
@@ -32,13 +27,17 @@ class OneTweet:
 
 @define
 class SocialETL:
-    secret: str = field(default=our_secret)
+    secret: str = field(default=None)
     query: str = field(default="slavaukraini")
     df: pd.DataFrame = field(init=False)
 
     @df.default
     def _df_default(self):
-        t = Twarc2(bearer_token=self.secret)
+        if self.secret is None:
+            my_secret = self._get_local_credentials()
+        else:
+            my_secret = self.secret
+        t = Twarc2(bearer_token=my_secret)
 
         # search_results is a generator, max_results is max tweets per page, 100 max for full archive search with all expansions.
         search_results = t.search_recent(
@@ -73,11 +72,13 @@ class SocialETL:
         else:
             return False
 
-    def _load(self, file):
-        my_csv = Path(f"{DATA_PATH}{file}.csv")
-        my_csv_pkl = Path(f"{DATA_PATH}{file}.pkl")
+    def _get_local_credentials(self):
+        my_secret_path = Path(f"my_secrets.txt")
+        print(f"We are in {Path(__file__).parent.resolve()}")
         try:
-            pipi = pd.read_pickle(my_csv_pkl)
+            with open(my_secret_path) as f:
+                print(f"Reading secret from {my_secret_path}…")
+                return f.readline()
         except FileNotFoundError:
-            pipi = pd.read_csv(my_csv)
-        return pipi
+            pass
+        raise FileNotFoundError(f"There was no secrets file in {my_secret_path}.")
