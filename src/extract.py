@@ -42,6 +42,7 @@ class SocialETL:
         # search_results is a generator, max_results is max tweets per page, 100 max for full archive search with all expansions.
         search_results = t.search_recent(
             query=self.query,
+        secrets-implementation
             max_results=100,
         )
 
