@@ -1,4 +1,6 @@
 import datetime
+import os
+import platform
 from pathlib import Path
 
 import pandas as pd
@@ -25,22 +27,23 @@ class OneTweet:
 
 @define
 class SocialETL:
-    secret: str = field()
+    secret: str = field(default=None)
     query: str = field(default="slavaukraini")
     df: pd.DataFrame = field(init=False)
 
     @df.default
     def _df_default(self):
-        t = Twarc2(bearer_token=self.secret)
-
-        # Start and end times must be in UTC
-        # start_time = datetime.datetime(2022, 3, 21, 0, 0, 0, 0, datetime.timezone.utc)
-        # end_time = datetime.datetime(2022, 3, 22, 0, 0, 0, 0, datetime.timezone.utc)
+        if self.secret is None:
+            my_secret = self._get_local_credentials()
+        else:
+            my_secret = self.secret
+        t = Twarc2(bearer_token=my_secret)
 
         # search_results is a generator, max_results is max tweets per page, 100 max for full archive search with all expansions.
         search_results = t.search_recent(
             query=self.query,
-            max_results=1000,
+        secrets-implementation
+            max_results=100,
         )
 
         # Default options for Dataframe converter
@@ -70,11 +73,13 @@ class SocialETL:
         else:
             return False
 
-    def _load(self, file):
-        my_csv = Path(f"{DATA_PATH}{file}.csv")
-        my_csv_pkl = Path(f"{DATA_PATH}{file}.pkl")
+    def _get_local_credentials(self):
+        my_secret_path = Path().cwd().parent / "data/my_secrets.yaml"
         try:
-            pipi = pd.read_pickle(my_csv_pkl)
+            with open(my_secret_path) as f:
+                print(f"Reading secret from {my_secret_path}…")
+                miao = f.readline().rstrip("\n").lstrip("api_key: ")
+                return miao
         except FileNotFoundError:
-            pipi = pd.read_csv(my_csv)
-        return pipi
+            pass
+        raise FileNotFoundError(f"There was no secrets file in {my_secret_path}.")
