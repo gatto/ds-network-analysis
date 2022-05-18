@@ -18,7 +18,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
       - name: install requirements
         run: pip install -U pandas attrs twarc twarc_csv
 
