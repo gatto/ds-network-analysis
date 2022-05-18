@@ -73,11 +73,12 @@ class SocialETL:
             return False
 
     def _get_local_credentials(self):
-        my_secret_path = Path().cwd().parent() / "data/my_secrets.txt"
+        my_secret_path = Path().cwd().parent / "data/my_secrets.yaml"
         try:
             with open(my_secret_path) as f:
                 print(f"Reading secret from {my_secret_path}…")
-                return f.readline()
+                miao = f.readline().rstrip("\n").lstrip("api_key: ")
+                return miao
         except FileNotFoundError:
             pass
         raise FileNotFoundError(f"There was no secrets file in {my_secret_path}.")

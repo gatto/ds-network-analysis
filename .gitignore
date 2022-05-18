@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # our own
-my_secrets.txt
+my_secrets.yaml
