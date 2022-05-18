@@ -15,8 +15,8 @@ except ModuleNotFoundError:
     DATA_PATH = "data/"
 
 our_secret = os.environ.get("API_KEY")
-    print(f"our secret is {our_secret}")
-    print(os.environ)
+print(f"our secret is {our_secret}")
+print(os.environ)
 
 
 @define
