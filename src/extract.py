@@ -26,17 +26,13 @@ class OneTweet:
 
 @define
 class SocialETL:
-    secret: str = field()
+    secret: str = field(default=our_secret)
     query: str = field(default="slavaukraini")
     df: pd.DataFrame = field(init=False)
 
     @df.default
     def _df_default(self):
         t = Twarc2(bearer_token=self.secret)
-
-        # Start and end times must be in UTC
-        # start_time = datetime.datetime(2022, 3, 21, 0, 0, 0, 0, datetime.timezone.utc)
-        # end_time = datetime.datetime(2022, 3, 22, 0, 0, 0, 0, datetime.timezone.utc)
 
         # search_results is a generator, max_results is max tweets per page, 100 max for full archive search with all expansions.
         search_results = t.search_recent(
@@ -81,6 +77,6 @@ class SocialETL:
         return pipi
 
 
-secret = os.environ.get("API_KEY")
-print(secret)
+our_secret = os.environ.get("API_KEY")
+print(f"our secret is {our_secret}")
 print(os.environ)
