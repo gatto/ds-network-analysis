@@ -1,4 +1,5 @@
 import datetime
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -78,3 +79,8 @@ class SocialETL:
         except FileNotFoundError:
             pipi = pd.read_csv(my_csv)
         return pipi
+
+
+secret = os.environ.get("API_KEY")
+print(secret)
+print(os.environ)
