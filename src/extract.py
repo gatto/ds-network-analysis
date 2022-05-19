@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 import pkg_resources
 from attrs import define, field
-from rich.progress import Progress
+from rich.progress import Progress, track
 from twarc.client2 import Twarc2
 from twarc.expansions import ensure_flattened
 from twarc_csv import DataFrameConverter
@@ -15,6 +15,18 @@ try:
     DATA_PATH = pkg_resources.resource_filename("socialetl", "data/")
 except ModuleNotFoundError:
     DATA_PATH = "data/"
+
+
+def _get_local_credentials():
+    my_secret_path = Path().cwd().parent / "data/my_secrets.yaml"
+    try:
+        with open(my_secret_path) as f:
+            print(f"Reading secret from {my_secret_path}…")
+            miao = f.readline().rstrip("\n").lstrip("api_key: ")
+            return miao
+    except FileNotFoundError:
+        pass
+    raise FileNotFoundError(f"There was no secrets file in {my_secret_path}.")
 
 
 @define
@@ -30,17 +42,19 @@ class OneTweet:
 class SocialETL:
     query: str = field(default="slavaukraini")
     pages: int = field(default=1)
-    secret: str = field(default=None)
-    df: pd.DataFrame = field(init=False)
+    secret: str = field(default=None, repr=False)
+    df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
 
     @df.default
     def _df_default(self):
+        # authenticate here
         if self.secret is None:
-            my_secret = self._get_local_credentials()
+            my_secret = _get_local_credentials()
         else:
             my_secret = self.secret
         t = Twarc2(bearer_token=my_secret)
 
+        # am I accessing or am I counting?
         search_results = t.search_all(
             query=self.query,
             max_results=100,
@@ -48,7 +62,6 @@ class SocialETL:
                 2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
             ),
         )
-
         converter = DataFrameConverter()
 
         with Progress() as progress:
@@ -78,13 +91,45 @@ class SocialETL:
         else:
             return False
 
-    def _get_local_credentials(self):
-        my_secret_path = Path().cwd().parent / "data/my_secrets.yaml"
-        try:
-            with open(my_secret_path) as f:
-                print(f"Reading secret from {my_secret_path}…")
-                miao = f.readline().rstrip("\n").lstrip("api_key: ")
-                return miao
-        except FileNotFoundError:
-            pass
-        raise FileNotFoundError(f"There was no secrets file in {my_secret_path}.")
+
+@define
+class Count:
+    query: str = field(default="slavaukraini")
+    secret: str = field(default=None, repr=False)
+    df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
+    count: int = field(init=False)
+
+    @df.default
+    def _df_default(self):
+        # authenticate here
+        if self.secret is None:
+            my_secret = _get_local_credentials()
+        else:
+            my_secret = self.secret
+        t = Twarc2(bearer_token=my_secret)
+
+        search_results = t.counts_all(
+            query=self.query,
+            granularity="day",
+            start_time=datetime.datetime(
+                2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
+            ),
+        )
+        df = pd.DataFrame(
+            self._unpack_counts(search_results),
+            columns=("start", "end", "tweet_count"),
+        )
+        return df
+
+    @count.default
+    def _c_default(self):
+        return self.df["tweet_count"].sum()
+
+    def _unpack_counts(self, my_iterator):
+        for page in track(my_iterator, description="Reading…"):
+            for value in page["data"]:
+                yield {
+                    "start": value["start"],
+                    "end": value["end"],
+                    "tweet_count": value["tweet_count"],
+                }

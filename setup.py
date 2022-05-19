@@ -9,7 +9,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 setup(
     # $ pip install sampleproject https://pypi.org/project/sampleproject/
     name="socialetl",
-    version="0.1",
+    version="0.2",
     description="Extract transform and load for the project of 2022 Social Network Analysis",
     long_description=long_description,
     long_description_content_type="text/markdown",
