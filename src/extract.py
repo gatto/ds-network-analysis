@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 import pkg_resources
 from attrs import define, field
-from rich.progress import track
+from rich.progress import Progress
 from twarc.client2 import Twarc2
 from twarc.expansions import ensure_flattened
 from twarc_csv import DataFrameConverter
@@ -41,28 +41,32 @@ class SocialETL:
             my_secret = self.secret
         t = Twarc2(bearer_token=my_secret)
 
-        # search_results is a generator, max_results is max tweets per page, 100 max for full archive search with all expansions.
-        search_results = t.search_recent(
+        search_results = t.search_all(
             query=self.query,
             max_results=100,
+            start_time=datetime.datetime(
+                2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
+            ),
         )
 
-        # Default options for Dataframe converter
         converter = DataFrameConverter()
 
-        i = 1
-        for page in track(search_results, description="Downloading tweets…"):
-            miao = converter.process([page])
+        with Progress() as progress:
+            task = progress.add_task("Downloading 🐦…", total=self.pages)
+            i = 1
 
-            try:
-                df = pd.concat([df, miao], ignore_index=True)
-            except NameError:
-                df = miao
+            for page in search_results:
+                miao = converter.process([page])
 
-            # Stop iteration prematurely, to only get 1 page of results.
-            if i == self.pages:
-                break
-            i += 1
+                try:
+                    df = pd.concat([df, miao], ignore_index=True)
+                except NameError:
+                    df = miao
+
+                progress.advance(task)
+                if i == self.pages:
+                    break
+                i += 1
 
         # TODO: transformation
 
