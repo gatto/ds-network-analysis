@@ -55,12 +55,10 @@ class SocialETL:
         t = Twarc2(bearer_token=my_secret)
 
         # am I accessing or am I counting?
-        search_results = t.search_all(
+        search_results = t.search_recent(
             query=self.query,
             max_results=100,
-            start_time=datetime.datetime(
-                2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
-            ),
+            # start_time=datetime.datetime(2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc),
         )
         converter = DataFrameConverter()
 
