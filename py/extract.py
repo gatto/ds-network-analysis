@@ -41,6 +41,7 @@ class OneTweet:
 @define
 class SocialETL:
     query: str = field(default="slavaukraini")
+    recent: bool = field(default=False)
     pages: int = field(default=1)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
@@ -55,13 +56,19 @@ class SocialETL:
         t = Twarc2(bearer_token=my_secret)
 
         # am I accessing or am I counting?
-        search_results = t.search_all(
-            query=self.query,
-            max_results=100,
-            start_time=datetime.datetime(
-                2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
-            ),
-        )
+        if recent:
+            search_results = t.search_recent(
+                query=self.query,
+                max_results=100,
+            )
+        else:
+            search_results = t.search_all(
+                query=self.query,
+                max_results=100,
+                start_time=datetime.datetime(
+                    2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
+                ),
+            )
         converter = DataFrameConverter()
 
         with Progress() as progress:
