@@ -1,5 +1,5 @@
 import pandas as pd
-from socialetl import Count, SocialETL
+from extract import Count, SocialETL
 
 
 def extract_tags(value):
@@ -9,7 +9,7 @@ def extract_tags(value):
     return results
 
 
-m = SocialETL(query="war", pages=50)
+m = SocialETL(query="Putin", pages=5, recent=True)
 print(m.df["entities.hashtags"])
 
 miao = m.df[["id", "entities.hashtags"]].dropna()
@@ -75,7 +75,6 @@ for e in repl:
     df_pro["entities.hashtags"] = df_pro["entities.hashtags"].str.replace(
         e, "", regex=True
     )
-df_pro["entities.hashtags"] = df_pro["entities.hashtags"].apply(str).map(str.lower)
 df_pro["entities.hashtags"] = df_pro["entities.hashtags"].apply(str).map(str.strip)
 df_pro["entities.hashtags"] = (
     df_pro["entities.hashtags"].apply(str).map(str.split)
