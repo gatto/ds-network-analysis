@@ -56,7 +56,7 @@ class SocialETL:
         t = Twarc2(bearer_token=my_secret)
 
         # am I accessing or am I counting?
-        if recent:
+        if self.recent:
             search_results = t.search_recent(
                 query=self.query,
                 max_results=100,

@@ -1,5 +1,6 @@
 import pandas as pd
 from extract import Count, SocialETL
+from rich import print
 
 
 def extract_tags(value):
@@ -10,11 +11,10 @@ def extract_tags(value):
 
 
 m = SocialETL(query="Putin", pages=5, recent=True)
-print(m.df["entities.hashtags"])
+print(f"{m.df['entities.hashtags'].count()} tweets retrieved.")
 
 miao = m.df[["id", "entities.hashtags"]].dropna()
-print(miao["entities.hashtags"])
-print(miao.info())
+print(f"{miao['entities.hashtags']} tweets with at least 1 hashtag.")
 
 miao["entities.hashtags"] = miao["entities.hashtags"].map(eval)
 
@@ -47,8 +47,6 @@ for category, value in results.items():
 
 
 """
-df_pro["entities.hashtags"] = my_dict["entities.hashtags"].fillna("0")
-
 repl = [
     "1",
     "2",
