@@ -10,7 +10,7 @@ def extract_tags(value):
     return results
 
 
-m = SocialETL(query="Putin", pages=5, recent=True)
+m = SocialETL(query="(#slavaukraini OR #istandwithputin OR #stopwarinukraine) lang:en", pages=5, recent=False)
 print(f"{m.df['entities.hashtags'].count()} tweets retrieved.")
 
 miao = m.df[["id", "entities.hashtags"]].dropna()
