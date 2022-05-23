@@ -40,9 +40,10 @@ class OneTweet:
 
 @define
 class SocialETL:
-    query: str = field(default="slavaukraini")
+    query: str = field(default=None)
     recent: bool = field(default=False)
     pages: int = field(default=1)
+    place: int = field(default=None)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
 
@@ -97,7 +98,8 @@ class SocialETL:
             return True
         else:
             return False
-
+    
+    
 
 @define
 class Count:
