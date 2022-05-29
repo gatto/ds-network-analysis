@@ -142,3 +142,41 @@ class Count:
                     "end": value["end"],
                     "tweet_count": value["tweet_count"],
                 }
+
+class geo:
+    lat: float = field(default=None)
+    lon: float = field(default=None)
+    query: str = field(default=None)
+    ip: str = field(default=None) #use the ip address to locate places
+    granularity: str(default="neighborhood") #neighborhood, city, admin, country
+    max_results: int = field(default=100)
+    secret: str = field(default=None, repr=False)
+    df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
+
+    @df.default
+    def _df_default(self):
+        # authenticate here
+        if self.secret is None:
+            my_secret = _get_local_credentials()
+        else:
+            my_secret = self.secret
+        t = Twarc2(bearer_token=my_secret)
+        
+        if self.recent:
+            search_results = t.search_recent(
+                query=self.query,
+                max_results=100,
+            )
+        else:
+            search_results = t.search_all(
+                query=self.query,
+                max_results=100,
+                start_time=datetime.datetime(
+                    2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
+                ),
+            )
+  
+
+                
+                
+         
