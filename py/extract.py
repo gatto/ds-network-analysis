@@ -148,7 +148,7 @@ class geo:
     lon: float = field(default=None)
     query: str = field(default=None)
     ip: str = field(default=None) #use the ip address to locate places
-    granularity: str(default="neighborhood") #neighborhood, city, admin, country
+    granularity: str = field(default="neighborhood") #neighborhood, city, admin, country
     max_results: int = field(default=100)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
