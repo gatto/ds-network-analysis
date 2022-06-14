@@ -9,6 +9,8 @@
 ## todo
 
 1. decidere hashtag per ciascun gruppo (prima fase con valutazione umana seconda fase con correlazione e se hashtag correlato con >1 categoria, escluso) -> abbiamo gli hashtag per ciascun gruppo
+    - esludere hashtags che compaiono una volta
+    - ripetere algoritmo per i primi k figli di ogni categoria
 Problemi: scaricare i tweet una volta sola. trovare migliore metodo di memorizzarli (csv) scrivere query corretta
 2. Scaricare i tweet in un dataframe
 3. classificarli per ciascuna delle 3 categorie
