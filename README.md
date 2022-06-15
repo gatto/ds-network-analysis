@@ -28,3 +28,11 @@ Problemi: scaricare i tweet una volta sola. trovare migliore metodo di memorizza
 3. tenerci solo gli utenti per cui non appare hashtag delle 3 categorie (già tutti trovati)
 questi sono i **"Don't care"**
 N.B. potremmo trovare altri campi per fare lo stesso lavoro.
+
+15/06 
+### algoritmo per categorizzare i tweets 
+- query per hashtags-padre: fatto
+- ricorsione sui k-figli: da fare 
+- eliminare hashatgs da liste che hanno pochi count: da fare (elminare hashtags che hanno poco supporto)
+- score alla lista per figli ripetuti su più liste: da fare  (calcolare score su quelli che hanno più supporto)
+
