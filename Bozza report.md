@@ -56,7 +56,7 @@ Ci concentreremo solo sugli utenti "attivi" sulla piattaforma.  Se gli utenti pi
    •Per identificare gli utenti più attivi utilizzziamo l’attributo ['author.public_metrics.tweet_count']
    •Invece per individuare gli hastags usati da un utente, prenderemo in considerazione l’attributo ['author.entities.description.hashtags']
 
-
+miao
 
 
 
