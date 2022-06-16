@@ -34,19 +34,15 @@ tagmadre = {
 }
 
 query_madre = " OR ".join([f"#{x}" for x in tagmadre.values()])
-print(query_madre)
-
-exit()
 m = SocialETL(
-    query="(#slavaukraini OR #istandwithputin OR #stopwarinukraine) lang:en",
-    pages=2,
+    query=f"({query_madre}) lang:en",
+    pages=1,
     recent=False,
 )
-print(f"{m.df['entities.hashtags'].count()} tweets retrieved.")
 
 tweets_with_hashtag = m.df[["id", "entities.hashtags"]].dropna()
 print(
-    f"{len(tweets_with_hashtag['entities.hashtags'])} tweets with at least 1 hashtag."
+    f"{len(m.df)} tweets retrieved\nwith query '{query_madre}'\nof which {len(tweets_with_hashtag)} tweets with at least 1 hashtag."
 )
 
 tweets_with_hashtag["entities.hashtags"] = tweets_with_hashtag["entities.hashtags"].map(
@@ -55,23 +51,82 @@ tweets_with_hashtag["entities.hashtags"] = tweets_with_hashtag["entities.hashtag
 
 tweets_with_hashtag["tags"] = tweets_with_hashtag["entities.hashtags"].map(extract_tags)
 
+tweets_with_hashtag = tweets_with_hashtag.drop(columns="entities.hashtags")
+
+## create a dataframe with all hashtags and their scores
+all_hashtags = set(tweets_with_hashtag["tags"].explode())
+
+print(f"We have {len(all_hashtags)} hashtags.")
+
+for row in tweets_with_hashtag["tags"]:
+    try:
+        if my_type != type(row):
+            print("u fucked up")
+    except:
+        pass
+    my_type = type(row)
+
+
+def create_score(
+    df: pd.DataFrame, one_hashtag: str, root_tags: dict
+) -> list[float, float, float]:
+    print(f"Looking for {one_hashtag}…")
+    mask = df["tags"].apply(lambda x: one_hashtag in x)
+    df = df[mask]
+    print(f"I found {len(df)} tweets with {one_hashtag}")
+
+    results = []
+    for category in root_tags:
+        selection = set((category, one_hashtag))
+        scores = []
+        temp_mask = df["tags"].apply(
+            lambda x: all(item for item in selection if item in x)
+        )
+        temp_df = df[temp_mask]
+        results.append(len(temp_df) / len(df))
+
+    print(results)
+    return results
+
+
+all_hashtags_dict = {}
+for hashtag in all_hashtags:
+    # discard based on support
+    pass
+    # calculate scores only on hashtags with enough support
+    all_hashtags_dict[hashtag] = create_score(tweets_with_hashtag, hashtag, tagmadre)
+print(all_hashtags_dict)
+all_hashtags_df = pd.DataFrame.from_dict(
+    all_hashtags_dict, orient="index", columns=tagmadre
+)
+print(all_hashtags_df)
+
+exit()
+
 my_results = []
-
-
 results = {"proukr": [], "prorus": [], "pax": []}
 results_as_series = {}
 my_tags = []
 
-for _, riga in tweets_with_hashtag.iterrows():
-    if tagmadre["proukr"] in riga["tags"]:
-        #        results = [tag for tag in riga["tags"]]
-        #        for tag in riga["tags"]:
-        #            results.append(tag)
-        results["proukr"].extend([tag for tag in riga["tags"]])
-    elif tagmadre["prorus"] in riga["tags"]:
-        results["prorus"].extend([tag for tag in riga["tags"]])
-    elif tagmadre["pax"] in riga["tags"]:
-        results["pax"].extend([tag for tag in riga["tags"]])
+
+def characterize_hashtags(tweet: pd.Series, root_tags: dict) -> str:
+    if root_tags["proukr"] in tweet["tags"]:
+        return "proukr"
+    elif root_tags["prorus"] in tweet["tags"]:
+        return "prorus"
+    elif root_tags["pax"] in tweet["tags"]:
+        return "pax"
+
+
+tweets_with_hashtag["class"] = tweets_with_hashtag.apply(
+    characterize_hashtags, root_tags=tagmadre, axis=1
+)
+
+print(
+    tweets_with_hashtag
+)  # fatto alla fine:padre->score->k figli->score->del supp<=th->print(tweets_with_hashtags)
+exit()
+
 top_results_to_show = 10
 top_results_to_take = 3
 for category, value in results.items():
