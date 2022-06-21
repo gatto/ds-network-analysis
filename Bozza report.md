@@ -26,14 +26,17 @@ Gli hashtag padre sono stati selezionati utilizzando la funzione count; tramite 
 ### 1.2. Hashtags- figli
 Dopo aver individuato il padre relativo a ogni categoria abbiamo ricercato tutti i tweet contenenti tali hashtag padre (#slavaukraini,  #istandwithputin, #stopwarinukraine) e se un tweet comprendeva un hashtag padre + altri hashtag, questi ultimi venivano inseriti automaticamente nella lista appartenete del padre.
 (fare esempio)
-Dopo aver ordinato le liste in base al numero di volte in cui sono comparsi(primo= più twittato), ripetere l’ago per i primi k figli di ogni lista (k=3), in modo da trovare hashtags provenienti non solo da quello madre.
-Dopo aver creato le liste, il lavoro successivo consisterà in:
-1.	duplicate removing 
-2.	list cleaning 
-3.	individuare un metedo per selezionare una quarta categoria: I don’t care category
+Dopo aver ordinato le liste in base al numero di volte in cui sono comparsi(primo= più twittato), le fasi successive consisteranno nel:
+a) applicare un primo scrore per eliminare hashtags che compaiono in più di una lista 
+b) ripetere l’ago per i primi k figli di ogni lista (k=3), in modo da trovare hashtags provenienti non solo da quello madre.
+c) applicare nuovamente lo score sulle liste finali
+d) list cleaning 
+e) individuare un metedo per selezionare una quarta categoria: I don’t care category
+duplicate removing 
+
 
 ### 1.3. Duplicate removing
-Un primo problema riscontato è stato che un figlio potesse apparire in più di una lista, quindi non avere una categorizzazione ben definita. Per risolverlo abbiamo deciso di assegnare uno score a ogni figlio che è presente in più di una lista. 
+Un primo problema riscontato (punto a e punto c) è stato che un figlio potesse apparire in più di una lista, quindi non avere una categorizzazione ben definita. Per risolverlo abbiamo deciso di assegnare uno score a ogni figlio che è presente in più di una lista. 
 Score-cat-method: 
 Viene effettuata una seconda ricerca per ogni figlio appartenete a più di una categoria fj: 
 - ricercare tutti i (recent?) tweet  che contengo il figlio ripetuto + i 3 hashtags padre e salvarli in 3 liste differenti
@@ -55,10 +58,6 @@ Abbiamo quindi optato per un meccanismo di selezione "per esclusione": osserviam
 Ci concentreremo solo sugli utenti "attivi" sulla piattaforma.  Se gli utenti più attivi individuati non hanno usato uno degli hashtag appartenenti a uno dei 3 gruppi già identificati, classificheremo questi utenti nella categoria "I don’t care".  
    •Per identificare gli utenti più attivi utilizzziamo l’attributo ['author.public_metrics.tweet_count']
    •Invece per individuare gli hastags usati da un utente, prenderemo in considerazione l’attributo ['author.entities.description.hashtags']
-
-miao
-
-
 
 
 
