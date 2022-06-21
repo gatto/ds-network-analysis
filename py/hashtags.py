@@ -1,3 +1,5 @@
+import sys
+
 import pandas as pd
 from extract import Count, SocialETL
 from rich import print
@@ -5,12 +7,12 @@ from rich.console import Console
 from rich.table import Table
 
 Hashtag_Counts = dict[
-    str, list[int, int, int]
+    str : list[int, int, int]
 ]  # questo è un dict che ha "hashtag": [count_ukr, count_rus, count_pax]
 
 
 def construct_query(hashtags: Hashtag_Counts) -> str:
-    # takes a list of hashtags and returns a string (the query string)
+    # takes a list of hashtags and returns a string (the query string) to pass to Twarc
     my_query = ""
     for item in hashtags:
         my_query = f"{my_query} OR #{item}"
@@ -18,21 +20,53 @@ def construct_query(hashtags: Hashtag_Counts) -> str:
     return my_query
 
 
-def extract_tags(list_of_tweets) -> list:
+def extract_tags(list_of_hashtags) -> list:
     # takes a list of dictionaries, each represents a hashtag appearing in a single tweet,
     # and returns a list of the hashtags appearing in that tweet
     results = []
-    for my_dict in list_of_tweets:
+    for my_dict in list_of_hashtags:
+        ## here we clean any hashtags e.g. with lower()
         results.append(my_dict["tag"].lower())
     return results
 
 
+def create_score(
+    df: pd.DataFrame, one_hashtag: str, root_tags: dict
+) -> list[float, float, float]:
+    # takes a df of all tweets, each row is a tweet, each column is
+    # a hashtag either [True | False] depending on whether the hashtag
+    # is in the tweet. Takes one_hashtag, the hashtag to score, and
+    # root_tags, a dict of {category: [hashtags]}
+    # TODO: make it so it accepts a list of {category: [hashtags]} instead of just one
+    print(f"Looking for {one_hashtag}…")
+    mask = df[one_hashtag]
+    df = df[mask]
+    print(f"I found {len(df)} tweets with {one_hashtag}")
+    print(df)
+    for col in df:
+        if df[col].any():
+            print(f"We have {col} hashtag")
+
+    results = []
+    for category, tag_madre in root_tags.items():
+        try:
+            temp_df = df[df[tag_madre]]  # TODO: here
+            results.append(len(temp_df) / len(df))
+        except KeyError:
+            results.append(0)
+
+    print(results)
+    return results
+
+
+## set the initial "parent" hashtags for each category
 tagmadre = {
     "proukr": "slavaukraini",
     "prorus": "istandwithputin",
     "pax": "stopwarinukraine",
 }
 
+## construct the initial query to Twarc
 query_madre = " OR ".join([f"#{x}" for x in tagmadre.values()])
 m = SocialETL(
     query=f"({query_madre}) lang:en",
@@ -40,67 +74,83 @@ m = SocialETL(
     recent=False,
 )
 
+## dropping any tweets with no hashtags (I think)
 tweets_with_hashtag = m.df[["id", "entities.hashtags"]].dropna()
 print(
     f"{len(m.df)} tweets retrieved\nwith query '{query_madre}'\nof which {len(tweets_with_hashtag)} tweets with at least 1 hashtag."
 )
 
+## evaluate the string in "entities.hashtags" to an actual list of dicts
 tweets_with_hashtag["entities.hashtags"] = tweets_with_hashtag["entities.hashtags"].map(
     eval
 )
 
+## make a simple list of strings, one hashtag is one string, into column "tags"
 tweets_with_hashtag["tags"] = tweets_with_hashtag["entities.hashtags"].map(extract_tags)
-
 tweets_with_hashtag = tweets_with_hashtag.drop(columns="entities.hashtags")
 
-## create a dataframe with all hashtags and their scores
 all_hashtags = set(tweets_with_hashtag["tags"].explode())
+print(f"We have {len(all_hashtags)} unique hashtags.")
 
-print(f"We have {len(all_hashtags)} hashtags.")
+## make a dict of {hashtag: False}
+all_hashtags_as_dict = {}
+for hashtag in all_hashtags:
+    all_hashtags_as_dict[hashtag] = False
 
-for row in tweets_with_hashtag["tags"]:
-    try:
-        if my_type != type(row):
-            print("u fucked up")
-    except:
-        pass
-    my_type = type(row)
+my_db = []
 
+## change {hashtag: False} to {hashtag: True} only for hashtags that appear in tweet, then append dict
+## to list my_db, where {id: tweet_id} and {hashtag: True} for hashtags appearing in that tweet_id.
+for _, row in tweets_with_hashtag.iterrows():
+    d = all_hashtags_as_dict.copy()
+    for tag in row["tags"]:
+        d[tag] = True
+    d["id"] = row["id"]
+    my_db.append(d)
 
-def create_score(
-    df: pd.DataFrame, one_hashtag: str, root_tags: dict
-) -> list[float, float, float]:
-    print(f"Looking for {one_hashtag}…")
-    mask = df["tags"].apply(lambda x: one_hashtag in x)
-    df = df[mask]
-    print(f"I found {len(df)} tweets with {one_hashtag}")
+df = pd.DataFrame(
+    my_db,
+    columns=sorted(all_hashtags),
+    index=[row["id"] for row in my_db],
+    dtype="Sparse[bool]",
+)
 
-    results = []
-    for category in root_tags:
-        selection = set((category, one_hashtag))
-        scores = []
-        temp_mask = df["tags"].apply(
-            lambda x: all(item for item in selection if item in x)
-        )
-        temp_df = df[temp_mask]
-        results.append(len(temp_df) / len(df))
-
-    print(results)
-    return results
+## up to here we have only dealt with a dataframe of tweets. Now we switch to dataframe of hashtags
 
 
-all_hashtags_dict = {}
+"""
+print(f"Dense is {sys.getsizeof(ser)} bytes")
+ser = pd.Series(data=d, dtype="Sparse[bool]")
+print(ser)
+print(f"Sparse is {sys.getsizeof(ser)} bytes")
+"""
+
+## create a dataframe with all hashtags and their scores
+all_hashtags_as_dict = {}
 for hashtag in all_hashtags:
     # discard based on support
     pass
     # calculate scores only on hashtags with enough support
-    all_hashtags_dict[hashtag] = create_score(tweets_with_hashtag, hashtag, tagmadre)
-print(all_hashtags_dict)
+    all_hashtags_as_dict[hashtag] = create_score(df, hashtag, tagmadre)
+print(all_hashtags_as_dict)
 all_hashtags_df = pd.DataFrame.from_dict(
-    all_hashtags_dict, orient="index", columns=tagmadre
+    all_hashtags_as_dict, orient="index", columns=tagmadre
 )
 print(all_hashtags_df)
 
+## now, "categorize" hashtags. The hashtag gets the category of its max score,
+## as long as it is > `threshold_certainty`
+## TODO: remember that we still need to account for hashtag support
+## (i.e. number of tweets supporting that hashtag)
+threshold_certainty = 0.5
+tags_categorized = {category: [] for category in tagmadre}
+for hashtag, scores in all_hashtags_df.iterrows():
+    print(hashtag, scores)
+    print(scores.idxmax(), scores.max())
+    if scores.max() > threshold_certainty:
+        tags_categorized[scores.idxmax()].append(hashtag)
+
+print(tags_categorized)
 exit()
 
 my_results = []
@@ -125,7 +175,6 @@ tweets_with_hashtag["class"] = tweets_with_hashtag.apply(
 print(
     tweets_with_hashtag
 )  # fatto alla fine:padre->score->k figli->score->del supp<=th->print(tweets_with_hashtags)
-exit()
 
 top_results_to_show = 10
 top_results_to_take = 3
