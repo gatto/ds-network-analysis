@@ -1,6 +1,7 @@
 import datetime
 import os
 import platform
+import random
 from pathlib import Path
 
 import pandas as pd
@@ -98,8 +99,7 @@ class SocialETL:
             return True
         else:
             return False
-    
-    
+
 
 @define
 class Count:
@@ -143,12 +143,15 @@ class Count:
                     "tweet_count": value["tweet_count"],
                 }
 
+
 class geo:
     lat: float = field(default=None)
     lon: float = field(default=None)
     query: str = field(default=None)
-    ip: str = field(default=None) #use the ip address to locate places
-    granularity: str = field(default="neighborhood") #neighborhood, city, admin, country
+    ip: str = field(default=None)  # use the ip address to locate places
+    granularity: str = field(
+        default="neighborhood"
+    )  # neighborhood, city, admin, country
     max_results: int = field(default=100)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
@@ -161,7 +164,7 @@ class geo:
         else:
             my_secret = self.secret
         t = Twarc2(bearer_token=my_secret)
-        
+
         if self.recent:
             search_results = t.search_recent(
                 query=self.query,
@@ -175,8 +178,26 @@ class geo:
                     2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
                 ),
             )
-  
 
-                
-                
-         
+
+@define
+class SocialDB:
+    n: int
+    df: pd.DataFrame = field()
+
+    @df.default
+    def _df_default(self):
+        results = []
+        categories = ("proukr", "prorus", "pax", "nocare")
+        for _ in range(self.n):
+            miao = {
+                "id": random.randint(100000, 999999),
+                "class": random.choice(categories),
+            }
+            results.append(miao)
+
+        df = pd.DataFrame(results)
+        df.set_index("id", inplace=True)
+        df["class"] = df["class"].astype("category")
+        print(df.info())
+        return df
