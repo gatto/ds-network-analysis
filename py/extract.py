@@ -182,9 +182,9 @@ class geo:
 
 @define
 class SocialDB:
-    n: int
+    n: int = field()
     df: pd.DataFrame = field()
-    edges: list[dict[int, int, int]] = field()
+    edges = field()
 
     @df.default
     def _df_default(self):
@@ -200,13 +200,11 @@ class SocialDB:
         df = pd.DataFrame(results)
         df.set_index("id", inplace=True)
         df["class"] = df["class"].astype("category")
-        print(df.info())
         return df
 
     @edges.default
     def _edges_default(self):
         users = set(self.df.index)
-        print(users)
         results = []
         for _ in range(self.n * 3):
             my_users = random.sample(users, 2)
