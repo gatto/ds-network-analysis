@@ -6,22 +6,41 @@ L'idea era quella di cercare di classificare i tweet degli utenti in 4 gruppi:
 •	Pro Russia
 •	"Pax Romana 
 •	"I don’t care" 
+
 L'obiettivo è categorizzare gli utenti esaminando i loro tweet. 
-L'analisi che effettueremo sui tweet comporterà, oltre all'osservazione degli hashtag in essi contenuti, anche l'analisi dell'andamento degli stessi grazie all'ausilio di tecniche NLP (Natural Language Processing) di Text analytics. 
+L'analisi che effettueremo sui tweet comporterà, oltre all'osservazione degli hashtag in essi contenuti, anche l'analisi dell'andamento degli stessi con l'obiettivo finale di andare a individuare quelli che potrebbero essere potenziali bot all'interno della rete. 
+
+## TWARK
+
+Attraverso la libreria di Twark abbiamo implementato diverse funzioni che ci hanno permesso di svolgere la nostra ricerca dei vari tweet:
+
+- SocialETL, ci permette di estrarre con l'utilizzo di una query una determinata keyword
+- Count, ci permette di individuare con quale frequenza una determinata keyword appare su Twitter
+- hashtags, ci permette di estrarre gli hashtags dai tweet
+
+
+ Tutte queste funzioni vengono considerate all interno di un range temporale che va dal 24 febbraio in poi.
+
 
 ## 1 CAT TREE 
 Come individuiamo  set di hashtags per categorizzare i vari utenti in base ai tweets che postano? 
 Il metodo del cat tree consiste nel:
--  creare una lista per ogni categoria 
+-  creare una lista per ogni categoria  
 -  individuare un hashtag padre per ogni categoria, il quale andrà inserito nella lista appartenente 
 -  selezionare i figli di ogni padre che verranno inseriti nella lista appartenente
 
 ### 1.1. Hashtags-padre
 Nel nostro caso abbiamo individuato 3 principali categorie con i seguenti hastag padre:
-a)	Pro Ucraina - #slavaukraini   
-b)	Pro Russia  -  #istandwithputin
-c)	Pax Romana - #stopwarinukraine
-Gli hashtag padre sono stati selezionati utilizzando la funzione count; tramite ricerche su Twitter e utilizzando la libreria Twarc abbiamo individuato dei possibili candidati- padre per ogni categoria e per ciascuno abbiamo preso il più “twittato”. (fare tabella) 
+
+     a)	Pro Ucraina - #slavaukraini  
+
+     b)	Pro Russia  -  #istandwithputin
+
+     c)	Pax Romana - #stopwarinukraine
+
+Gli hashtag padre sono stati selezionati utilizzando la funzione Count, 
+
+ individuato dei possibili candidati- padre per ogni categoria e per ciascuno abbiamo preso il più “twittato”. (fare tabella) 
 
 ### 1.2. Hashtags- figli
 Dopo aver individuato il padre relativo a ogni categoria abbiamo ricercato tutti i tweet contenenti tali hashtag padre (#slavaukraini,  #istandwithputin, #stopwarinukraine) e se un tweet comprendeva un hashtag padre + altri hashtag, questi ultimi venivano inseriti automaticamente nella lista appartenete del padre.
@@ -50,6 +69,7 @@ Assegniamo un figlio ripetuto fj a una determinata categoria se:
 ### 1.4 List cleaning 
 Dopo aver creato un algoritmo per eliminare in modo automatico i duplicati,  occorre effettuare una valutazione umana (arbitraria) sull’appartenenza o meno di un hasHtag a una particolare categoria.
 Ad esempio, tra i vari hashtags emersi, appaiono più volte #russia o #ucraina. Questi non appartengono a nessuna categoria, per questo motivo sono stati eliminati dalle liste.
+
 Successivamente, abbiamo deciso di rimuovere hashtags irrilevanti ai fini della categorizzazione, come ad esempio tutti gli hashtags con un solo count o con un count inferiore a un certo thershold (ad esempio 10).
 
 ### 1.5. Individuazione 4 categoria: I don’t care
