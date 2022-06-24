@@ -7,10 +7,6 @@ from rich import print
 from rich.console import Console
 from rich.table import Table
 
-Hashtag_Counts = dict[
-    str : list[int, int, int]
-]  # questo è un dict che ha "hashtag": [count_ukr, count_rus, count_pax]
-
 
 def construct_query_for_twarc(root_tags: dict) -> str:
     # takes a dict of hashtags and returns a string (the query string) to pass to Twarc
