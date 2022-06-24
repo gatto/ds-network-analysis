@@ -144,6 +144,52 @@ class Count:
                 }
 
 
+@define
+class UserETL:
+    id: int = field()
+    pages: int = field(default=1)
+    max_results: int = field(init=False, default=20)
+    secret: str = field(default=None, repr=False)
+    df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
+
+    @df.default
+    def _df_default(self):
+        if self.secret is None:
+            my_secret = _get_local_credentials()
+        else:
+            my_secret = self.secret
+        t = Twarc2(bearer_token=my_secret)
+
+        search_results = t.timeline(
+            user=self.id,
+            start_time=datetime.datetime(
+                2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
+            ),
+        )
+        converter = DataFrameConverter()
+
+        with Progress() as progress:
+            task = progress.add_task("Downloading 🐦…", total=self.pages)
+            i = 1
+
+            for page in search_results:
+                miao = converter.process([page])
+
+                try:
+                    df = pd.concat([df, miao], ignore_index=True)
+                except NameError:
+                    df = miao
+
+                progress.advance(task)
+                if i == self.pages:
+                    break
+                i += 1
+
+        # TODO: transformation
+
+        return df
+
+
 class geo:
     lat: float = field(default=None)
     lon: float = field(default=None)
