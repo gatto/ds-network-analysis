@@ -29,9 +29,7 @@ def extract_tags(list_of_hashtags) -> list:
     return results
 
 
-def create_score(
-    df: pd.DataFrame, one_hashtag: str, root_tags: dict
-) -> list[float, float, float]:
+def create_score(df: pd.DataFrame, one_hashtag: str, root_tags: dict) -> list:
     # takes a df of all tweets, each row is a tweet, each column is
     # a hashtag either [True | False] depending on whether the hashtag
     # is in the tweet. Takes one_hashtag, the hashtag to score, and
