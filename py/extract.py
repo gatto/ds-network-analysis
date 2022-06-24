@@ -85,7 +85,7 @@ class SocialETL:
                 except NameError:
                     df = miao
 
-                progress.advance(task)
+                progress.update(task, advance=1, refresh=True)
                 if i == self.pages:
                     break
                 i += 1
@@ -165,6 +165,7 @@ class UserETL:
             start_time=datetime.datetime(
                 2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
             ),
+            max_results=self.max_results,
         )
         converter = DataFrameConverter()
 
