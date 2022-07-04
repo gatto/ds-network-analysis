@@ -1,13 +1,21 @@
 import json
 import keyword
 import sys
+import unicodedata
 from collections import defaultdict
 
 import pandas as pd
 from extract import Count, SocialETL
 from rich import print
 from rich.console import Console
+from rich.progress import track
 from rich.table import Table
+
+
+def ensure_latin(s):
+    return (
+        unicodedata.normalize("NFKD", s).encode("latin-1", "ignore").decode("latin-1")
+    )
 
 
 def construct_query_for_twarc(root_tags: dict) -> str:
@@ -27,7 +35,9 @@ def extract_tags(list_of_hashtags) -> list:
     results = []
     for my_dict in list_of_hashtags:
         ## here we clean any hashtags e.g. with lower()
-        results.append(my_dict["tag"].lower())
+        cleaned = my_dict["tag"].lower()
+        cleaned = ensure_latin(cleaned)
+        results.append(cleaned)
     return results
 
 
@@ -37,7 +47,7 @@ def create_score(df: pd.DataFrame, one_hashtag: str, root_tags: dict) -> list:
     # is in the tweet. Takes one_hashtag, the hashtag to score, and
     # root_tags, a dict of {category: [hashtags]}
     # TODO: make it so it accepts a list of {category: [hashtags]} instead of just one
-    threshold_support = 0.1 * len(df) / 100  ## set the threshold_support here!!
+    threshold_support = 0.3 * len(df) / 100  ## set the threshold_support here!!
 
     if threshold_support < 1:
         threshold_support = 1
@@ -78,7 +88,7 @@ def do_search(tagmadre):
     query_madre = construct_query_for_twarc(tagmadre)
     m = SocialETL(
         query=f"({query_madre}) lang:en",
-        pages=5,
+        pages=20,
         recent=False,
     )
 
@@ -152,11 +162,11 @@ def do_search(tagmadre):
         score = create_score(df, hashtag, tagmadre)
         if score is not False:
             all_hashtags_as_dict[hashtag] = score
-    print(all_hashtags_as_dict)
+    # print(all_hashtags_as_dict)
     all_hashtags_df = pd.DataFrame.from_dict(
         all_hashtags_as_dict, orient="index", columns=tagmadre
     )
-    print(all_hashtags_df)
+    # print(all_hashtags_df)
 
     ## now, "categorize" hashtags. The hashtag gets the category of its max score,
     ## as long as it is > `threshold_certainty`
@@ -164,7 +174,7 @@ def do_search(tagmadre):
     ## (i.e. number of tweets supporting that hashtag)
     threshold_certainty = 0.5
     tags_categorized = defaultdict(list)
-    for hashtag, scores in all_hashtags_df.iterrows():
+    for hashtag, scores in track(all_hashtags_df.iterrows()):
         # print(hashtag, scores)  # TODO: check if the scores are different enough among 3 categories
         # print(scores.idxmax(), scores.max())
         if scores.max() > threshold_certainty:
@@ -175,7 +185,7 @@ def do_search(tagmadre):
         k: sorted(v, key=lambda item: item[1], reverse=True)
         for k, v in tags_categorized.items()
     }
-    print(tags_categorized)
+    # print(tags_categorized)
     return tags_categorized
 
     ## second step: take k top hashtags per category, query again, categorize again
@@ -194,11 +204,13 @@ if __name__ == "__main__":
 
     # code
     end_results = do_search(tag_madre)
-    end_results = {k: [x[0] for x in v] for k, v in end_results.items()}
-    print(
-        end_results
-    )  ## TODO: the dictionary comprehension doesn't work in recreating the structure of tag_madre
+    """
+    end_results = {
+        k: [x[0] for x in v[:top_results_to_take]] for k, v in end_results.items()
+    }
+    print("miao", end_results)
     end_results = do_search(end_results)
+    """
     with open("hashtags.json", "w", encoding="utf-8") as f:
         json.dump(end_results, f, ensure_ascii=False, indent=4)
     exit()

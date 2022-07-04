@@ -2,6 +2,7 @@ import datetime
 import os
 import platform
 import random
+import unicodedata
 from pathlib import Path
 
 import pandas as pd
@@ -16,6 +17,12 @@ try:
     DATA_PATH = pkg_resources.resource_filename("socialetl", "data/")
 except ModuleNotFoundError:
     DATA_PATH = "data/"
+
+
+def ensure_latin(s):
+    return (
+        unicodedata.normalize("NFKD", s).encode("latin-1", "ignore").decode("latin-1")
+    )
 
 
 def _get_local_credentials():
@@ -91,6 +98,7 @@ class SocialETL:
                 i += 1
 
         # TODO: transformation
+        df.rename(columns=ensure_latin, inplace=True)
 
         return df
 
