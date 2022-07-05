@@ -105,6 +105,7 @@ The users we are going to consider as vcandidates for the 4 category can already
   If the most active users identified did not use one of the hashtags belonging to one of the 3 groups already identified, we will classify these users in the "I don't care" category. 
 
 ------------ da correggere---------------------------------------------------------------------------------
+
    -To identify the most active users we use the attribute ['author.public_metrics.tweet_count']
 
    -In contrast, to identify the hastags used by a user, we will consider the attribute ['author.entities.description.hashtags']
