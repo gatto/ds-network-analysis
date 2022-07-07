@@ -55,7 +55,7 @@ def get_unique_max(scores: dict):
     elif cocco == 1:  # unique maximum found
         return my_max
     else:  # wut tis
-        raise Exception("cocco")
+        raise Exception(f"cocco {cocco}")
 
 
 def classify_user(categories: list, root_tags: dict) -> str:
@@ -69,7 +69,7 @@ def classify_user(categories: list, root_tags: dict) -> str:
             case "pax":
                 my_scores["pax"] += 1
             case _:
-                raise Exception("wtf did you just do")
+                raise Exception(f"wtf did you just do? This {category} doesn't exist")
     return get_unique_max(my_scores)
 
 
@@ -221,7 +221,7 @@ class Count:
 @define
 class UserETL:
     id: int = field()
-    pages: int = field(default=1)
+    pages: int = field(default=1)  # each page is max_results tweets
     max_results: int = field(init=False, default=20)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
@@ -255,7 +255,7 @@ class UserETL:
                 except NameError:
                     df = miao
 
-                progress.advance(task)
+                progress.update(task, advance=1, refresh=True)
                 if i == self.pages:
                     break
                 i += 1
@@ -263,42 +263,6 @@ class UserETL:
         # TODO: transformation
 
         return df
-
-
-class geo:
-    lat: float = field(default=None)
-    lon: float = field(default=None)
-    query: str = field(default=None)
-    ip: str = field(default=None)  # use the ip address to locate places
-    granularity: str = field(
-        default="neighborhood"
-    )  # neighborhood, city, admin, country
-    max_results: int = field(default=100)
-    secret: str = field(default=None, repr=False)
-    df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
-
-    @df.default
-    def _df_default(self):
-        # authenticate here
-        if self.secret is None:
-            my_secret = _get_local_credentials()
-        else:
-            my_secret = self.secret
-        t = Twarc2(bearer_token=my_secret)
-
-        if self.recent:
-            search_results = t.search_recent(
-                query=self.query,
-                max_results=100,
-            )
-        else:
-            search_results = t.search_all(
-                query=self.query,
-                max_results=100,
-                start_time=datetime.datetime(
-                    2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
-                ),
-            )
 
 
 @define
@@ -312,7 +276,7 @@ class SocialDB:
 
     @df.default
     def _df_default(self):
-        if self.placeholder:
+        if self.placeholder:  # make fake df
             results = []
             categories = ("proukr", "prorus", "pax", "nocare")
             for _ in range(self.n):
@@ -340,7 +304,7 @@ class SocialDB:
                 tag_madre["pax"].append("stopwarinukraine")
 
             # make query
-            print(tag_madre)
+            print(f"Tag madre used:\n{tag_madre}")
             qu = construct_query_for_twarc(tag_madre)
             print(f"query: '{qu}'")
             m = SocialETL(query=qu, pages=self.pages)
@@ -369,14 +333,42 @@ class SocialDB:
 
     @edges.default
     def _edges_default(self):
-        users = set(self.df.index)
-        results = []
-        for _ in range(self.n * 3):
-            my_users = random.sample(users, 2)
-            miao = {
-                "id": random.randint(100000, 999999),
-                "from": my_users[0],
-                "to": my_users[1],
-            }
-            results.append(miao)
-        return results
+        if self.placeholder:  # make fake df
+            users = set(self.df.index)
+            results = []
+            for _ in range(self.n * 3):
+                my_users = random.sample(users, 2)
+                miao = {
+                    "id": random.randint(100000, 999999),
+                    "from": my_users[0],
+                    "to": my_users[1],
+                }
+                results.append(miao)
+            return results
+        else:
+            my_author_ids = set(self.df.index)
+            results = []
+            print(f"Downloading from {len(my_author_ids)} users.")
+            with Progress() as progress:
+                task = progress.add_task("Users 🐦…", total=len(my_author_ids))
+
+                for author in my_author_ids:
+                    u = UserETL(id=author, pages=5)
+                    u.df = u.df.dropna(subset=["retweeted_user_id"])
+                    u.df = u.df.query("retweeted_user_id in @my_author_ids")
+
+                    my_edges = []
+                    for retweeted_author_id_in_tweet in u.df["retweeted_user_id"]:
+                        my_edges.append(
+                            {
+                                "id": "coccodì",
+                                "from": author,
+                                "to": retweeted_author_id_in_tweet,
+                            }
+                        )
+                        progress.update(task, advance=1, refresh=True)
+
+                    print(u.df)
+                    print(f"[red]The edges I've extracted are[/red]:\n{my_edges}")
+                    results.extend(my_edges)
+            return results

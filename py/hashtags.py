@@ -28,7 +28,7 @@ def create_score(df: pd.DataFrame, one_hashtag: str, root_tags: dict) -> list:
     # is in the tweet. Takes one_hashtag, the hashtag to score, and
     # root_tags, a dict of {category: [hashtags]}
     # TODO: make it so it accepts a list of {category: [hashtags]} instead of just one
-    threshold_support = 0.2 * len(df) / 100  # set the threshold_support here!!
+    threshold_support = 0.075 * len(df) / 100  # set the threshold_support here!!
 
     if threshold_support < 1:
         threshold_support = 1
@@ -61,15 +61,15 @@ def create_score(df: pd.DataFrame, one_hashtag: str, root_tags: dict) -> list:
             results.append(0)
 
     # print(results)
-    return results
+    return (results, len(df))
 
 
-def do_search(tagmadre):
+def do_search(tagmadre, pages):
     # construct the initial query to Twarc
     query_madre = construct_query_for_twarc(tagmadre)
     m = SocialETL(
         query=f"({query_madre}) lang:en",
-        pages=20,
+        pages=pages,
         recent=False,
     )
 
@@ -136,13 +136,16 @@ def do_search(tagmadre):
 
     # create a dataframe with all hashtags and their scores
     all_hashtags_as_dict = {}
+    supp = {}
     for hashtag in all_hashtags:
         # discard based on support
         pass
         # calculate scores only on hashtags with enough support
         score = create_score(df, hashtag, tagmadre)
         if score is not False:
-            all_hashtags_as_dict[hashtag] = score
+            # score[0] is the scores, score[1] is the support
+            all_hashtags_as_dict[hashtag] = score[0]
+            supp[hashtag] = score[1]
     # print(all_hashtags_as_dict)
     all_hashtags_df = pd.DataFrame.from_dict(
         all_hashtags_as_dict, orient="index", columns=tagmadre
@@ -167,7 +170,7 @@ def do_search(tagmadre):
         for k, v in tags_categorized.items()
     }
     # print(tags_categorized)
-    return tags_categorized
+    return tags_categorized, supp
 
     # second step: take k top hashtags per category, query again, categorize again
 
@@ -175,6 +178,7 @@ def do_search(tagmadre):
 if __name__ == "__main__":
     # params
     top_results_to_take = 3
+    pages_to_do = 20
 
     # set the initial "parent" hashtags for each category
     tag_madre = {
@@ -184,7 +188,7 @@ if __name__ == "__main__":
     }
 
     # code
-    end_results = do_search(tag_madre)
+    end_results, tags_support = do_search(tag_madre, pages_to_do)
     """
     end_results = {
         k: [x[0] for x in v[:top_results_to_take]] for k, v in end_results.items()
@@ -192,8 +196,11 @@ if __name__ == "__main__":
     print("miao", end_results)
     end_results = do_search(end_results)
     """
-    with open("hashtags.json", "w", encoding="utf-8") as f:
+    with open(f"hashtags_{pages_to_do}.json", "w", encoding="utf-8") as f:
         json.dump(end_results, f, ensure_ascii=False, indent=4)
+    with open(f"supports_{pages_to_do}.json", "w", encoding="utf-8") as f:
+        json.dump(tags_support, f, ensure_ascii=False, indent=4)
+
     exit()
 
     for category, value in results.items():
