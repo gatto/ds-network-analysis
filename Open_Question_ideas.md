@@ -4,3 +4,5 @@ Se, usando i dati della rete(come pesi degli archi, misure di Geometric Centrali
 Quindi la possibile domanda sarebbe: è possibile costruire un modello che, usando i dati della rete, riesca a predire se un nodo è pro o contro la russia?
 
 2) indviduare i bot nella rete (utilizzando libreria ad esempio botometer o con modello di ML). Con l'aumento e/o diminuzione dei bot, come cambia la diffusione dell'opinione (categoria:pro russia o contro russia) nella rete? 
+
+3) come anadando a cancellare i nodi principali del pro russia (hub), cosa succede alla categoria pro russia
