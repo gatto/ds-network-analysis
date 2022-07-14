@@ -35,7 +35,7 @@ The "cat tree method" consists of:
 ### 1.1. (parent)Hashtags
 In our case we identified 3 main categories with the following parent hastags:
 
-     (a) Pro Ukraine - #slavaukraini  
+     a) Pro Ukraine - #slavaukraini  
 
      b) Pro Russia - #istandwithputin
 
@@ -109,6 +109,10 @@ The users we are going to consider as vcandidates for the 4 category can already
    -To identify the most active users we use the attribute ['author.public_metrics.tweet_count']
 
    -In contrast, to identify the hastags used by a user, we will consider the attribute ['author.entities.description.hashtags']
+
+
+## 2 CATEGORIZING USERS
+
 
 
 
