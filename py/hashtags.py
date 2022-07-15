@@ -68,9 +68,7 @@ def do_search(tagmadre, pages):
     # construct the initial query to Twarc
     query_madre = construct_query_for_twarc(tagmadre)
     m = SocialETL(
-        query=f"({query_madre}) lang:en",
-        pages=pages,
-        recent=False,
+        query=f"({query_madre}) lang:en", pages=pages, recent=False, save_memory=True
     )
 
     # dropping any tweets with no hashtags (I think)

@@ -69,7 +69,9 @@ def classify_user(categories: list, root_tags: dict) -> str:
             case "pax":
                 my_scores["pax"] += 1
             case _:
-                raise Exception(f"wtf did you just do? This {category} doesn't exist")
+                raise Exception(
+                    f"Wut? Category {category} doesn't exist\ncategories are:{categories}"
+                )
     return get_unique_max(my_scores)
 
 
@@ -117,7 +119,7 @@ class SocialETL:
     query: str = field(default=None)
     recent: bool = field(default=False)
     pages: int = field(default=1)
-    place: int = field(default=None)
+    save_memory: bool = field(default=False)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
 
@@ -152,6 +154,14 @@ class SocialETL:
 
             for page in search_results:
                 miao = converter.process([page])
+                if self.save_memory:
+                    miao = miao[
+                        [
+                            "author_id",
+                            "entities.hashtags",
+                            "id",
+                        ]
+                    ]
 
                 try:
                     df = pd.concat([df, miao], ignore_index=True)
@@ -351,7 +361,6 @@ class SocialDB:
             print(f"Downloading from {len(my_author_ids)} users.")
             with Progress() as progress:
                 task = progress.add_task("Users 🐦…", total=len(my_author_ids))
-
                 for author in my_author_ids:
                     u = UserETL(id=author, pages=5)
                     u.df = u.df.dropna(subset=["retweeted_user_id"])
@@ -366,9 +375,9 @@ class SocialDB:
                                 "to": retweeted_author_id_in_tweet,
                             }
                         )
-                        progress.update(task, advance=1, refresh=True)
 
                     print(u.df)
                     print(f"[red]The edges I've extracted are[/red]:\n{my_edges}")
                     results.extend(my_edges)
+                    progress.update(task, advance=1, refresh=True)
             return results
