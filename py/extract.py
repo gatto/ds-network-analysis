@@ -69,7 +69,7 @@ def classify_user(categories: list, root_tags: dict) -> str:
             case "pax":
                 my_scores["pax"] += 1
             case _:
-                raise Exception(f"wtf did you just do? This {category} doesn't exist")
+                raise Exception(f"Wut? Category {category} doesn't exist\ncategories are:{categories}")
     return get_unique_max(my_scores)
 
 
@@ -117,7 +117,6 @@ class SocialETL:
     query: str = field(default=None)
     recent: bool = field(default=False)
     pages: int = field(default=1)
-    place: int = field(default=None)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
 
@@ -141,7 +140,7 @@ class SocialETL:
                 query=self.query,
                 max_results=100,
                 start_time=datetime.datetime(
-                    2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
+                    2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
                 ),
             )
         converter = DataFrameConverter()
