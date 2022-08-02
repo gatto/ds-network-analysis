@@ -143,7 +143,7 @@ class SocialETL:
                 query=self.query,
                 max_results=100,
                 start_time=datetime.datetime(
-                    2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
+                    2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
                 ),
             )
         converter = DataFrameConverter()
