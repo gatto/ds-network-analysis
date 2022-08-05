@@ -109,19 +109,65 @@ def do_search(tagmadre, pages):
 
     def assign_hashtag_to_tweet(row: pd.Series) -> pd.Series:
         for tag in row["tags"]:
-            if tag in all_hashtags:
-                row.loc[tag] = True
+            row.loc[tag] = True
         return row
 
     tweets_with_hashtag = tweets_with_hashtag.apply(assign_hashtag_to_tweet, axis=1)
-    tweets_with_hashtag = tweets_with_hashtag.drop(columns=["tags"])
+    tweets_with_hashtag = tweets_with_hashtag.drop(columns=["tags", ""])
+    tweets_with_hashtag = tweets_with_hashtag.astype(dtype="Sparse[bool]")
 
     for madre in tagmadre.values():
         print(f"[red]Let's write the describe of column '{madre[0]}'")
         print(tweets_with_hashtag[madre[0]].describe())
 
-    tweets_with_hashtag.to_csv(f"twee_hash_{pages}.csv")
-    print("[green]All done.")
+    # up to here we have only dealt with a dataframe of tweets. Now we switch to dataframe of hashtags
+
+    """
+    print(f"Dense is {sys.getsizeof(ser)} bytes")
+    ser = pd.Series(data=d, dtype="Sparse[bool]")
+    print(ser)
+    print(f"Sparse is {sys.getsizeof(ser)} bytes")
+    """
+
+    # create a dataframe with all hashtags and their scores
+    all_hashtags_as_dict = {}
+    supp = {}
+    for hashtag in track(all_hashtags):
+        # discard based on support
+        pass
+        # calculate scores only on hashtags with enough support
+        score = create_score(tweets_with_hashtag, hashtag, tagmadre)
+        if score is not False:
+            # score[0] is the scores, score[1] is the support
+            all_hashtags_as_dict[hashtag] = score[0]
+            supp[hashtag] = score[1]
+    all_hashtags_df = pd.DataFrame.from_dict(
+        all_hashtags_as_dict, orient="index", columns=tagmadre
+    )
+
+    # now, "categorize" hashtags. The hashtag gets the category of its max score,
+    # as long as it is > `threshold_certainty`
+    # TODO: remember that we still need to account for hashtag support
+    # (i.e. number of tweets supporting that hashtag)
+    threshold_certainty = 0.5
+    tags_categorized = defaultdict(list)
+    for hashtag, scores in all_hashtags_df.iterrows():
+        # print(hashtag, scores)  # TODO: check if the scores are different enough among 3 categories
+        # print(scores.idxmax(), scores.max())
+        if scores.max() > threshold_certainty:
+            tags_categorized[scores.idxmax()].append((hashtag, scores.max()))
+            other_scores = set(scores).difference(set((scores.max(),)))
+            for sco in other_scores:
+                if scores.max() < 1.2 * sco:
+                    print(f"Attention. For {hashtag} the scores are\n{scores}")
+
+    # tags_categorized.sort(key=lambda x: x[1], reverse=True)
+    """    tags_categorized = {
+        k: sorted(v, key=lambda item: item[1], reverse=True)
+        for k, v in tags_categorized.items()
+    }"""
+
+    return tags_categorized, supp
 
 
 if __name__ == "__main__":
@@ -138,4 +184,18 @@ if __name__ == "__main__":
 
     # code
     # first run
-    do_search(tag_madre, pages_to_do)
+    end_results, tags_support = do_search(tag_madre, pages_to_do)
+
+    # second run
+    """
+    end_results = {
+        k: [x[0] for x in v[:top_results_to_take]] for k, v in end_results.items()
+    }
+    print("miao", end_results)
+    end_results = do_search(end_results)
+    """
+
+    with open(f"hashtags_{pages_to_do}.json", "w", encoding="utf-8") as f:
+        json.dump(end_results, f, ensure_ascii=False, indent=4)
+    with open(f"supports_{pages_to_do}.json", "w", encoding="utf-8") as f:
+        json.dump(tags_support, f, ensure_ascii=False, indent=4)
