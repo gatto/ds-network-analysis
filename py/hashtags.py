@@ -100,30 +100,25 @@ def do_search(tagmadre, pages):
 
     print(f"We have {len(all_hashtags)} unique hashtags.")
 
-    # sostituzione del for appena visto
     tweets_with_hashtag.set_index("id", inplace=True)
 
-    col_h=sorted(list(all_hashtags))
-    df_h=pd.DataFrame(columns=col_h)
-    tweets_with_hashtag=pd.concat([tweets_with_hashtag,df_h],axis=1)
-    tweets_with_hashtag=tweets_with_hashtag.fillna(False)
-    print(tweets_with_hashtag.info())
-    # tweets_with_hashtag = tweets_with_hashtag.astype(dtype="Sparse[bool]") # TODO: this
-    tweets_with_hashtag = (
-        tweets_with_hashtag.copy()
-    )  # TODO: this bc of defragmentation reasons. it's a shite way of doing it, it's better to avoid the previous for cycle.
+    col_h = sorted(list(all_hashtags))
+    df_h = pd.DataFrame(columns=col_h)
+    tweets_with_hashtag = pd.concat([tweets_with_hashtag, df_h], axis=1)
+    tweets_with_hashtag = tweets_with_hashtag.fillna(False)
 
     def assign_hashtag_to_tweet(row: pd.Series) -> pd.Series:
-        tags_appearing = row["tags"]
-        for tag in tags_appearing:
+        for tag in row["tags"]:
             row.loc[tag] = True
         return row
 
     tweets_with_hashtag = tweets_with_hashtag.apply(assign_hashtag_to_tweet, axis=1)
     tweets_with_hashtag = tweets_with_hashtag.drop(columns=["tags", ""])
+    tweets_with_hashtag = tweets_with_hashtag.astype(dtype="Sparse[bool]")
 
-    print("[red]Let's write the describe of column 'slavaukraini'")
-    print(tweets_with_hashtag["slavaukraini"].describe())
+    for madre in tagmadre.values():
+        print(f"[red]Let's write the describe of column '{madre[0]}'")
+        print(tweets_with_hashtag[madre[0]].describe())
 
     # up to here we have only dealt with a dataframe of tweets. Now we switch to dataframe of hashtags
 
@@ -161,22 +156,24 @@ def do_search(tagmadre, pages):
         # print(scores.idxmax(), scores.max())
         if scores.max() > threshold_certainty:
             tags_categorized[scores.idxmax()].append((hashtag, scores.max()))
+            other_scores = set(scores).difference(set((scores.max(),)))
+            for sco in other_scores:
+                if scores.max() < 1.2 * sco:
+                    print(f"Attention. For {hashtag} the scores are {scores}")
 
     # tags_categorized.sort(key=lambda x: x[1], reverse=True)
-    tags_categorized = {
+    """    tags_categorized = {
         k: sorted(v, key=lambda item: item[1], reverse=True)
         for k, v in tags_categorized.items()
-    }
-    # print(tags_categorized)
-    return tags_categorized, supp
+    }"""
 
-    # second step: take k top hashtags per category, query again, categorize again
+    return tags_categorized, supp
 
 
 if __name__ == "__main__":
     # params
     top_results_to_take = 3
-    pages_to_do = 3
+    pages_to_do = 300
 
     # set the initial "parent" hashtags for each category
     tag_madre = {
@@ -202,25 +199,3 @@ if __name__ == "__main__":
         json.dump(end_results, f, ensure_ascii=False, indent=4)
     with open(f"supports_{pages_to_do}.json", "w", encoding="utf-8") as f:
         json.dump(tags_support, f, ensure_ascii=False, indent=4)
-
-    """for category, value in results.items():
-        results_as_series[category] = pd.Series(value, name=category)
-        print(
-            f"top {top_results_to_show} results for category {category} are:\n{results_as_series[category].value_counts()[:top_results_to_show]}"
-        )
-        to_append = (
-            results_as_series[category].value_counts()[:top_results_to_take].index
-        )
-        to_append = [x for x in to_append]
-        print(f"Hashtags we're taking for category {category} are: {to_append}\n")
-        my_tags.extend(to_append)
-
-    # second iteration
-    # initialize the table
-    table = Table(title="Table of hashtags")
-    table.add_column("Hashtag", style="cyan", no_wrap=True)
-    table.add_column("Count in first search", justify="right", style="magenta")
-    table.add_column("Count in second search", justify="right", style="magenta")
-    table.add_column("Category assigned", style="green")
-    console = Console()
-"""
