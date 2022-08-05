@@ -103,8 +103,10 @@ def do_search(tagmadre, pages):
     # sostituzione del for appena visto
     tweets_with_hashtag.set_index("id", inplace=True)
 
-    for col in sorted(all_hashtags):
-        tweets_with_hashtag[col] = False
+    col_h=sorted(list(all_hashtags))
+    df_h=pd.DataFrame(columns=col_h)
+    tweets_with_hashtag=pd.concat([tweets_with_hashtag,df_h],axis=1)
+    tweets_with_hashtag=tweets_with_hashtag.fillna(False)
     print(tweets_with_hashtag.info())
     # tweets_with_hashtag = tweets_with_hashtag.astype(dtype="Sparse[bool]") # TODO: this
     tweets_with_hashtag = (
