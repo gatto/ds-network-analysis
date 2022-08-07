@@ -67,23 +67,6 @@ def do_search(tagmadre, pages):
     # construct the initial query to Twarc
     tweets_with_hashtag = pd.read_csv(Path("twee_hash_800.csv"), index_col=0)
 
-    # dropping any tweets with no hashtags (I think)
-    tweets_with_hashtag = tweets_with_hashtag[["id", "entities.hashtags"]].dropna()
-    print(
-        f"tweets retrieved\nof which {len(tweets_with_hashtag)} tweets with at least 1 hashtag."
-    )
-
-    # evaluate the string in "entities.hashtags" to an actual list of dicts
-    tweets_with_hashtag["entities.hashtags"] = tweets_with_hashtag[
-        "entities.hashtags"
-    ].map(eval)
-
-    # make a simple list of strings, one hashtag is one string, into column "tags"
-    tweets_with_hashtag["tags"] = tweets_with_hashtag["entities.hashtags"].map(
-        extract_tags
-    )
-    tweets_with_hashtag = tweets_with_hashtag.drop(columns="entities.hashtags")
-
     # hashtags: EXPLODE *musica dei power ranger*
     all_hashtags = set(tweets_with_hashtag["tags"].explode())
 
@@ -93,36 +76,7 @@ def do_search(tagmadre, pages):
     all_hashtags = all_hashtags.difference(keywordsss)
     all_hashtags = all_hashtags.difference(set(("",)))
 
-    print(f"We have {len(all_hashtags)} unique hashtags.")
-
-    tweets_with_hashtag.set_index("id", inplace=True)
-
-    col_h = sorted(list(all_hashtags))
-    df_h = pd.DataFrame(columns=col_h)
-    tweets_with_hashtag = pd.concat([tweets_with_hashtag, df_h], axis=1)
-    tweets_with_hashtag = tweets_with_hashtag.fillna(False)
-
-    def assign_hashtag_to_tweet(row: pd.Series) -> pd.Series:
-        for tag in row["tags"]:
-            row.loc[tag] = True
-        return row
-
-    tweets_with_hashtag = tweets_with_hashtag.apply(assign_hashtag_to_tweet, axis=1)
-    tweets_with_hashtag = tweets_with_hashtag.drop(columns=["tags", ""])
-    tweets_with_hashtag = tweets_with_hashtag.astype(dtype="Sparse[bool]")
-
-    for madre in tagmadre.values():
-        print(f"[red]Let's write the describe of column '{madre[0]}'")
-        print(tweets_with_hashtag[madre[0]].describe())
-
     # up to here we have only dealt with a dataframe of tweets. Now we switch to dataframe of hashtags
-
-    """
-    print(f"Dense is {sys.getsizeof(ser)} bytes")
-    ser = pd.Series(data=d, dtype="Sparse[bool]")
-    print(ser)
-    print(f"Sparse is {sys.getsizeof(ser)} bytes")
-    """
 
     # create a dataframe with all hashtags and their scores
     all_hashtags_as_dict = {}
