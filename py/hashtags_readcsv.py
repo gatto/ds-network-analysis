@@ -65,7 +65,7 @@ def create_score(df: pd.DataFrame, one_hashtag: str, root_tags: dict) -> list:
 
 def do_search(tagmadre, pages):
     # construct the initial query to Twarc
-    tweets_with_hashtag = pd.read_csv(Path("twee_hash_800.csv"))
+    tweets_with_hashtag = pd.read_csv(Path("twee_hash_800.csv"), index_col=0)
 
     # dropping any tweets with no hashtags (I think)
     tweets_with_hashtag = tweets_with_hashtag[["id", "entities.hashtags"]].dropna()
