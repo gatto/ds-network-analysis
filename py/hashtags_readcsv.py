@@ -68,7 +68,7 @@ def do_search(tagmadre, pages):
     tweets_with_hashtag = pd.read_csv(Path("twee_hash_800.csv"), index_col=0)
 
     # hashtags: EXPLODE *musica dei power ranger*
-    all_hashtags = set(tweets_with_hashtag["tags"].explode())
+    all_hashtags = set(tweets_with_hashtag.columns)
 
     # keyword level: eliminate all python keywords from columns because otherwise we are in no man's land
     keywordsss = keyword.kwlist
