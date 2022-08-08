@@ -151,13 +151,13 @@ class SocialETL:
 
             for page in search_results:
                 miao = converter.process([page])
-                miao = miao[
-                    [
-                        "author_id",
-                        "entities.hashtags",
-                        "id",
-                    ]
-                ]
+                #miao = miao[
+                #    [
+                #        "author_id",
+                #        "entities.hashtags",
+                #        "id",
+                #    ]
+                #]
 
                 try:
                     df = pd.concat([df, miao], ignore_index=True)
