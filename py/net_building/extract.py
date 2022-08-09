@@ -82,8 +82,8 @@ def construct_query_for_twarc(root_tags: dict) -> str:
 def extract_tags(list_of_hashtags) -> list:
     # takes a list of dictionaries, each represents a hashtag appearing in a single tweet,
     # and returns a list of the hashtags appearing in that tweet
-    results = []
     for my_dict in list_of_hashtags:
+        results = []
         # here we clean any hashtags e.g. with lower()
         cleaned = my_dict["tag"].lower()
         cleaned = ensure_latin(cleaned)
