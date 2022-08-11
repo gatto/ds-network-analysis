@@ -1,0 +1,1304 @@
+,user_id,tweet_id,retweet_id,conversation_id,hashtag,location,verified
+0,762874741262725120,"['1557160076850466816', '1553890731156295682', '1551772036355293185', '1551362072897896450', '1549208065764982784']","['22779605', '22779605', '22779605', '849115880420069376', '22779605']","['1557160076850466816', '1553890731156295682', '1551772036355293185', '1551362072897896450', '1549208065764982784']","[['katie_proactive'], ['copper'], ['tungsten'], ['gold'], ['katie_proactive'], ['katie_proactive'], ['asx'], ['gold'], ['katie_proactive']]","['South Australia, Australia', 'South Australia, Australia', 'South Australia, Australia', 'South Australia, Australia', 'South Australia, Australia']","0    False
+4    False
+6    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+1,1247017297098575874,[],[],[],"[['rocarmedforces'], ['rocarmedforces'], ['rocarmedforces'], ['rocarmedforces'], ['rocarmedforces'], ['rocarmedforces'], ['rocnavy']]",[],"Series([], Name: author.verified, dtype: bool)"
+2,1370777854305316864,[],[],[],"[['neptun'], ['putin'], ['atacmsforukraine'], ['himarso0clock'], ['crimea'], ['stakhanov'], ['ukraine'], ['armukrainenow'], ['bucha']]",[],"Series([], Name: author.verified, dtype: bool)"
+3,17477864,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+4,1141653385,['1557481177149083648'],['1141653385'],['1557481177149083648'],"[['novisa4raisi'], ['1988massacre'], ['democracy'], ['novisa4raisi'], ['democracy'], ['1988massacre'], ['1988massacre'], ['democracy'], ['humanrights']]","['Washington, D.C.']","0    False
+Name: author.verified, dtype: bool"
+5,113780858,['1557362395558952960'],['410266560'],['1557362395558952960'],"[['cdnpoli'], ['russia'], ['hockeycanada'], ['cdnpoli'], ['cdnpoli'], ['taiwan'], ['indigenous']]","['Ottawa, Ontario']","6    True
+Name: author.verified, dtype: bool"
+6,556797259,"['1557132509976166402', '1557094209110376448']","['556797259', '1355313395747184641']","['1557132509976166402', '1557094209110376448']","[['afriforum'], ['afriforum'], ['carpediem']]","['Johannesburg, South Africa', 'Johannesburg, South Africa']","2    False
+5    False
+Name: author.verified, dtype: bool"
+7,2460955128,"['1554462065007513601', '1554118794859143168', '1553350223908446208']","['1111567384148692993', '21303235', '3131563661']","['1554462065007513601', '1554118794859143168', '1553350223908446208']","[['mindset'], ['slovakia'], ['porajmos'], ['blackseagraininitiative'], ['diplomaciapreslovensko'], ['diplomaciapreslovensko'], ['endhumantrafficking']]","['Slovenská republika', 'Slovenská republika', 'Slovenská republika']","3    False
+4    False
+9    False
+Name: author.verified, dtype: bool"
+8,164480472,[],[],[],[['sylnation']],[],"Series([], Name: author.verified, dtype: bool)"
+9,1420510668634083329,[],[],[],"[['emergentsuniverse'], ['emergentsuniverse'], ['lauraallred'], ['discord'], ['discord'], ['superbooster'], ['emergentsuniverse'], ['emergentsuniverse'], ['discord'], ['emergentsuniverse']]",[],"Series([], Name: author.verified, dtype: bool)"
+10,307231970,[],[],[],"[['donetsk'], ['ukrainewillwin'], ['wagnergroup'], ['russianwarcrimes'], ['russianukrainianwar'], ['russianukrainianwar'], ['russianlosses'], ['himars']]",[],"Series([], Name: author.verified, dtype: bool)"
+11,2749315621,[],[],[],"[['russiaisaterroriststate'], ['znpp'], ['russiaisaterroriststate']]",[],"Series([], Name: author.verified, dtype: bool)"
+12,338985020,[],[],[],"[['afp'], ['afp'], ['afp'], ['afp'], ['afp'], ['afp'], ['afp'], ['afp'], ['afp'], ['afp']]",[],"Series([], Name: author.verified, dtype: bool)"
+13,1389770340201418756,[],[],[],"[['anjaliarora'], ['bycott'], ['lalsinghchaddha']]",[],"Series([], Name: author.verified, dtype: bool)"
+14,423004794,[],[],[],"[['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera']]",[],"Series([], Name: author.verified, dtype: bool)"
+15,1526098959374110720,['1557361320521072640'],['34305774'],['1557361320521072640'],[['worldlionday']],"['Gauteng, SA']","4    False
+Name: author.verified, dtype: bool"
+16,1551174104555917314,['1557406585395216385'],['347126522'],['1557406585395216385'],"[['tigraygenocide'], ['tigraygenocide'], ['tigrayanslivesmatter'], ['tigraygenocide'], ['tigrayanslivesmatter'], ['tigray'], ['tigraygenocide646days']]",[0],"7    False
+Name: author.verified, dtype: bool"
+17,1377719490604118028,"['1557423535483752448', '1557354078790975492']","['1377719490604118028', '1377719490604118028']","['1557423535483752448', '1557354078790975492']","[['countryhumansecuador'], ['countryhumansmexico']]","['Ecuador 🇪🇨', 'Ecuador 🇪🇨']","4    False
+9    False
+Name: author.verified, dtype: bool"
+18,1346890637690499074,[],[],[],"[['effetsindesirablesvaccins'], ['artemisia'], ['worldcouncilforhealth']]",[],"Series([], Name: author.verified, dtype: bool)"
+19,139779018,['1557466959574208512'],['732979277864439808'],['1557466959574208512'],"[['chhattisgarh'], ['chhattisgarh'], ['chhattisgarh'], ['chhattisgarh'], ['chhattisgarh'], ['chhattisgarh']]","['Delhi, India']","2    False
+Name: author.verified, dtype: bool"
+20,35991235,"['1557308049970581504', '1557300985953144832']","['1168793622248067072', '1168793622248067072']","['1557308049970581504', '1557300985953144832']","[['standwithukraine'], ['ukraine'], ['ukrainian']]","['Sydney, New South Wales', 'Sydney, New South Wales']","6    False
+7    False
+Name: author.verified, dtype: bool"
+21,3824133753,[],[],[],"[['putin'], ['putin'], ['putin']]",[],"Series([], Name: author.verified, dtype: bool)"
+22,105165371,['1556995023119458309'],['1204866898736943104'],['1556995023119458309'],"[['eelv'], ['ggrmc'], ['poutine'], ['unioneuropea']]",['Paris'],"2    False
+Name: author.verified, dtype: bool"
+23,1560664110,[],[],[],"[['israel'], ['israel'], ['soleimani'], ['russie'], ['i24news'], ['israel'], ['bolton']]",[],"Series([], Name: author.verified, dtype: bool)"
+24,3972812140,"['1557476176850976769', '1556424985203412992', '1554854646900031490']","['3972812140', '1009546724', '1499442188572315650']","['1557476176850976769', '1556424985203412992', '1554854646900031490']","[['slavaukraini'], ['slavaukraini'], ['fckptn'], ['freeukraine'], ['freetaiwan'], ['oprussia']]","['Internet ', 'Internet ', 'Internet ']","0    False
+4    False
+9    False
+Name: author.verified, dtype: bool"
+25,145710009,"['1557422673533276161', '1557422542847188993', '1557422531837149188', '1557422396814106625']","['4846427080', '127483019', '127483019', '1430793200']","['1557422673533276161', '1557422542847188993', '1557422531837149188', '1557422396814106625']","[['____'], ['____'], ['____'], ['arynews']]","['Lahore, Pakistan', 'Lahore, Pakistan', 'Lahore, Pakistan', 'Lahore, Pakistan']","1    False
+2    False
+3    False
+5    False
+Name: author.verified, dtype: bool"
+26,1202724642542080000,[],[],[],"[['romanadidulo'], ['romanadidulo'], ['antivax']]",[],"Series([], Name: author.verified, dtype: bool)"
+27,1357076626593431554,[],[],[],[['live']],[],"Series([], Name: author.verified, dtype: bool)"
+28,3292597556,['1557464671883563010'],['1388337031'],['1557464671883563010'],[['ohio']],['UK'],"7    False
+Name: author.verified, dtype: bool"
+29,2709836953,[],[],[],"[['kodema'], ['afu'], ['ukrainewarnews'], ['kharkov'], ['videos'], ['afu']]",[],"Series([], Name: author.verified, dtype: bool)"
+30,123830541,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+31,118862890,[],[],[],"[['romania'], ['romania'], ['romanians'], ['ukraine'], ['rewards'], ['russia'], ['china'], ['publictransport'], ['bucharest'], ['romania']]",[],"Series([], Name: author.verified, dtype: bool)"
+32,720139699,[],[],[],"[['ukraine'], ['ukraine'], ['belarus'], ['belarus'], ['ukraine'], ['belarus'], ['belarus'], ['belarus']]",[],"Series([], Name: author.verified, dtype: bool)"
+33,726208615867125761,"['1557483416911749121', '1557446422122975233']","['1195773254', '848691710']","['1557483416911749121', '1557446422122975233']","[['johnnydeppkeepswinning'], ['justiceforjohnnydepp']]","['Canada', 'Canada']","0    False
+3    False
+Name: author.verified, dtype: bool"
+34,19536434,[],[],[],"[['navalny'], ['russiancorruption'], ['kremlin'], ['himars'], ['azov'], ['ilyaponomarev']]",[],"Series([], Name: author.verified, dtype: bool)"
+35,165840245,['1557471511690321920'],['19802110'],['1557471511690321920'],"[['schweiz'], ['coronawarnapp'], ['wef'], ['klausschwab']]",['Wien'],"0    False
+Name: author.verified, dtype: bool"
+36,337180680,['1557391293063503875'],['2451893905'],['1557391293063503875'],"[['perronne'], ['nioublinipardon'], ['justicepourlessuspendus']]",['St Goussaud'],"1    False
+Name: author.verified, dtype: bool"
+37,99642673,[],[],[],"[['kserasera'], ['holycowtrailer'], ['bhoolbhulaiyaa2'], ['india'], ['sooryavanshi'], ['maharashtra'], ['rakshabandhan'], ['aamirkhan'], ['drishyamfilms'], ['vineetkumarsingh']]",[],"Series([], Name: author.verified, dtype: bool)"
+38,1231514832479948802,"['1557460896716361728', '1557459857925701634', '1557458722615660545', '1557458598661443589', '1557458492646203393', '1557458439214956548', '1557457366072844295', '1557456871971332102']","['1231514832479948802', '1231514832479948802', '1231514832479948802', '1231514832479948802', '1231514832479948802', '1231514832479948802', '1231514832479948802', '1231514832479948802']","['1557460896716361728', '1557459857925701634', '1557458722615660545', '1557458598661443589', '1557458492646203393', '1557458439214956548', '1557457366072844295', '1557456871971332102']","[['uk'], ['dogs'], ['adoptdontshop'], ['dogs'], ['adoptdontshop'], ['chihuahua'], ['adoptdontshop'], ['adoptdontshop'], ['dogs'], ['germanshepherd']]","['Wales ,UK', 'Wales ,UK', 'Wales ,UK', 'Wales ,UK', 'Wales ,UK', 'Wales ,UK', 'Wales ,UK', 'Wales ,UK']","2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+39,26550418,[],[],[],[['visaban']],[],"Series([], Name: author.verified, dtype: bool)"
+40,1529850416783142912,[],[],[],"[['pentagone'], ['ukrainewar'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+41,14695985,[],[],[],"[['unionsforall'], ['1u'], ['goodairports']]",[],"Series([], Name: author.verified, dtype: bool)"
+42,1301030949627596800,['1557064227134869505'],['456554343'],['1557064227134869505'],"[['transformativeuse'], ['ebooksos']]",[0],"8    False
+Name: author.verified, dtype: bool"
+43,904677286670151680,['1557083546434654209'],['114512948'],['1557083546434654209'],"[['nupes'], ['palestine']]","['Val-de-Marne, Ile-de-France']","1    True
+Name: author.verified, dtype: bool"
+44,1236204709,[],[],[],"[['ivdd'], ['ivdd'], ['ivdd'], ['ivdd'], ['ivdd'], ['ivdd'], ['ivdd']]",[],"Series([], Name: author.verified, dtype: bool)"
+45,1506503452448333828,[],[],[],"[['zelenskywarcriminal'], ['zelenskywarcriminal'], ['zelenskywarcriminal'], ['zelenskywarcriminal'], ['zelenskywarcriminal'], ['zelenskywarcriminal'], ['zelenskywarcriminal']]",[],"Series([], Name: author.verified, dtype: bool)"
+46,1252413607268085769,[],[],[],"[[''], [''], ['tl']]",[],"Series([], Name: author.verified, dtype: bool)"
+47,1391462696877391872,[],[],[],"[['_'], ['_'], ['__'], ['_1444'], ['_1444'], ['_'], ['_'], ['__'], ['__']]",[],"Series([], Name: author.verified, dtype: bool)"
+48,1098417702,['1557475336488640516'],['748614598216007681'],['1557475336488640516'],"[['incendies'], ['ukraine'], ['nazi']]",[0],"3    False
+Name: author.verified, dtype: bool"
+49,1106811016002916353,[],[],[],"[['ukraine'], ['selenskyi'], ['zelensky'], ['ukraine'], ['zaporizhzhya'], ['cherson'], ['kherson'], ['crimea']]",[],"Series([], Name: author.verified, dtype: bool)"
+50,1509805702453284864,[],[],[],"[['ukraine'], ['ukraine'], ['glorytoukraine'], ['zsu']]",[],"Series([], Name: author.verified, dtype: bool)"
+51,1322146345507942409,[],[],[],"[[''], ['bandoriart'], ['']]",[],"Series([], Name: author.verified, dtype: bool)"
+52,859407061230252032,"['1557482405581230080', '1557469868961800192', '1557465212709650434']","['859407061230252032', '859407061230252032', '859407061230252032']","['1557482405581230080', '1557469868961800192', '1557465212709650434']","[['france'], ['france'], ['donbass'], ['ukraine'], ['ukraine'], ['ukraine'], ['ukraine']]","['Charenton-le-Pont, France', 'Charenton-le-Pont, France', 'Charenton-le-Pont, France']","0    False
+4    False
+6    False
+Name: author.verified, dtype: bool"
+53,1294576949738844161,[],[],[],"[['slavaukraini'], ['crimeaisukraine'], ['krim'], ['ukraine'], ['genocide'], ['putin'], ['russia'], ['russland'], ['putin'], ['russland']]",[],"Series([], Name: author.verified, dtype: bool)"
+54,607946179,"['1557398328958193665', '1557369143464235013', '1557369131913060353', '1557368850139828225', '1557368654806777856']","['4823705386', '607946179', '607946179', '607946179', '607946179']","['1557398328958193665', '1557369143464235013', '1557369131913060353', '1557368850139828225', '1557368654806777856']","[['odesa'], ['ukrainian'], ['russian'], ['womensart'], ['crimesagainsthumanity'], ['iimm'], ['pows'], ['torture']]","['Europe', 'Europe', 'Europe', 'Europe', 'Europe']","4    True
+5    True
+6    True
+7    True
+8    True
+Name: author.verified, dtype: bool"
+55,822691669304901632,['1557482929432977409'],['772912024657551360'],['1557482929432977409'],"[['kononowicz'], ['iou'], ['danewaktach']]",['Ankh-Morpork'],"1    False
+Name: author.verified, dtype: bool"
+56,2561171399,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+57,25125905,[],[],[],"[['lifelonglearning'], ['idwip2022'], ['dyk'], ['idwip2022'], ['idwip2022'], ['climateaction'], ['lifelonglearning'], ['idil'], ['lifelonglearning']]",[],"Series([], Name: author.verified, dtype: bool)"
+58,636921376,"['1557458050839101443', '1557457967116652547', '1557456862496411654', '1557441280426262531', '1557441111769157636', '1557440919078682626', '1557440763398594564']","['561376693', '1182764439902281729', '68440549', '80513878', '1498563609395441664', '1397410950', '472852289']","['1557458050839101443', '1557457967116652547', '1557456862496411654', '1557441280426262531', '1557441111769157636', '1557440919078682626', '1557440763398594564']","[['gironde'], ['landiras'], ['gironde'], ['ouestmoncycle'], ['covid'], ['ouestmoncycle'], ['cattelot']]","[0, 0, 0, 0, 0, 0, 0]","0    False
+1    False
+2    False
+4    False
+5    False
+6    False
+7    False
+Name: author.verified, dtype: bool"
+59,1366412079796793347,"['1557391199476109312', '1557008194379079690']","['1366412079796793347', '1382088964367060995']","['1557391199476109312', '1557008194379079690']","[['lg7'], ['lg7'], ['gaga']]","[0, 0]","0    False
+2    False
+Name: author.verified, dtype: bool"
+60,838012831530352640,[],[],[],"[['passsanitaire'], ['perronne'], ['covid19'], ['covid19'], ['amnesty'], ['dupontmoretti'], ['omicron']]",[],"Series([], Name: author.verified, dtype: bool)"
+61,1929756972,[],[],[],[['ataman']],[],"Series([], Name: author.verified, dtype: bool)"
+62,153802461,[],[],[],"[['niemcy'], ['ke'], ['cdu'], ['zakowski'], ['moskwa']]",[],"Series([], Name: author.verified, dtype: bool)"
+63,2326857668,"['1557471121586458624', '1557442076958146563', '1557428982894714880']","['627673190', '627673190', '627673190']","['1557471121586458624', '1557442076958146563', '1557428982894714880']","[['supercup'], ['supercup'], ['supercup'], ['supercup'], ['supercup'], ['supercup'], ['supercup'], ['supercup'], ['supercup']]","['Nyon, Switzerland', 'Nyon, Switzerland', 'Nyon, Switzerland']","1    True
+4    True
+8    True
+Name: author.verified, dtype: bool"
+64,1287230909016678400,[],[],[],"[['backtoschool'], ['basketball'], ['covid'], ['covid'], ['usf'], ['facemask'], ['covid'], ['backtoschool'], ['covid'], ['facemask']]",[],"Series([], Name: author.verified, dtype: bool)"
+65,810938203582537729,"['1557473362846224384', '1557473288212717568']","['1210757976002220038', '16481520']","['1557473362846224384', '1557473288212717568']","[['ptvinthewild'], ['ptvinthewild'], ['tnsen31'], ['votebluetosavedemocracy']]","['United States', 'United States']","6    False
+8    False
+Name: author.verified, dtype: bool"
+66,1445454626522755078,[],[],[],[['trumpraid']],[],"Series([], Name: author.verified, dtype: bool)"
+67,2344211046,[],[],[],[['weeone']],[],"Series([], Name: author.verified, dtype: bool)"
+68,2175613031,"['1557482292263768069', '1557482166774386689', '1557482115004076032', '1557474031695269889']","['2868860479', '2868860479', '2868860479', '1183728633606758400']","['1557482292263768069', '1557482166774386689', '1557482115004076032', '1557474031695269889']","[['ig'], ['myspc'], ['ig'], ['love']]","[0, 0, 0, 0]","0    False
+1    False
+2    False
+4    False
+Name: author.verified, dtype: bool"
+69,46479088,['1557433199718006785'],['1560664110'],['1557433199718006785'],"[['zelensky'], ['slavaukraini'], ['zelensky'], ['mariupol'], ['hezbollah'], ['idf'], ['idf']]",[0],"4    True
+Name: author.verified, dtype: bool"
+70,1502349083981324288,[],[],[],"[['ukrainerussianwar'], ['mykolaiv'], ['russianwarcrimes'], ['russia'], ['ukrainerussianwar'], ['stoprussianow'], ['actforukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+71,1511332574538440712,[],[],[],"[['medvedev'], ['sakiairbase'], ['russen'], ['russian'], ['russland']]",[],"Series([], Name: author.verified, dtype: bool)"
+72,848691710,['1557430785996689411'],['1218346012873576448'],['1557430785996689411'],"[['justiceforjohnnydepp'], ['johnnydeppdeservesanapology']]",[0],"9    False
+Name: author.verified, dtype: bool"
+73,978606266040938496,['1557477677832994818'],['815297463695327234'],['1557477677832994818'],"[['gaza'], ['russia']]",['KolMakom '],"4    False
+Name: author.verified, dtype: bool"
+74,82107337,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+75,2151390708,[],[],[],"[['climatecrisis'], ['energy'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+76,1483362685051977730,['1557314752380080128'],['3899254043'],['1557314752380080128'],"[['krim'], ['ukraine'], ['visaban'], ['visabann'], ['krim']]",['Germany'],"5    False
+Name: author.verified, dtype: bool"
+77,47743604,[],[],[],"[['opznbek'], ['opznbek'], ['opznkop']]",[],"Series([], Name: author.verified, dtype: bool)"
+78,1337746054083735552,['1556740036150071297'],['2729342121'],['1556740036150071297'],"[['hedgewatch'], ['stannesroad'], ['microchipped'], ['catsoftwitter'], ['kilwinning']]",['Wolverhampton UK'],"4    False
+Name: author.verified, dtype: bool"
+79,1209936918,['1557458707620843521'],['3090115562'],['1557458707620843521'],"[['oann'], ['oann'], ['oann'], ['infocus'], ['oann'], ['oann'], ['oann'], ['oann'], ['oann']]",[0],"3    True
+Name: author.verified, dtype: bool"
+80,1006081814849576960,['1557384167427555333'],['1354776830608347139'],['1557384167427555333'],"[['ukraine'], ['dnr'], ['dnr'], ['mali'], ['donbass']]",['Paris-Donetsk-Lugansk-Moscou'],"7    False
+Name: author.verified, dtype: bool"
+81,22785212,['1557066636162699267'],['1420042096841474054'],['1557066636162699267'],"[['foreverhome'], ['heatwave']]","['London, England']","9    False
+Name: author.verified, dtype: bool"
+82,1218161667135221760,['1545055016930553857'],['1394560106352635905'],['1545055016930553857'],[['ukraine']],['Ukraine'],"4    False
+Name: author.verified, dtype: bool"
+83,873135988440223745,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+84,1231894919268196353,[],[],[],[['terzopolo']],[],"Series([], Name: author.verified, dtype: bool)"
+85,838449056,[],[],[],[['meghanmarkleisaliar']],[],"Series([], Name: author.verified, dtype: bool)"
+86,717451555033718788,"['1556995953277779968', '1556995914341957632', '1552059046580174854']","['796371560814772225', '1512083107972718603', '967323879424356352']","['1556995953277779968', '1556995914341957632', '1552059046580174854']","[['britisharmy'], ['welldone'], ['military'], ['leadership'], ['servetolead'], ['sandhurst'], ['irishranger'], ['futuresoldier']]","['Camberley, South East', 'Camberley, South East', 'Camberley, South East']","5    False
+6    False
+8    False
+Name: author.verified, dtype: bool"
+87,861137888838393856,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+88,17560697,[],[],[],"[['gamedev'], ['eldenring'], ['swag']]",[],"Series([], Name: author.verified, dtype: bool)"
+89,2758100418,['1557463068271075329'],['348176735'],['1557463068271075329'],"[['crimea'], ['goawaysteven'], ['amnestyinternational'], ['crimea'], ['ukraine'], ['crimea'], ['crimea']]",['London'],"2    False
+Name: author.verified, dtype: bool"
+90,1394295256091406336,[],[],[],[['johnnydeppisalegend']],[],"Series([], Name: author.verified, dtype: bool)"
+91,701736181717934080,[],[],[],"[['vincennes'], ['rodeosurbains'], ['jupiter'], ['erdogan'], ['gvt'], ['chine'], ['poutine'], ['macron'], ['darmanin']]",[],"Series([], Name: author.verified, dtype: bool)"
+92,91157519,[],[],[],[['la7']],[],"Series([], Name: author.verified, dtype: bool)"
+93,1470857883340451842,[],[],[],"[['silenzio'], ['quisling'], ['quisling'], ['garante'], ['stalin'], ['putsch'], ['germania'], ['putsch'], ['default'], ['rinnegati']]",[],"Series([], Name: author.verified, dtype: bool)"
+94,2954167529,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+95,786700740211437568,"['1557465491744165888', '1557453557485428736']","['81828490', '1100756303780237319']","['1557465491744165888', '1557453557485428736']","[['ukraine'], ['nafofellas']]","['Украина', 'Украина']","5    False
+7    False
+Name: author.verified, dtype: bool"
+96,961431948978683904,[],[],[],"[['donetsk'], ['mariupol'], ['kyiv'], ['crimea'], ['putin'], ['zaporizhzhia'], ['crimea'], ['russia']]",[],"Series([], Name: author.verified, dtype: bool)"
+97,1426115871966179329,"['1557474423329939456', '1557459188799913984']","['125449982', '1374144540']","['1557474423329939456', '1557459188799913984']","[['coronawarnapp'], ['fdpmachtkrankundarm'], ['inflation'], ['fdpmachtkrankundarm']]","[0, 0]","0    False
+6    False
+Name: author.verified, dtype: bool"
+98,187793278,['1556478242688831490'],['495102115'],['1556478242688831490'],"[['visitaministerialgt'], ['protegeryservir'], ['protegeryservir'], ['enconsulta'], ['accionesquetransforman'], ['elanodeloslogros']]",['Guatemala'],"6    True
+Name: author.verified, dtype: bool"
+99,59743946,[],[],[],[['covid']],[],"Series([], Name: author.verified, dtype: bool)"
+100,2450265194,['1557472030190084099'],['1536276645660835840'],['1557472030190084099'],"[['spiace'], ['bassguitar']]","['Friuli-Venezia Giulia, Italia']","1    False
+Name: author.verified, dtype: bool"
+101,206830178,"['1557428609148768258', '1557417962000318464']","['364820393', '29164972']","['1557428609148768258', '1557417962000318464']","[['ukrainerussiawar'], ['ukrainian'], ['russia'], ['tory'], ['standwithukraine']]","['Cymru', 'Cymru']","5    False
+9    False
+Name: author.verified, dtype: bool"
+102,739187198495477760,[],[],[],"[['yazidigenocide'], ['yazidiculture'], ['yazidigenocide'], ['stop'], ['yazidigenocide'], ['hijab']]",[],"Series([], Name: author.verified, dtype: bool)"
+103,1434538970864488449,[],[],[],"[['catsoftwitter'], ['caturday'], ['daddyslitteboy'], ['adopt'], ['catsoftwitter'], ['catsofukraine'], ['scoliosis']]",[],"Series([], Name: author.verified, dtype: bool)"
+104,1325080365690617856,"['1557470799891767307', '1544729964871909383', '1515096927813214209', '1515096920536006658']","['436953678', '1544712167882211332', '436953678', '778288628489420800']","['1557470799891767307', '1544729964871909383', '1515096927813214209', '1515096920536006658']","[['trump'], ['sharktank'], ['covidisnotover'], ['florida'], ['airconditioner']]","[0, 0, 0, 0]","0    False
+2    False
+3    False
+4    False
+Name: author.verified, dtype: bool"
+105,1495480590572961792,[],[],[],"[['crimea'], ['kherson'], ['kherson'], ['ukraine'], ['ukraine'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+106,1538025890835070976,['1557476443931627521'],['1538025890835070976'],['1557476443931627521'],"[['crimea'], ['crimea']]",[0],"0    False
+Name: author.verified, dtype: bool"
+107,128967072,[],[],[],"[[''], [''], ['ukrainewillwin']]",[],"Series([], Name: author.verified, dtype: bool)"
+108,1122618943225643009,"['1557006266228215812', '1557006156605923328']","['2874959663', '179449138']","['1557006266228215812', '1557006156605923328']","[['europe'], ['weareindigenous'], ['iran']]","['Vienna, Austria', 'Vienna, Austria']","7    True
+8    True
+Name: author.verified, dtype: bool"
+109,1281660648,"['1557478847125372928', '1557478285231198211', '1557478241690058752', '1557478196731412480', '1557478134353743874', '1557478094512001027']","['956171191', '1281660648', '1281660648', '1281660648', '1281660648', '1281660648']","['1557478847125372928', '1557478285231198211', '1557478241690058752', '1557478196731412480', '1557478134353743874', '1557478094512001027']","[['donbass'], ['cdnpoli'], ['cdnpoli'], ['zelenskyy'], ['trudeaudictatorship'], ['worldpressfreedomday']]","['Toronto, Canada', 'Toronto, Canada', 'Toronto, Canada', 'Toronto, Canada', 'Toronto, Canada', 'Toronto, Canada']","0    False
+2    False
+3    False
+4    False
+5    False
+6    False
+Name: author.verified, dtype: bool"
+110,365415777,[],[],[],"[[''], [''], [''], ['']]",[],"Series([], Name: author.verified, dtype: bool)"
+111,784190722916356096,"['1557483274766893058', '1557385155337019392']","['784190722916356096', '784190722916356096']","['1557483274766893058', '1557385155337019392']","[['diadelafuerzaaereaargentina'], ['rusia'], ['crimea'], ['diadelafuerzaaereaargentina'], ['china']]","['🇦🇷🇦🇷🇦🇷🇦🇷🇦🇷🇦🇷🇦🇷', '🇦🇷🇦🇷🇦🇷🇦🇷🇦🇷🇦🇷🇦🇷']","0    False
+7    False
+Name: author.verified, dtype: bool"
+112,55602596,[],[],[],"[['rmasge'], ['nurdiesge'], ['lauterbach'], ['supercup2022']]",[],"Series([], Name: author.verified, dtype: bool)"
+113,1444963732854018054,"['1556897093628973056', '1556897074280632322']","['1046353892169175040', '1046353892169175040']","['1556897093628973056', '1556897074280632322']","[['alulamoments'], ['_'], ['cotm2022'], ['royalcommissionforalula'], ['cotm2022'], ['cotm2022'], ['cotm2022'], ['cotm2022'], ['_']]","['AlUla, Saudi Arabia', 'AlUla, Saudi Arabia']","1    True
+2    True
+Name: author.verified, dtype: bool"
+114,731874217,[],[],[],[['monkeypox']],[],"Series([], Name: author.verified, dtype: bool)"
+115,1400591810213384198,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+116,1461703836700188673,"['1557394188387471366', '1557390536536891400', '1557388819879677952']","['1309441830287794177', '1105894085108350977', '1105894085108350977']","['1557394188387471366', '1557390536536891400', '1557388819879677952']","[['einerfuralleallefureinen'], ['podbean'], ['oerr']]","[0, 0, 0]","2    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+117,1458079414672150533,[],[],[],"[['ukraine'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+118,3156450949,[],[],[],"[['cnftcommunity'], ['cnft'], ['hornniesfollowhornnies'], ['vampfollowvamp']]",[],"Series([], Name: author.verified, dtype: bool)"
+119,19140613,['1557470419090808833'],['19802110'],['1557470419090808833'],"[['rip'], ['tagesthemen'], ['klimahysterie'], ['schweiz'], ['inflation'], ['zib2'], ['osterreich'], ['zib2']]",['D-A-CH-Region '],"5    False
+Name: author.verified, dtype: bool"
+120,506198762,"['1557405920304529410', '1557401805025382400']","['1472181324144254979', '169966568']","['1557405920304529410', '1557401805025382400']","[['endtigraysiege'], ['ashendatigray'], ['mikadramassacre'], ['tigray'], ['christianity'], ['fascism'], ['endtigraysiege'], ['tigray']]","[0, 0]","2    False
+3    False
+Name: author.verified, dtype: bool"
+121,1373379438,"['1557430018799575040', '1556869128371089408']","['1373379438', '1373379438']","['1557430018799575040', '1556869128371089408']","[['cuba'], ['singularity'], ['alexjones'], ['singularity'], ['cuba'], ['truthbombs']]","['Los Angeles', 'Los Angeles']","0    False
+7    False
+Name: author.verified, dtype: bool"
+122,3002967393,[],[],[],"[[''], [''], [''], [''], ['']]",[],"Series([], Name: author.verified, dtype: bool)"
+123,1062073178,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+124,2365378849,['1557466064107327489'],['1475028197255303169'],['1557466064107327489'],"[['effetssecondairesvaccins19'], ['macron'], ['macron'], ['greenpeace']]",['Paris'],"1    False
+Name: author.verified, dtype: bool"
+125,1506990422094196741,['1557482864505225218'],['1218438418436370433'],['1557482864505225218'],"[['maskensindkeinmildesmittel'], ['trump'], ['fdprausausderregierung'], ['fifthamendment']]","['Bayern, Deutschland']","0    False
+Name: author.verified, dtype: bool"
+126,141403272,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+127,610899107,['1550212803537010689'],['267231512'],['1550212803537010689'],"[['precarietat'], ['politicaturistica'], ['cachitosdehierroycromo']]",[0],"7    False
+Name: author.verified, dtype: bool"
+128,1220096014750711810,[],[],[],"[['zacksnydersjusticeleague'], ['releasetheayercut'], ['releasetheayercut'], ['releasetheayercut']]",[],"Series([], Name: author.verified, dtype: bool)"
+129,1548658198109896707,[],[],[],[['ukraine']],[],"Series([], Name: author.verified, dtype: bool)"
+130,114718372,"['1557357506829090818', '1557357222358913024']","['255493944', '255493944']","['1557357506829090818', '1557357222358913024']","[['donbass'], ['iccpr'], ['nato'], ['iaea'], ['zakharova'], ['nato'], ['asiapacific'], ['nebenzia']]","['London', 'London']","4    True
+5    True
+Name: author.verified, dtype: bool"
+131,15856061,['1557440302331346945'],['1255561430'],['1557440302331346945'],"[['visaban'], ['visaban'], ['visaban'], ['crimea']]",[0],"4    False
+Name: author.verified, dtype: bool"
+132,273842391,[],[],[],"[['pomona'], ['canada'], ['pomona'], ['odesa'], ['canada'], ['pomona'], ['canada'], ['pomona'], ['odesa']]",[],"Series([], Name: author.verified, dtype: bool)"
+133,1496121132818259977,"['1557450504128675846', '1557450483987791872', '1557450474160275463', '1557450445634867200', '1557450432519233538', '1557450417914642432', '1557450380778377221', '1557450365011992576', '1557450347286765570', '1557450330270568448']","['1551700405704441858', '1551700405704441858', '1551700405704441858', '1551700405704441858', '1555547954995412998', '1555547954995412998', '1555547954995412998', '1555547954995412998', '1548375192342122501', '1548375192342122501']","['1557450504128675846', '1557450483987791872', '1557450474160275463', '1557450445634867200', '1557450432519233538', '1557450417914642432', '1557450380778377221', '1557450365011992576', '1557450347286765570', '1557450330270568448']","[['tigraysiege'], ['tigrayfamine'], ['tigrayfamine'], ['tigrayfamine'], ['tigrayanslivesmatter'], ['tigrayanslivesmatter'], ['endtigraygenocide'], ['tigrayanslivesmatter'], ['tigrayanslivesmatter'], ['endtigraysiege']]","['Tigray Adigrat', 'Tigray Adigrat', 'Tigray Adigrat', 'Tigray Adigrat', 'Tigray Adigrat', 'Tigray Adigrat', 'Tigray Adigrat', 'Tigray Adigrat', 'Tigray Adigrat', 'Tigray Adigrat']","0    False
+1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+134,4835455751,[],[],[],"[['makemeaware'], ['crimea'], ['russiaukrainewar'], ['sakiairbase'], ['makemeaware']]",[],"Series([], Name: author.verified, dtype: bool)"
+135,1512557049103757318,[],[],[],[['crimea']],[],"Series([], Name: author.verified, dtype: bool)"
+136,19489239,[],[],[],"[['covid'], ['healthcare'], ['soccer'], ['irgc'], ['art']]",[],"Series([], Name: author.verified, dtype: bool)"
+137,816665851302711296,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+138,78761555,"['1557389811870154752', '1557375456864833537', '1557375338669301761']","['73062993', '94055847', '94055847']","['1557389811870154752', '1557375456864833537', '1557375338669301761']","[['uyghur'], ['dingjiaxi'], ['myanmar'], ['hk'], ['xianzi'], [''], [''], ['oubiaofeng'], ['']]","['contact@nchrd.org', 'contact@nchrd.org', 'contact@nchrd.org']","0    True
+5    True
+6    True
+Name: author.verified, dtype: bool"
+139,1503332034000965635,"['1557473800119361542', '1557473765193404423', '1557473731106246660', '1557473670725095431', '1557472535066836992', '1557472534588710913', '1557472534542647297', '1557472444738412545', '1557472444348252161', '1557472444297928707']","['1492209106932932614', '1532138060179247105', '1532138060179247105', '1532138060179247105', '1546224553986334724', '1546224553986334724', '1546224553986334724', '1394033579126968322', '1394033579126968322', '1394033579126968322']","['1557473800119361542', '1557473765193404423', '1557473731106246660', '1557473670725095431', '1557472535066836992', '1557472534588710913', '1557472534542647297', '1557472444738412545', '1557472444348252161', '1557472444297928707']","[['tigraygenocide'], ['tigraysiege'], ['tigrayfamine'], ['tigrayfamine'], ['tigrayanwomenandgirls'], ['endtigraysiege'], ['tigraygenocide'], ['endtigraygenocide'], ['endtigraysiege'], ['tigrayanslivesmatter']]","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]","0    False
+1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+140,507857939,[],[],[],"[[''], ['stoprussianow'], [''], ['mariupol'], ['stoprussia'], ['stoprussianaggression'], ['stoprussia'], [''], ['polska']]",[],"Series([], Name: author.verified, dtype: bool)"
+141,14106476,[],[],[],"[['crimeaisukraine'], ['ukrainewillwin'], ['ukrainewillwin'], ['russian'], ['ukraine'], ['ukrainerussiawar'], ['ukraine'], ['crimeaisukraine'], ['ukrainerussiawar']]",[],"Series([], Name: author.verified, dtype: bool)"
+142,1583034342,[],[],[],"[['ukraine'], ['ukraine'], ['ukraine'], ['ukrainewar'], ['ukrainewar']]",[],"Series([], Name: author.verified, dtype: bool)"
+143,1289511102305492994,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+144,1458399150706511873,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+145,16566439,[],[],[],"[['adopt'], ['feraltuesday'], ['tnr'], ['caturday'], ['adopt']]",[],"Series([], Name: author.verified, dtype: bool)"
+146,744266737227538432,"['1557480166443581443', '1557480094331031557']","['744266737227538432', '744266737227538432']","['1557480166443581443', '1557480094331031557']","[[''], ['reem']]","['Abu Dhabi, United Arab Emirate', 'Abu Dhabi, United Arab Emirate']","3    False
+6    False
+Name: author.verified, dtype: bool"
+147,3362160970,['1557289178693599232'],['143427448'],['1557289178693599232'],"[['standwithukraine'], ['standwithukraine'], ['standwithukraine'], ['standwithukraine'], ['armukrainenow']]","['Tallinn, Eesti']","8    True
+Name: author.verified, dtype: bool"
+148,1524973263063027712,"['1557480937935495168', '1557479130999971840', '1557172389141782529']","['1551935359105335302', '1522147402714873857', '1018992396']","['1557480937935495168', '1557479130999971840', '1557172389141782529']","[['johnnydepp'], ['whereswaldman'], ['johnnydeppisalegend'], ['whereiswaldman'], ['truthwins'], ['thankyoudior'], ['mldauber']]","[0, 0, 0]","1    False
+4    False
+7    False
+Name: author.verified, dtype: bool"
+149,2874967634,"['1556426252281491457', '1555045950606884864', '1552915473771024384', '1552124010531397633']","['94079202', '346304908', '346304908', '346304908']","['1556426252281491457', '1555045950606884864', '1552915473771024384', '1552124010531397633']","[['auspol'], ['auspol'], ['springst'], ['auspol'], ['auspol']]","['Canberra', 'Canberra', 'Canberra', 'Canberra']","1    False
+3    False
+5    False
+9    False
+Name: author.verified, dtype: bool"
+150,519929797,['1557478561891622914'],['1496861885043519498'],['1557478561891622914'],"[['amnestyinternational'], ['donetsk'], ['russianukraineraw'], ['russianukrainewar'], ['russianukrainerar'], ['russianukrainerar']]",[0],"1    False
+Name: author.verified, dtype: bool"
+151,9637692,[],[],[],"[['broncos'], ['denver7'], ['denver7'], ['denver7'], ['denver7'], ['denver7'], ['denver7'], ['denver7'], ['denver7'], ['denver7']]",[],"Series([], Name: author.verified, dtype: bool)"
+152,705887018665037827,[],[],[],"[['putin'], ['ukraine'], ['budapestmemorandum'], ['ukraine'], ['krim']]",[],"Series([], Name: author.verified, dtype: bool)"
+153,1520830471633981440,[],[],[],"[['crimea'], ['putinwarcriminal']]",[],"Series([], Name: author.verified, dtype: bool)"
+154,968225418,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+155,1496815489,"['1557482135367421952', '1557479560282865681', '1557479537012883468', '1557478741588287489']","['912385040587345921', '930375301556768768', '1513636629839335425', '31124199']","['1557482135367421952', '1557479560282865681', '1557479537012883468', '1557478741588287489']","[['evusheld'], ['immunocompromised'], ['evusheld'], ['evusheld4theuk'], ['evusheld'], ['evusheld4theuk']]","[0, 0, 0, 0]","1    False
+6    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+156,425903395,[],[],[],"[['trump2024'], ['maralagoraid'], ['stalinisme'], ['republicain'], ['trump2024'], ['gretchenwhitmer'], ['trump'], ['taiwan'], ['chine'], ['obama']]",[],"Series([], Name: author.verified, dtype: bool)"
+157,334548719,"['1555989414156926976', '1555625653130743809', '1555625552136085504', '1555625449065152512', '1555625412994146304', '1555625391854862336']","['334548719', '334548719', '334548719', '334548719', '334548719', '334548719']","['1555989414156926976', '1555625653130743809', '1555625552136085504', '1555625449065152512', '1555625412994146304', '1555625391854862336']","[['blockblackrock'], ['blockblackrock'], ['climatejustice'], ['womenmustlead'], ['womenmustlead'], ['ispeak4myself'], ['feministclimatejustice'], ['feministclimatejustice'], ['feministclimatejustice'], ['africanfeministstories']]","['Nairobi, Kenya', 'Nairobi, Kenya', 'Nairobi, Kenya', 'Nairobi, Kenya', 'Nairobi, Kenya', 'Nairobi, Kenya']","3    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+158,4854840657,[],[],[],"[['thecocoanuts'], ['london'], ['marxbrothers'], ['harpomarx'], ['harpomarx'], ['monkeybusiness']]",[],"Series([], Name: author.verified, dtype: bool)"
+159,1350189740226703365,[],[],[],"[['allah'], ['allah'], ['muslims']]",[],"Series([], Name: author.verified, dtype: bool)"
+160,242354037,['1556606021744951297'],['988843891'],['1556606021744951297'],"[['ukraine'], ['russia'], ['russia'], ['ukraine']]",['London '],"6    False
+Name: author.verified, dtype: bool"
+161,1553831284186775555,['1556649081996550145'],['1553974924561326080'],['1556649081996550145'],"[['defi'], ['crypto'], ['bnb'], ['hiddengem'], ['cashverse'], ['cashverse'], ['x100gem'], ['cryptocurrencies'], ['bnb']]",['Boston'],"2    False
+Name: author.verified, dtype: bool"
+162,230318508,[],[],[],"[['venere'], ['venere'], ['venere'], ['venere'], ['venere'], ['venere'], ['venere'], ['venere'], ['venere'], ['venere']]",[],"Series([], Name: author.verified, dtype: bool)"
+163,1458830329452670985,[],[],[],[['longgrafene']],[],"Series([], Name: author.verified, dtype: bool)"
+164,1399133987101102090,"['1557327415789211649', '1557010858726883328']","['1399133987101102090', '1399133987101102090']","['1557327415789211649', '1557010858726883328']","[['cbs'], ['assangeathon'], ['assangeathon'], ['assangeathon'], ['freeassangenow']]","[0, 0]","4    False
+7    False
+Name: author.verified, dtype: bool"
+165,1131917492,['1557457826892713985'],['18166778'],['1557457826892713985'],"[['new'], ['breaking']]","['Washington, D.C.']","2    True
+Name: author.verified, dtype: bool"
+166,1522619817353752584,['1557456417140899846'],['832242520864280576'],['1557456417140899846'],"[['zelenskywarcriminal'], ['pd']]",[0],"6    False
+Name: author.verified, dtype: bool"
+167,1151081126502342657,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+168,1403387952647049222,['1557466673522917382'],['1312430607293714433'],['1557466673522917382'],[['ocart']],[0],"3    False
+Name: author.verified, dtype: bool"
+169,1506150945537019904,[],[],[],"[['nftgiveaways'], ['nftgiveaways'], ['nftgiveaways'], ['nftgiveaways'], ['nftgiveaways'], ['nftgiveaways'], ['nftgiveaways'], ['nftgiveaways'], ['nftgiveaways'], ['nftgiveaways']]",[],"Series([], Name: author.verified, dtype: bool)"
+170,1594316444,['1557466158940446720'],['1594316444'],['1557466158940446720'],"[['somalia'], ['somalia']]",[0],"3    False
+Name: author.verified, dtype: bool"
+171,1352231298,"['1556627465585528835', '1555968947538874368', '1555192429397032963']","['915256403987746816', '915256403987746816', '1224385757206339584']","['1556627465585528835', '1555968947538874368', '1555192429397032963']","[['indiedev'], ['games'], ['gamedev'], ['tinyteams2022']]","['Philadelphia, PA', 'Philadelphia, PA', 'Philadelphia, PA']","0    False
+3    False
+8    False
+Name: author.verified, dtype: bool"
+172,2884771,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+173,1205226529455632385,"['1557464922388369410', '1557440259683655682']","['1205226529455632385', '16513335']","['1557464922388369410', '1557440259683655682']","[['democracy'], ['wisen']]","['The United States of America', 'The United States of America']","2    True
+8    True
+Name: author.verified, dtype: bool"
+174,1399645904722874371,"['1557446415311405057', '1557427928199225349']","['2605541377', '1408464373333512192']","['1557446415311405057', '1557427928199225349']","[['_'], ['__auditor'], ['__']]","[0, 0]","2    False
+9    False
+Name: author.verified, dtype: bool"
+175,2874959663,[],[],[],"[['vostok4'], ['justdoit'], ['weareindigenous'], ['glinka'], ['leningrad'], ['spacewalk'], ['wwii'], ['atc2022'], ['dyk'], ['bogolyubov']]",[],"Series([], Name: author.verified, dtype: bool)"
+176,720373269803589632,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+177,1451744456873582595,[],[],[],"[['eritreaprevails'], ['tplf'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+178,1276861291311755265,[],[],[],"[['nowar'], ['phoenix'], ['z'], ['nowar'], [''], [''], ['nowar'], [''], ['nowar'], ['']]",[],"Series([], Name: author.verified, dtype: bool)"
+179,551195158,[],[],[],"[['_'], ['_'], ['united_states'], ['_'], [''], ['_'], ['russia_ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+180,297269510,[],[],[],"[['1'], ['200']]",[],"Series([], Name: author.verified, dtype: bool)"
+181,1460994287479541763,[],[],[],"[['vollpfosten'], ['habeck'], ['ploetzlichundunerwartet']]",[],"Series([], Name: author.verified, dtype: bool)"
+182,2275398922,[],[],[],[['stopwillemengel']],[],"Series([], Name: author.verified, dtype: bool)"
+183,1506338005887422468,"['1557445402219118599', '1557444733869477888', '1557444714856685568', '1557439744249839616', '1557439720262701057', '1557439692798312452', '1557439634405195778']","['1440402539082444802', '1394033579126968322', '1496493167390113794', '1493983181942530048', '1493983181942530048', '1493983181942530048', '1493983181942530048']","['1557445402219118599', '1557444733869477888', '1557444714856685568', '1557439744249839616', '1557439720262701057', '1557439692798312452', '1557439634405195778']","[['endtigrayfamine'], ['tigrayfamine'], ['tigrayfamine'], ['tigraygenocide'], ['tigrayfamine'], ['endtigraysiege'], ['airdropfoodtotigray'], ['endtigraysiege'], ['tigraygenocide']]","[0, 0, 0, 0, 0, 0, 0]","0    False
+2    False
+3    False
+5    False
+6    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+184,1515246652432523268,[],[],[],"[['russiaisaterroriststate'], ['ukrainewillwin'], ['ukrainewillwin'], ['ukraine'], ['ukrainewar'], ['ukraine'], ['russiaisaterroriststate'], ['russiaukrainewar'], ['russiaisaterroriststate'], ['ukrainerussiawar']]",[],"Series([], Name: author.verified, dtype: bool)"
+185,1226193618341376003,[],[],[],"[['barrontrump'], ['barrontrump']]",[],"Series([], Name: author.verified, dtype: bool)"
+186,755687306078609408,[],[],[],"[['russianukrainianwar'], ['ukraineunderattak'], ['ukraine'], ['russiaterroriststate'], ['ukrainianarmy'], ['ukrainerussiawar'], ['ukrainerussiawar'], ['ukrainewar'], ['russianukrainianwar'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+187,932229195681488896,[],[],[],"[['justiceforjohnnydepp'], ['justiceforjohnnydepp'], ['justiceforjohnnydepp'], ['justiceforjohnnydepp'], ['justiceforjohnnydepp'], ['justiceforjohnnydepp'], ['justiceforjohnnydepp'], ['justiceforjohnnydepp'], ['justiceforjohnnydepp'], ['justiceforjohnnydepp']]",[],"Series([], Name: author.verified, dtype: bool)"
+188,1515267512413593601,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+189,1505210171043495939,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+190,1513636629839335425,"['1557477506634088448', '1557477193894301702', '1557477150659416066', '1557476986196566019']","['271876089', '128929917', '3179984552', '1318872596537016320']","['1557477506634088448', '1557477193894301702', '1557477150659416066', '1557476986196566019']","[['immunocompromised'], ['evusheld'], ['evusheld'], ['evusheld'], ['borisjohnson'], ['evusheld'], ['evusheld']]","[0, 0, 0, 0]","3    False
+6    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+191,995214637300879360,"['1557479653278875651', '1557479606877392898', '1557478066816880640']","['22243285', '1394295256091406336', '20968625']","['1557479653278875651', '1557479606877392898', '1557478066816880640']","[['justiceforjohnnydepp'], ['justiceforjohnnydepp'], ['johnnydeppisalegend'], ['johnnydeppisalegend'], ['justiceforjohnnydepp'], ['johnnydeppdeservesanapology']]","['New York, NY', 'New York, NY', 'New York, NY']","4    False
+5    False
+9    False
+Name: author.verified, dtype: bool"
+192,48697538,['1557373407137873921'],['48697538'],['1557373407137873921'],"[['spahnkanneseinfachnicht'], ['lindner']]","['wenn de rein kommst, links']","8    False
+Name: author.verified, dtype: bool"
+193,247377016,"['1557333570284167168', '1557292922529148929', '1556795880136536064']","['1482168100812431361', '1086747635644616705', '2853648153']","['1557333570284167168', '1557292922529148929', '1556795880136536064']","[['makebatmanbeyond'], ['axeofzaslav'], ['wonderwoman3'], ['superman']]","['United Kingdom', 'United Kingdom', 'United Kingdom']","0    False
+2    False
+7    False
+Name: author.verified, dtype: bool"
+194,1141051783936184320,['1557387352254910465'],['1195427305453162498'],['1557387352254910465'],"[['wednesdaymotivation'], ['culturalheritage'], ['ukraine'], ['ukraine'], ['ukraine'], ['worldheritage'], ['ukraine'], ['wwii']]",['United Kingdom'],"0    False
+Name: author.verified, dtype: bool"
+195,865233440173682688,[],[],[],"[['quartou'], ['quartou'], ['torcedor'], ['curti'], ['flamengo'], ['colecionador']]",[],"Series([], Name: author.verified, dtype: bool)"
+196,942156122,[],[],[],[['showitorshutit']],[],"Series([], Name: author.verified, dtype: bool)"
+197,1154515162726117376,[],[],[],"[['tocondos'], ['manywillgetrinsed']]",[],"Series([], Name: author.verified, dtype: bool)"
+198,1061678161312866305,"['1557478825545564162', '1557085335284322305', '1557085320637726726']","['16742053', '1061678161312866305', '1061678161312866305']","['1557478825545564162', '1557085335284322305', '1557085320637726726']","[['nato'], ['putin'], ['ukrainianarmy'], ['ukrainianarmy'], ['ukraine'], ['ukrainianarmy'], ['ukraine'], ['ukrainianarmy']]","['Istanbul, Turkey', 'Istanbul, Turkey', 'Istanbul, Turkey']","1    False
+4    False
+5    False
+Name: author.verified, dtype: bool"
+199,36522267,['1557417906010456066'],['203154779'],['1557417906010456066'],"[['oplichting'], ['levenskosten'], ['covid']]","['De Wolden, Nederland']","2    False
+Name: author.verified, dtype: bool"
+200,385346548,"['1557466614978826241', '1557451552792760320']","['1294576949738844161', '81828490']","['1557466614978826241', '1557451552792760320']","[['russland'], ['ukraine'], ['shame']]","['Kyiv, Ukraine', 'Kyiv, Ukraine']","3    True
+6    True
+Name: author.verified, dtype: bool"
+201,1357014936287924225,[],[],[],"[['boerenprotest'], ['oversterfte']]",[],"Series([], Name: author.verified, dtype: bool)"
+202,174091851,[],[],[],"[['usa'], ['eeuu'], ['apelacion'], ['letizia'], ['hunterbiden'], ['eeuu'], ['congreso']]",[],"Series([], Name: author.verified, dtype: bool)"
+203,268342221,['1557445692658008066'],['51441283'],['1557445692658008066'],"[['blessedbe'], ['rockyhorror'], ['heatwave'], ['blessedbe'], ['blessedbe'], ['blessedbe'], ['justsayin']]","['1-203-446-3669 * CT, USA']","4    False
+Name: author.verified, dtype: bool"
+204,1520343858118242304,['1557430285741854722'],['1544126824812199936'],['1557430285741854722'],"[['countryhumansbelarus'], ['countryhumansantarctica'], ['countryhumanschina'], ['countryhumanschina'], ['countryhumansfrance'], ['countryhumansgreece'], ['countryhumansgreece'], ['countryhumansottoman']]",['Beijing'],"0    False
+Name: author.verified, dtype: bool"
+205,47319066,['1557348497879441408'],['68440549'],['1557348497879441408'],[['ukraine']],['France'],"2    True
+Name: author.verified, dtype: bool"
+206,19706851,[],[],[],[['thread']],[],"Series([], Name: author.verified, dtype: bool)"
+207,31417996,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+208,785252209869066240,"['1557408602620665857', '1557407975270236162', '1557407917325910016', '1557407893967802370', '1557407855661260808', '1557407832030736384']","['1328822068100665357', '1490017121950224386', '1400264838908104711', '1233820718837698562', '1486022791161856004', '1490017121950224386']","['1557408602620665857', '1557407975270236162', '1557407917325910016', '1557407893967802370', '1557407855661260808', '1557407832030736384']","[['trabajadoresconlapatria'], ['trabajadoresconlapatria'], ['dezurdateam'], ['dezurdateam'], ['trabajadoresconlapatria'], ['lapatriateespera'], ['dezurdateam']]","['Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela']","1    False
+3    False
+5    False
+6    False
+7    False
+8    False
+Name: author.verified, dtype: bool"
+209,1211111593246785536,['1557116725715427333'],['861875437370314754'],['1557116725715427333'],"[['polizeigewalt'], ['polizeikrafte']]",[0],"8    False
+Name: author.verified, dtype: bool"
+210,222264309,[],[],[],"[['russiaisaterrorriststate'], ['ukrainewillwin'], ['russiaisaterrorriststate'], ['strongertogether'], ['ukraine'], ['turkish'], ['crimeaisukraine'], ['ukraine'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+211,1376800650957295621,"['1557424814788382721', '1557424793670062084']","['799501722133688320', '2451893905']","['1557424814788382721', '1557424793670062084']","[['israel'], ['perronne'], ['billgatesbioterrorist']]","['Québec', 'Québec']","1    False
+2    False
+Name: author.verified, dtype: bool"
+212,1556847491336835072,[],[],[],[['fypage']],[],"Series([], Name: author.verified, dtype: bool)"
+213,1388819128052506627,[],[],[],"[['standwithukraine'], ['russiaisaterroriststate'], ['armukrainenow'], ['standwithukraine'], ['banrussiantourists'], ['russiaisaterroriststate'], ['armukrainenow'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+214,1518874485415460869,['1557447506295939072'],['1518874485415460869'],['1557447506295939072'],"[['russiaukraineconflict'], ['washington'], ['standwithtaiwan']]",['Croatia'],"8    False
+Name: author.verified, dtype: bool"
+215,1133476313778540547,[],[],[],"[['usa'], ['africa'], ['russia'], ['africa'], ['usa'], ['pp4ppp'], ['cotedivoire'], ['sahel'], ['africa']]",[],"Series([], Name: author.verified, dtype: bool)"
+216,17710740,[],[],[],"[['socialmedia'], ['china'], ['noidahousingsociety'], ['himachalelections2022'], ['ritaora'], ['astrology'], ['suvenduadhikari'], ['tinadabi'], ['sushasanbabu'], ['covid19']]",[],"Series([], Name: author.verified, dtype: bool)"
+217,19507241,"['1557477444009037824', '1557361362443067393']","['29195679', '192141801']","['1557477444009037824', '1557361362443067393']","[['dotherightthing'], ['hungouttodry'], ['evusheld'], ['immunocompromised'], ['immunocompromised'], ['evusheld'], ['immunocompromised'], ['immunocompromised']]","['Oxford, England', 'Oxford, England']","0    False
+1    False
+Name: author.verified, dtype: bool"
+218,1515130594082050050,[],[],[],"[['skpoli'], ['skpoli'], ['skpoli'], ['skpoli'], ['skpoli'], ['skpoli'], ['skpoli'], ['skpoli'], ['skpoli']]",[],"Series([], Name: author.verified, dtype: bool)"
+219,2822294777,"['1557309442760351746', '1557023184267919361']","['1198909097908854784', '2822294777']","['1557309442760351746', '1557023184267919361']","[['mascherina'], ['disabilita'], ['voloinritardo'], ['vacanze'], ['partitipolitici'], ['elezionipolitiche2022'], ['personecondisabilita'], ['sport'], ['personecondisabilita'], ['disabilita']]","['Roma, Lazio', 'Roma, Lazio']","2    False
+6    False
+Name: author.verified, dtype: bool"
+220,204245399,[],[],[],"[['nhk_news'], ['nhk_news'], ['nhk_news'], ['nhk_news'], ['nhk_news'], ['nhk_news'], ['nhk_news'], ['nhk_news'], ['nhk_news']]",[],"Series([], Name: author.verified, dtype: bool)"
+221,1486281591056121857,['1556657299636097025'],['1451442115091714050'],['1556657299636097025'],"[['cnftproject'], ['cnftproject'], ['cnftproject'], ['cnft'], ['whitelistgiveaway']]",[0],"7    False
+Name: author.verified, dtype: bool"
+222,1441279280835534852,"['1557344456570900480', '1557344443497213952', '1557344250668298241', '1557206115686891520', '1557206049920131072', '1557205836895625216']","['1441279280835534852', '1441279280835534852', '2963668917', '1441279280835534852', '3280339711', '1357193045301633025']","['1557344456570900480', '1557344443497213952', '1557344250668298241', '1557206115686891520', '1557206049920131072', '1557205836895625216']","[['whatshappeninginmyanmar'], ['2022aug10coup'], ['whatshappeninginmyanmar'], ['whatshappeninginmyanmar'], ['2022aug10coup'], ['whatshappeninginmyanmar'], ['whatshappeninginmyanmar'], ['2022aug10coup']]","['Stati Uniti', 'Stati Uniti', 'Stati Uniti', 'Stati Uniti', 'Stati Uniti', 'Stati Uniti']","0    False
+1    False
+2    False
+6    False
+7    False
+8    False
+Name: author.verified, dtype: bool"
+223,87358629,"['1557464897339916288', '1557464469000814594', '1557464460687818752']","['1445454626522755078', '87358629', '87358629']","['1557464897339916288', '1557464469000814594', '1557464460687818752']","[['longcovid'], ['longcovid'], ['covid'], ['covid19'], ['stopthespread'], ['longcovid']]","[' ', ' ', ' ']","7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+224,16742053,[],[],[],"[['putin'], ['germany'], ['russia'], ['taiwan'], ['afghanistan'], ['taiwan'], ['taiwan']]",[],"Series([], Name: author.verified, dtype: bool)"
+225,1453838456203923462,[],[],[],"[['indiegame'], ['pcgaming'], ['pcgaming'], ['gaming']]",[],"Series([], Name: author.verified, dtype: bool)"
+226,1042307696,[],[],[],"[['russia'], [''], ['russian'], ['belarus'], ['ukraine'], ['ukraine'], ['ukraine'], ['eu']]",[],"Series([], Name: author.verified, dtype: bool)"
+227,517555392,"['1557354091017371652', '1557351705662087169', '1556913337170026496']","['502751959', '714821362502778880', '1435274022']","['1557354091017371652', '1557351705662087169', '1556913337170026496']","[['fallvonkabul'], ['stresstest'], ['medien']]","[0, 0, 0]","0    True
+1    True
+9    True
+Name: author.verified, dtype: bool"
+228,16145985,"['1557479955017129984', '1557452376843452417', '1557415525457842179', '1557391301758390272']","['16145985', '16145985', '16145985', '16145985']","['1557479955017129984', '1557452376843452417', '1557415525457842179', '1557391301758390272']","[['10agosto'], ['elezionipolitiche22'], ['elezionipolitiche22'], ['10agosto'], ['flattax'], ['10agosto'], ['10agosto'], ['9agosto'], ['elezionipolitiche2022']]","['Brussels, Belgium', 'Brussels, Belgium', 'Brussels, Belgium', 'Brussels, Belgium']","0    True
+1    True
+3    True
+4    True
+Name: author.verified, dtype: bool"
+229,2971201923,"['1557388347059978240', '1557290856343912451']","['1356158825825525761', '755687306078609408']","['1557388347059978240', '1557290856343912451']","[['donetsk'], ['ukraine'], ['ukrainewar']]","[0, 0]","6    False
+7    False
+Name: author.verified, dtype: bool"
+230,1553259127429906432,[],[],[],"[['victory'], ['russiaisaterroriststate'], ['ukrainian'], ['russiawarcrimes'], ['russiaisateroriststate'], ['russiaisaterroriststate'], ['slavaukraine'], ['russianukrainianwar'], ['ukrainewar'], ['world']]",[],"Series([], Name: author.verified, dtype: bool)"
+231,1250024850414096389,['1557093225978019842'],['154565819'],['1557093225978019842'],"[['action4justice'], ['action4justice'], ['onebar4all'], ['action4justice']]","['South East, England']","7    False
+Name: author.verified, dtype: bool"
+232,2384192587,['1557475332768563200'],['1207354669900668930'],['1557475332768563200'],[['rusofobia']],[0],"6    False
+Name: author.verified, dtype: bool"
+233,801130684811087872,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+234,1244560483526606852,"['1557098640119939073', '1554258973666250752']","['1509776148644909066', '1386285178629152768']","['1557098640119939073', '1554258973666250752']","[['russia'], ['countryhumans'], ['countryhumansgermany']]","[0, 0]","4    False
+9    False
+Name: author.verified, dtype: bool"
+235,1257898714917715969,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+236,1337754019163496450,[],[],[],"[['australianpolitics'], ['eggdonor'], ['podcast'], ['adoption'], ['consumertech'], ['disney'], ['trumpfbiraidpadlockmarlagorecordstruthsocial'], ['riverall']]",[],"Series([], Name: author.verified, dtype: bool)"
+237,1346708971344850946,[],[],[],"[['facts'], ['facts'], ['facts'], ['facts'], ['facts'], ['facts'], ['facts'], ['facts'], ['facts']]",[],"Series([], Name: author.verified, dtype: bool)"
+238,2950969565,[],[],[],"[['standwithbelarus'], ['standwithbelarus']]",[],"Series([], Name: author.verified, dtype: bool)"
+239,1461518230690971649,[],[],[],"[['covid'], ['smartnews'], ['covid']]",[],"Series([], Name: author.verified, dtype: bool)"
+240,471163803,[],[],[],"[['paris'], ['narbonne'], ['police'], ['grenoble'], ['seinesaintdenis'], ['qatar'], ['antisemite']]",[],"Series([], Name: author.verified, dtype: bool)"
+241,1449759568280657920,[],[],[],"[['roissycharlesdegaulle'], ['museedulouvre'], ['ukraine'], ['saintdenis']]",[],"Series([], Name: author.verified, dtype: bool)"
+242,77372998,[],[],[],"[['portiyportufamilia'], ['portiyportufamilia'], ['portiyportufamilia'], ['portiyportufamilia'], ['portiyportufamilia'], ['monumentoecumenico'], ['covid19'], ['monumentoecumenico'], ['coronavirus']]",[],"Series([], Name: author.verified, dtype: bool)"
+243,1508214843022655498,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+244,1210974114007015424,['1537026453753188352'],['14908508'],['1537026453753188352'],"[['teilhabe'], ['organizing']]","['Berlin, Deutschland']","7    False
+Name: author.verified, dtype: bool"
+245,1128208480119271424,[],[],[],[['casa']],[],"Series([], Name: author.verified, dtype: bool)"
+246,1284076810569953280,[],[],[],"[['digitalart'], ['photoediting'], ['posterdesign'], ['digitalart'], ['digitalart']]",[],"Series([], Name: author.verified, dtype: bool)"
+247,30987163,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+248,1308208119856627712,['1556197299344347136'],['1481165770663116807'],['1556197299344347136'],"[['joinalphacodes'], ['joinalphacodes'], ['domains'], ['webhosting'], ['joinalphacodes'], ['website']]","['Kampala, Uganda']","3    False
+Name: author.verified, dtype: bool"
+249,121768165,['1557391926139256832'],['556160767'],['1557391926139256832'],[['diplomacy']],['U.S.A.'],"0    False
+Name: author.verified, dtype: bool"
+250,1394033579126968322,"['1557482982167834624', '1557482917755990016', '1557482786574831616', '1557482762625437697', '1557482752735227904', '1557482744174632960', '1557482736159404032', '1557482706333683712', '1557482694497296384']","['1510743146040283144', '1328225623773483010', '1491160206654513153', '1491160206654513153', '1491160206654513153', '1491160206654513153', '1491160206654513153', '1491160206654513153', '1491160206654513153']","['1557482982167834624', '1557482917755990016', '1557482786574831616', '1557482762625437697', '1557482752735227904', '1557482744174632960', '1557482736159404032', '1557482706333683712', '1557482694497296384']","[['doublestandards'], ['endtigraysiege'], ['tigraysiege'], ['endtigraygenocide'], ['reconnecttigray'], ['tigraygenocide'], ['endtigraysiege'], ['tigraygenocide'], ['reconnecttigray']]","['Las Vegas, NV', 'Las Vegas, NV', 'Las Vegas, NV', 'Las Vegas, NV', 'Las Vegas, NV', 'Las Vegas, NV', 'Las Vegas, NV', 'Las Vegas, NV', 'Las Vegas, NV']","0    False
+1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+Name: author.verified, dtype: bool"
+251,852708006345162752,['1557322416854302720'],['388983706'],['1557322416854302720'],"[['enoughisenough'], ['surroundparliament'], ['freeassangenow'], ['freeassange']]",[0],"6    False
+Name: author.verified, dtype: bool"
+252,175072012,"['1555149998249189378', '1554110793133838342']","['175072012', '175072012']","['1555149998249189378', '1554110793133838342']","[['china'], ['security'], ['readinglist'], ['eucareers'], ['readinglist'], ['eucareers']]","['Paris/Brussels', 'Paris/Brussels']","4    False
+7    False
+Name: author.verified, dtype: bool"
+253,260380078,"['1557438425380290561', '1556736845815373825']","['1194701678202761217', '238285207']","['1557438425380290561', '1556736845815373825']","[['nasa'], ['dartmission'], ['sunrise'], ['backtoschool'], ['backtoschool']]","['Washington, DC', 'Washington, DC']","1    True
+6    True
+Name: author.verified, dtype: bool"
+254,22364234,['1557404899758981121'],['118459189'],['1557404899758981121'],[['ukraine']],"['Stendal, Sachsen-Anhalt']","2    True
+Name: author.verified, dtype: bool"
+255,1515124778205470729,[],[],[],"[['pressfreedom'], ['pressfreedom']]",[],"Series([], Name: author.verified, dtype: bool)"
+256,1546872019727310851,"['1557430312321286146', '1557399932201492480']","['929025607610109952', '1508194549730000899']","['1557430312321286146', '1557399932201492480']","[['coronawarnapp'], ['lauterbachluegt'], ['klabauterbach']]","['Hessen, Deutschland', 'Hessen, Deutschland']","8    False
+9    False
+Name: author.verified, dtype: bool"
+257,87679233,[],[],[],[['covid']],[],"Series([], Name: author.verified, dtype: bool)"
+258,1464903300642447368,['1557384119188865024'],['2874959663'],['1557384119188865024'],"[['donetsk'], ['turkey'], ['nazis'], ['donetsk'], ['nazi'], ['donbass'], ['peskov'], ['weareindigenous']]",['1098RZ Amsterdam'],"9    False
+Name: author.verified, dtype: bool"
+259,1517696955329228800,"['1557391094668738560', '1557340327622713345']","['1891490382', '1415305029221822464']","['1557391094668738560', '1557340327622713345']","[['soviet'], ['africa'], ['saudiarabia']]","[0, 0]","0    False
+6    False
+Name: author.verified, dtype: bool"
+260,1556715698134683648,"['1557480922278158339', '1557476231804817408', '1557475262354391051', '1557473896676429826', '1557468703318499328']","['1224837138497376261', '1131187974652203008', '1012040911147225100', '47375691', '19802110']","['1557480922278158339', '1557476231804817408', '1557475262354391051', '1557473896676429826', '1557468703318499328']","[['mittelfingermittwoch'], ['standwithukraine'], ['socialcreditsystem'], ['gesundheitsminister'], ['lindner'], ['corona']]","[0, 0, 0, 0, 0]","1    False
+4    False
+5    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+261,1002771233606430720,[],[],[],"[['winukraine'], ['research'], ['verbotprivaterreisenjetzt'], ['standwithukraine'], ['luneburgerheide'], ['natural'], ['sky']]",[],"Series([], Name: author.verified, dtype: bool)"
+262,1268611702540644352,"['1557453000901332993', '1557436928412336129', '1557422278660456449']","['1257376150696931331', '782840672600678401', '1434538970864488449']","['1557453000901332993', '1557436928412336129', '1557422278660456449']","[['gohomerussia'], ['ukrainewillwin'], ['cats'], ['stevenseagal'], ['anewday'], ['crimeaisukraine'], ['caturday'], ['banrussiantourists']]","['New Jersey, USA', 'New Jersey, USA', 'New Jersey, USA']","2    False
+5    False
+7    False
+Name: author.verified, dtype: bool"
+263,222929165,[],[],[],"[['jwnachschlag'], ['trenmaya'], ['lindner'], ['jwtitel'], ['wutwinter'], ['jwthema'], ['jwsport'], ['jwfeuilleton'], ['jwgesprach']]",[],"Series([], Name: author.verified, dtype: bool)"
+264,465792221,[],[],[],"[['otras'], ['motos'], ['titobessone'], ['f1'], ['f1'], ['tc'], ['pilotos'], ['argentina']]",[],"Series([], Name: author.verified, dtype: bool)"
+265,1064455718445740032,['1557413734867472386'],['330262748'],['1557413734867472386'],"[['fcb'], ['transfers'], ['fcb']]","['London, England']","6    False
+Name: author.verified, dtype: bool"
+266,16557497,['1557309681278005249'],['18834002'],['1557309681278005249'],"[['templin'], ['hassimnetz']]",['Germany'],"2    True
+Name: author.verified, dtype: bool"
+267,802813232515837952,[],[],[],"[['piffi'], ['trolli'], ['venalainenruletti']]",[],"Series([], Name: author.verified, dtype: bool)"
+268,1168793622248067072,[],[],[],"[['chernobyl'], ['eu'], ['russia'], ['ukrainian'], ['ukraine'], ['ukrainian'], ['ukraine'], ['weapons']]",[],"Series([], Name: author.verified, dtype: bool)"
+269,19283678,"['1555448116496592896', '1554827554527145988']","['2521325127', '263126632']","['1555448116496592896', '1554827554527145988']","[['tv'], ['cwb2022'], ['contentwithoutborders'], ['ukindies'], ['cwb2022'], ['ukindies'], ['contentwithoutboarders']]","['London', 'London']","4    False
+8    False
+Name: author.verified, dtype: bool"
+270,1526190415929810944,['1556910648541446146'],['1542046952505966592'],['1556910648541446146'],"[['animals'], ['animals']]",['kharkiv Ukraine '],"8    False
+Name: author.verified, dtype: bool"
+271,1347699807826178049,"['1557468414687547393', '1557467208883863553']","['1041766942351212546', '1041766942351212546']","['1557468414687547393', '1557467208883863553']","[['johnnydeppkeepswinning'], ['amberheardlsanabuser']]","[0, 0]","1    False
+2    False
+Name: author.verified, dtype: bool"
+272,980103515916984321,[],[],[],[['putin']],[],"Series([], Name: author.verified, dtype: bool)"
+273,1352540747074072578,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+274,767763405138690048,[],[],[],"[['gamedev'], ['wiedzmin'], ['thewitcher3wildhunt'], ['thewitcher3'], ['cyberpunk2077'], ['anniversary'], ['gamergirl']]",[],"Series([], Name: author.verified, dtype: bool)"
+275,1313210887591743489,[],[],[],"[['covid19'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+276,3549719123,[],[],[],"[['zshq'], ['raaaaa'], ['zshq']]",[],"Series([], Name: author.verified, dtype: bool)"
+277,2923120204,[],[],[],"[['trackingprisoner'], ['peopleneedingourhelp'], ['pc1735'], ['haybailpic']]",[],"Series([], Name: author.verified, dtype: bool)"
+278,2741035986,[],[],[],[['tangodown']],[],"Series([], Name: author.verified, dtype: bool)"
+279,1555700094472781826,"['1555976755751559177', '1555976576810061824', '1555976425714352128', '1555971402871853057']","['2198733733', '2855877522', '2198733733', '1457411587']","['1555976755751559177', '1555976576810061824', '1555976425714352128', '1555971402871853057']","[['ukraineunderattack'], ['jin'], ['telegram'], ['windows11themes'], ['kp360']]","[0, 0, 0, 0]","2    False
+3    False
+4    False
+9    False
+Name: author.verified, dtype: bool"
+280,1497540766129864711,['1557462105506430981'],['1519571299965800448'],['1557462105506430981'],"[['russia'], ['russianwarcrimesinukraine'], ['ukrainerussiawar'], ['russia'], ['ukraine'], ['warinukraine']]",['Ukraine'],"3    False
+Name: author.verified, dtype: bool"
+281,934810674450059265,[],[],[],"[['crimea'], ['ukrainerussiawar'], ['ukrainerussiawar'], ['ukrainerussiawar'], ['ukrainerussiawar'], ['ukrainerussiawar'], ['ukrainerussiawar'], ['ukrainerussiawar']]",[],"Series([], Name: author.verified, dtype: bool)"
+282,1369270626784055304,"['1557480632393015296', '1557479888117964803']","['1556715698134683648', '165840245']","['1557480632393015296', '1557479888117964803']","[['standwithukraine'], ['coronawarnapp'], ['demokratie']]","['Brandenburg, Deutschland', 'Brandenburg, Deutschland']","4    False
+7    False
+Name: author.verified, dtype: bool"
+283,1398016647567491076,[],[],[],"[['news'], ['weather'], ['dailypop'], ['washingtondc'], ['hairstylist'], ['catfish']]",[],"Series([], Name: author.verified, dtype: bool)"
+284,1391696701338132480,['1557447006385233920'],['1438574709029867522'],['1557447006385233920'],"[['reconquete'], ['reconquete']]",[0],"1    False
+Name: author.verified, dtype: bool"
+285,4633098981,[],[],[],"[['toulouse'], ['grele'], ['orages'], ['forteschaleurs'], ['bearn']]",[],"Series([], Name: author.verified, dtype: bool)"
+286,1511241682494312453,"['1557466120839381006', '1557466105358188544', '1557466055580205056']","['1510019483653521428', '1510019483653521428', '1510019483653521428']","['1557466120839381006', '1557466105358188544', '1557466055580205056']","[['ukraine'], ['ukraine'], ['lci_ukraine'], ['lci']]","[0, 0, 0]","7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+287,1456241792,[],[],[],[['atheism']],[],"Series([], Name: author.verified, dtype: bool)"
+288,1330586255722229762,"['1557425176186441731', '1557424028289273857']","['1170005964', '32958080']","['1557425176186441731', '1557424028289273857']","[['bmtl'], ['bill21'], ['new'], ['watch'], ['quebec'], ['bmtl']]","['Montréal, Québec', 'Montréal, Québec']","3    False
+4    False
+Name: author.verified, dtype: bool"
+289,381858912,"['1557479011927969793', '1557478626819440640', '1557477713144946689', '1557473938212634626']","['1495480590572961792', '1495480590572961792', '381858912', '1451974263435579393']","['1557479011927969793', '1557478626819440640', '1557477713144946689', '1557473938212634626']","[['kherson'], ['crimea'], ['biden'], ['biden'], ['trumpraid']]","[0, 0, 0, 0]","3    False
+4    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+290,1429084650010562563,['1553042884399620103'],['1397830202'],['1553042884399620103'],"[['alphaverse'], ['metacoaster'], ['alphaverse'], ['metaverse'], ['metaverse'], ['metaverse']]","['Paris, France']","9    False
+Name: author.verified, dtype: bool"
+291,1241970468845834241,['1556487400746106880'],['1369344336241057799'],['1556487400746106880'],"[['hauntedlocations'], ['thisisyourparaflixx']]","['Toronto, Ontario']","5    False
+Name: author.verified, dtype: bool"
+292,1322420269,[],[],[],"[['likud'], ['holocaust'], ['syria'], ['bolton'], ['china'], ['turkey'], ['ogemiyidurdurun'], ['dubai'], ['___']]",[],"Series([], Name: author.verified, dtype: bool)"
+293,3797735669,[],[],[],"[['justiceforjohnnydepp'], ['justiceforjohnnydepp']]",[],"Series([], Name: author.verified, dtype: bool)"
+294,1387129020077068288,['1557457660760440834'],['43859771'],['1557457660760440834'],"[['slavaukraini'], ['heroiamslava'], ['slavaukraini'], ['caricatur'], ['slavaukraini']]","['Minnesota, USA']","5    False
+Name: author.verified, dtype: bool"
+295,1522863419820490752,[],[],[],"[['rainbow'], ['photography'], ['marigolds'], ['openseanft'], ['nature'], ['artprojects'], ['artist'], ['photooftheday'], ['ring'], ['photography']]",[],"Series([], Name: author.verified, dtype: bool)"
+296,1468989229195620360,['1557382165389668354'],['1504675731913199639'],['1557382165389668354'],[['nuremberg2']],[0],"9    False
+Name: author.verified, dtype: bool"
+297,2554131522,"['1557448566796435458', '1557446795122380801', '1557445196299780098']","['1936999562', '704527972796071937', '1141653385']","['1557448566796435458', '1557446795122380801', '1557445196299780098']","[['ukraine'], ['no2appeasement'], ['ukraine'], ['ukraine'], ['iran'], ['_'], ['1988massacre'], ['iran']]","['Somewhere', 'Somewhere', 'Somewhere']","5    False
+6    False
+7    False
+Name: author.verified, dtype: bool"
+298,795284402809040900,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+299,3424952223,"['1557468794012012545', '1557414992621731841', '1556960392173473792', '1556762257283059715', '1556617096431288323']","['3424952223', '3424952223', '3424952223', '3424952223', '3424952223']","['1557468794012012545', '1557414992621731841', '1556960392173473792', '1556762257283059715', '1556617096431288323']","[['naturephotography'], ['naturephotography'], ['naturephotography'], ['naturephotography'], ['naturephotography'], ['naturephotography'], ['naturephotography'], ['naturephotography'], ['naturephotography'], ['naturephotography']]","['In your heart 🦋 𑜞᭄', 'In your heart 🦋 𑜞᭄', 'In your heart 🦋 𑜞᭄', 'In your heart 🦋 𑜞᭄', 'In your heart 🦋 𑜞᭄']","0    False
+2    False
+4    False
+6    False
+8    False
+Name: author.verified, dtype: bool"
+300,326316197,[],[],[],[['ucraina']],[],"Series([], Name: author.verified, dtype: bool)"
+301,1519594794565177344,"['1557473865500184576', '1557473825423491073', '1557473718896582657']","['406382833', '406382833', '406382833']","['1557473865500184576', '1557473825423491073', '1557473718896582657']","[['immunocompromised'], ['evusheld'], ['covid'], ['covid'], ['nationalscandal'], ['evusheld'], ['immunocompromised']]","[0, 0, 0]","5    False
+6    False
+8    False
+Name: author.verified, dtype: bool"
+302,808992203238424576,"['1557479112696111106', '1557476455352877058']","['2415072836', '1356158825825525761']","['1557479112696111106', '1557476455352877058']","[['crimeaisukraine'], ['ukraine'], ['british'], ['ukraine']]","[0, 0]","4    False
+7    False
+Name: author.verified, dtype: bool"
+303,1434398515577249799,"['1557459884274339841', '1557268871207219200', '1557190493473509376']","['1454574462473363459', '1480833961681117184', '1440623046738382853']","['1557459884274339841', '1557268871207219200', '1557190493473509376']","[['ukraine'], ['ukraine'], ['cardano'], ['cardano'], ['adaninjaz']]","['Ninava', 'Ninava', 'Ninava']","0    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+304,1252132942987567105,[],[],[],"[['nadlesnictwodojlidy'], ['nadlesnictwobaligrod'], ['nadlesnictwolutowiska'], ['nadlesnictwolutowko'], ['nadlesnictwolubliniec'], ['nadlesnictwozamrzenica'], ['nadlesnictwobolewice'], ['nadlesnictwobolewice'], ['nadlesnictwobaligrod']]",[],"Series([], Name: author.verified, dtype: bool)"
+305,1178296273264369665,[],[],[],"[['alidavali'], ['botd']]",[],"Series([], Name: author.verified, dtype: bool)"
+306,38170599,[],[],[],"[['perronne'], ['lrem'], ['macron']]",[],"Series([], Name: author.verified, dtype: bool)"
+307,1541906272940830720,[],[],[],"[['ukrainecrisis'], ['uk'], ['wallstreet'], ['deliveroo'], ['cocacola']]",[],"Series([], Name: author.verified, dtype: bool)"
+308,856533847,"['1545001099052175361', '1543603268273799168', '1543597424920379393', '1543216234539384835']","['968225418', '517555392', '517555392', '869491052029374464']","['1545001099052175361', '1543603268273799168', '1543597424920379393', '1543216234539384835']","[['kanzler'], ['johnson'], ['klima'], ['klimaziele'], ['fragselbst'], ['fragselbst'], ['ard']]","['Berlino, Germania', 'Berlino, Germania', 'Berlino, Germania', 'Berlino, Germania']","2    True
+4    True
+6    True
+9    True
+Name: author.verified, dtype: bool"
+309,142393421,[],[],[],"[['globonews'], ['globonews'], ['globonews'], ['globonews'], ['globonews'], ['globonews'], ['globonews'], ['globonews'], ['globonews'], ['globonews']]",[],"Series([], Name: author.verified, dtype: bool)"
+310,1326328073709645824,[],[],[],[['justiceforjohnnydepp']],[],"Series([], Name: author.verified, dtype: bool)"
+311,1115874631,[],[],[],"[['cgtnamerica'], ['cgtnamerica'], ['cgtnamerica'], ['cgtnamerica'], ['cgtnamerica'], ['cgtnamerica'], ['cgtnamerica'], ['cgtnamerica'], ['cgtnamerica'], ['cgtnamerica']]",[],"Series([], Name: author.verified, dtype: bool)"
+312,1452960449574670339,"['1557478375580737540', '1557477113468444673', '1557477078613778434', '1557477061190717440', '1557472148846944262', '1557472138818424832', '1557472127514730503', '1557471097041424398']","['1356356911478824960', '254632929', '254632929', '254632929', '254632929', '254632929', '254632929', '118864905']","['1557478375580737540', '1557477113468444673', '1557477078613778434', '1557477061190717440', '1557472148846944262', '1557472138818424832', '1557472127514730503', '1557471097041424398']","[['10ago'], ['10ago'], ['10ago'], ['cantvlohaceposible'], ['10ago'], ['cantvlohaceposible'], ['10ago'], ['trabajadoresconlapatria']]","[0, 0, 0, 0, 0, 0, 0, 0]","2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+313,214708464,['1557448396436344832'],['1017551740319797248'],['1557448396436344832'],"[['haiti'], ['cdnpoli'], ['cdnpoli']]","['Montréal, Québec']","2    False
+Name: author.verified, dtype: bool"
+314,1539053415262826499,['1557476835465781256'],['1515267512413593601'],['1557476835465781256'],"[['amberheardisanabuser'], ['amberheardisanabuser'], ['amberturd'], ['justiceforjohnnydepp'], ['amberheardisanabuser']]",[0],"7    False
+Name: author.verified, dtype: bool"
+315,1514547915422765062,['1556099413931851776'],['1518742556942737410'],['1556099413931851776'],"[['nfts'], ['airdrop'], ['mitsubishi']]",[0],"7    False
+Name: author.verified, dtype: bool"
+316,3350950445,[],[],[],"[['johnnydeppisaking'], ['johnnydeppgotjustice']]",[],"Series([], Name: author.verified, dtype: bool)"
+317,1068337838,['1557407381050507269'],['1324067252317114374'],['1557407381050507269'],[['allefurlutzi']],"['Berlin, Germany']","2    True
+Name: author.verified, dtype: bool"
+318,96232951,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+319,778587214003462144,[],[],[],[['glazersout']],[],"Series([], Name: author.verified, dtype: bool)"
+320,1514994478377062402,"['1557478834647203846', '1557440420103307266']","['2370797451', '1487180601941803013']","['1557478834647203846', '1557440420103307266']","[['usawarcriminal'], ['usawarcriminal']]","[0, 0]","1    False
+8    False
+Name: author.verified, dtype: bool"
+321,930075185121808384,"['1557283535911886848', '1557271816770560000']","['274035504', '2330514919']","['1557283535911886848', '1557271816770560000']","[['wearenato'], ['wearenato'], ['sabiasque'], ['integracionenelmultidominio'], ['nato'], ['wearenato'], ['wearenato']]","['Bruselas, Bélgica', 'Bruselas, Bélgica']","5    True
+6    True
+Name: author.verified, dtype: bool"
+322,1450867630496264197,['1557463321867157504'],['193757522'],['1557463321867157504'],"[['johnnydeppkeepswinning'], ['bobdylan'], ['justiceforjohnnydepp']]",[0],"8    False
+Name: author.verified, dtype: bool"
+323,1522946699160920065,[],[],[],"[['covid19'], ['travelgram'], ['covid19'], ['instatravels'], ['traveling'], ['traveler'], ['covid19'], ['traveladdict'], ['covid19'], ['traveladdict']]",[],"Series([], Name: author.verified, dtype: bool)"
+324,978184280,[],[],[],"[['albuquerque'], ['armenie']]",[],"Series([], Name: author.verified, dtype: bool)"
+325,1499763123603050497,[],[],[],"[['stopputin'], ['putinswar'], ['ukraineunderattack'], ['stopputin'], ['istandwithukraine'], ['putinwarcrimes'], ['ukraine'], ['istandwithukraine'], ['russiawarcrimes'], ['standwithukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+326,249862904,[],[],[],"[['oakland'], ['caughtintheact'], ['oakland'], ['smallbusinessowner'], ['sanfrancisco']]",[],"Series([], Name: author.verified, dtype: bool)"
+327,1499443706692358144,"['1557440676266029056', '1557440666937999362', '1557440526063919104', '1557440513841811457', '1557440458825121793', '1557440381578625027', '1557440321688068096']","['1440402539082444802', '1440402539082444802', '1499443706692358144', '1499443706692358144', '1499443706692358144', '1498326112820207619', '1493730311741448195']","['1557440676266029056', '1557440666937999362', '1557440526063919104', '1557440513841811457', '1557440458825121793', '1557440381578625027', '1557440321688068096']","[['tigrayfamine'], ['tigraysiege'], ['endtigrayfamine'], ['endtigraysiege'], ['tigraygenocide646days'], ['tigraygenocide646days'], ['endtigraysiege'], ['endtigraysiege'], ['endtigrayfamine'], ['endtigrayfamine']]","['Allentown, PA', 'Allentown, PA', 'Allentown, PA', 'Allentown, PA', 'Allentown, PA', 'Allentown, PA', 'Allentown, PA']","0    False
+1    False
+2    False
+3    False
+4    False
+6    False
+8    False
+Name: author.verified, dtype: bool"
+328,1556178777872408576,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+329,740989553960452096,"['1557357690325712896', '1557331844403806209']","['740989553960452096', '953078630']","['1557357690325712896', '1557331844403806209']","[['chinese'], ['chinese'], ['srilanka']]","[0, 0]","7    True
+9    True
+Name: author.verified, dtype: bool"
+330,1503830879608745992,[],[],[],"[['magatears'], ['magats'], ['magameltdown']]",[],"Series([], Name: author.verified, dtype: bool)"
+331,188143601,"['1557482866682241024', '1557482734356144128', '1557482508929093632', '1557482496228757504']","['1309762062', '2608740770', '405259565', '113457526']","['1557482866682241024', '1557482734356144128', '1557482508929093632', '1557482496228757504']","[['auspol'], ['auspol'], ['alcoholawareness'], ['fasdawareness']]","['Mt Morgan', 'Mt Morgan', 'Mt Morgan', 'Mt Morgan']","1    False
+3    False
+4    False
+5    False
+Name: author.verified, dtype: bool"
+332,1498963157456498691,[],[],[],"[['standwithukraine'], ['standwithukraine'], ['standwithukraine'], ['standwithukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+333,3354102262,['1557445919154520066'],['1030423829083025408'],['1557445919154520066'],"[['sgerma'], ['fdprausausderregierung']]","['Berlin, Deutschland']","0    True
+Name: author.verified, dtype: bool"
+334,1472722404593913857,[],[],[],"[['laalsinghchaddha'], ['shahbazgill']]",[],"Series([], Name: author.verified, dtype: bool)"
+335,890011658839441408,[],[],[],"[['ukrainewar'], ['russia'], ['russia'], ['ukrainewar'], ['russia'], ['russia'], ['ukraine'], ['russiaukrainewar'], ['ukrainewar']]",[],"Series([], Name: author.verified, dtype: bool)"
+336,1529882865978204162,[],[],[],"[['reduireausilence'], ['bouvines'], ['maidan'], ['tortures'], ['rpd']]",[],"Series([], Name: author.verified, dtype: bool)"
+337,1536692358758137856,"['1557437458337472513', '1557437430445543425', '1557437369019686913', '1557437355266555905', '1557420884859752450', '1557391585792385024', '1557362358359625728']","['1556692583505592321', '1492197849760677897', '1506338005887422468', '1362321651166232577', '1490263320082980868', '1017540973562355712', '1017540973562355712']","['1557437458337472513', '1557437430445543425', '1557437369019686913', '1557437355266555905', '1557420884859752450', '1557391585792385024', '1557362358359625728']","[['endtigrayfamine'], ['tigraygenocide'], ['tigrayfamine'], ['endtigrayfamine'], ['abiytoicc'], ['tigraygenocide'], ['tigraygenocide'], ['endtigraysiege'], ['tigrayissuffering'], ['tigray']]","[0, 0, 0, 0, 0, 0, 0]","0    False
+1    False
+2    False
+3    False
+5    False
+7    False
+8    False
+Name: author.verified, dtype: bool"
+338,869491052029374464,"['1555880252429197312', '1537324124002992130', '1530991791889080324']","['714821362502778880', '856533847', '791587123']","['1555880252429197312', '1537324124002992130', '1530991791889080324']","[['grune'], ['spd'], ['fragselbst'], ['ard'], ['ard'], ['ukraine'], ['berichtausberlin'], ['petersberg']]","[0, 0, 0]","0    False
+7    False
+8    False
+Name: author.verified, dtype: bool"
+339,4012126155,[],[],[],"[[''], [''], [''], ['']]",[],"Series([], Name: author.verified, dtype: bool)"
+340,279673090,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+341,80653307,['1557244362140131328'],['35803565'],['1557244362140131328'],[['freevladimir']],['London'],"4    False
+Name: author.verified, dtype: bool"
+342,1403178120824475648,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+343,163018653,[],[],[],"[['ukrainewillwin'], ['armukrainenow']]",[],"Series([], Name: author.verified, dtype: bool)"
+344,704527972796071937,"['1557395257888837635', '1557395232173555713', '1557394912718589953', '1557394129566457861', '1557394107286306818', '1557393889052561408', '1557393827450740736', '1557393804545630209', '1557393652531580932']","['704527972796071937', '704527972796071937', '704527972796071937', '704527972796071937', '704527972796071937', '704527972796071937', '704527972796071937', '704527972796071937', '704527972796071937']","['1557395257888837635', '1557395232173555713', '1557394912718589953', '1557394129566457861', '1557394107286306818', '1557393889052561408', '1557393827450740736', '1557393804545630209', '1557393652531580932']","[['novisa4raisi'], ['__'], ['_'], ['___'], ['_1444'], ['_1444'], ['_'], ['saeersabil'], ['__'], ['__']]","['الشرق الاوسط', 'الشرق الاوسط', 'الشرق الاوسط', 'الشرق الاوسط', 'الشرق الاوسط', 'الشرق الاوسط', 'الشرق الاوسط', 'الشرق الاوسط', 'الشرق الاوسط']","1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+345,16476536,[],[],[],"[['statiuniti'], ['donaldtrump'], ['casapound'], ['cottarelli'], ['fratoianni'], ['calenda'], ['taiwan'], ['biden'], ['berlusconi'], ['russia']]",[],"Series([], Name: author.verified, dtype: bool)"
+346,1399327083617259521,[],[],[],[['ukrainewillwin']],[],"Series([], Name: author.verified, dtype: bool)"
+347,283943058,"['1557380717356662790', '1557380705474281474', '1557379659930763265']","['1268810710513070080', '1268810710513070080', '1133057554785947648']","['1557380717356662790', '1557380705474281474', '1557379659930763265']","[['youthsummercamps_ijt'], ['youthsummercamps_ijt'], ['youthsummercamps_ijt'], ['youthsummercamps_ijt'], ['youthsummercamps_ijt'], ['youthsummercamps_ijt'], ['youthsummercamps_ijt'], ['__'], ['__'], ['__']]","['Lahore Pakistan', 'Lahore Pakistan', 'Lahore Pakistan']","1    True
+2    True
+3    True
+Name: author.verified, dtype: bool"
+348,4211046952,[],[],[],"[[''], ['notatarget'], ['wbw2022'], ['wbw2022'], ['wbw2022'], ['wbw2022'], [''], ['ukraine'], [''], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+349,752758467937574912,"['1556945835954520071', '1556945735744163840', '1556945684561027072']","['2214239180', '984729214032207872', '78330131']","['1556945835954520071', '1556945735744163840', '1556945684561027072']","[['indigenes'], ['defensemquidefensa'], ['perlapau'], ['ciutatsdh'], ['diainternacionalpoblesindigenes']]","[0, 0, 0]","0    False
+1    False
+2    False
+Name: author.verified, dtype: bool"
+350,1050774624,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+351,725704783,[],[],[],"[['100daysofcode'], ['100daysofcodechallenge'], ['100daysofcode']]",[],"Series([], Name: author.verified, dtype: bool)"
+352,1059322663250939905,[],[],[],"[['covid'], ['sarsstrike'], ['sarsstrike'], ['sarsstrike'], ['paxlovid'], ['paxlovid']]",[],"Series([], Name: author.verified, dtype: bool)"
+353,1102047326,[],[],[],"[['ukraine'], [''], [''], ['ukraine'], [''], [''], ['ukraine'], ['ukraine'], ['ukraine'], ['armukrainenow']]",[],"Series([], Name: author.verified, dtype: bool)"
+354,19816088,"['1557460087135944708', '1557459966939856897', '1557332068853583872']","['388818684', '330377097', '32416907']","['1557460087135944708', '1557459966939856897', '1557332068853583872']","[['newsroomsforall'], ['thameswater'], ['fbi'], ['ukrainerussia'], ['bbcos'], ['polio'], ['seine']]","['London, England', 'London, England', 'London, England']","1    False
+2    False
+5    False
+Name: author.verified, dtype: bool"
+355,142033532,"['1557354586498801665', '1557334007800643593']","['22127823', '22127823']","['1557354586498801665', '1557334007800643593']","[['moharram2022'], ['bahriatown'], ['bahriatown'], ['samaatv']]","['Pakistan🇵🇰 💖', 'Pakistan🇵🇰 💖']","4    True
+6    True
+Name: author.verified, dtype: bool"
+356,3326670143,[],[],[],"[['freeaccess'], ['freeaccess'], ['freeaccess'], ['iceland'], ['openaccess'], ['muslimbrotherhood']]",[],"Series([], Name: author.verified, dtype: bool)"
+357,9019142,[],[],[],"[['vaccinemandates'], ['arrest'], ['firstnations'], ['arrest'], ['arrest'], ['vaccinemandates'], ['arrest'], ['criminals']]",[],"Series([], Name: author.verified, dtype: bool)"
+358,367153025,"['1557474709364678657', '1557473059149434880']","['382545373', '1468603672708149251']","['1557474709364678657', '1557473059149434880']","[['jesoutiensperronne'], ['jesoutiensperronne'], ['monkeypox']]","['Bretagne', 'Bretagne']","4    False
+6    False
+Name: author.verified, dtype: bool"
+359,1317610394710503424,[],[],[],"[['magatears'], ['darkbrandonrising'], ['magatears'], ['magameltdown']]",[],"Series([], Name: author.verified, dtype: bool)"
+360,1513544472839299076,[],[],[],"[['vaccines'], ['klausschwab'], ['goodtobewhite']]",[],"Series([], Name: author.verified, dtype: bool)"
+361,1428758747845992450,[],[],[],"[['redsultan'], ['greekgenocide'], ['islam'], ['muslims'], ['armenians'], ['hamidianregiments'], ['berlin']]",[],"Series([], Name: author.verified, dtype: bool)"
+362,43859771,[],[],[],[['caricatur']],[],"Series([], Name: author.verified, dtype: bool)"
+363,1151913018936053760,[],[],[],[['goblue']],[],"Series([], Name: author.verified, dtype: bool)"
+364,1460538526186057729,[],[],[],"[['lfc'], ['lfc'], ['lfc'], ['fcbarcelona'], ['lfc'], ['lfc'], ['lfc'], ['lfc'], ['lfc']]",[],"Series([], Name: author.verified, dtype: bool)"
+365,1338994562090602497,"['1557403319517286400', '1557403308230426624']","['66369181', '66369181']","['1557403319517286400', '1557403308230426624']","[['wearenato'], ['wearenato'], ['wearenato']]","['The Pentagon', 'The Pentagon']","0    True
+1    True
+Name: author.verified, dtype: bool"
+366,1089710815597547520,[],[],[],"[['trending'], ['world'], ['mjmnewstoday'], ['mjmnewstoday'], ['sadsad'], ['unitednationsun'], ['rt'], ['destinations'], ['mjmnews'], ['travel']]",[],"Series([], Name: author.verified, dtype: bool)"
+367,1077919783021146115,[],[],[],"[['gbnews'], ['gbnews']]",[],"Series([], Name: author.verified, dtype: bool)"
+368,214614191,"['1557119663976448002', '1557028533930758144']","['214614191', '108636964']","['1557119663976448002', '1557028533930758144']","[['wednesdaywisdom'], ['finnslaw'], ['policedog'], ['finnslaw'], ['finnslawpart2']]","['Buntingford, East', 'Buntingford, East']","1    True
+4    True
+Name: author.verified, dtype: bool"
+369,187796215,[],[],[],"[['leaks'], ['crime'], ['dictatorship'], ['military'], ['spacejunk'], ['military'], ['military'], ['military'], ['threats'], ['booklovers']]",[],"Series([], Name: author.verified, dtype: bool)"
+370,2674405074,[],[],[],"[['ukrainian'], ['ukraine'], ['russian'], ['russian'], ['russian'], ['russian'], ['russian'], ['russia'], ['russian'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+371,1131225274635431936,[],[],[],"[['sieteindegni'], ['iovotoitaliaviva'], ['iovotoitaliaviva']]",[],"Series([], Name: author.verified, dtype: bool)"
+372,3568692616,['1557449524318273537'],['1386035970886275072'],['1557449524318273537'],"[['sleepyjoe'], ['prosieben'], ['gendergaga']]",[0],"4    False
+Name: author.verified, dtype: bool"
+373,1328317881700941825,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+374,1488275208029061123,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+375,1546263516176326657,['1557463490197069826'],['1546263516176326657'],['1557463490197069826'],"[['russiaisaterroriststate'], ['slavaukraini'], ['ukraine']]",['New York'],"2    False
+Name: author.verified, dtype: bool"
+376,1165613755511783426,[],[],[],[['commonwealthgames2022']],[],"Series([], Name: author.verified, dtype: bool)"
+377,1356158825825525761,[],[],[],[['ukraine']],[],"Series([], Name: author.verified, dtype: bool)"
+378,1853479915,"['1557460457073557504', '1557452968320012289', '1557452303434743808']","['2182251391', '712941191', '1341843643309694982']","['1557460457073557504', '1557452968320012289', '1557452303434743808']","[['maskenpflicht'], ['covid19'], ['maskensindkeinmildesmittel'], ['sarscov2'], ['munch']]","['Potsdam | Witten', 'Potsdam | Witten', 'Potsdam | Witten']","1    False
+2    False
+4    False
+Name: author.verified, dtype: bool"
+379,1043457866244517893,['1557443696701968388'],['1043457866244517893'],['1557443696701968388'],"[['moma'], ['klimakrise']]",[0],"1    False
+Name: author.verified, dtype: bool"
+380,1536276645660835840,['1557478864573587456'],['2450265194'],['1557478864573587456'],"[['buonanotte'], ['draghi'], ['assassini'], ['vaccinokiller']]",[0],"2    False
+Name: author.verified, dtype: bool"
+381,2349991320,"['1557478878389616646', '1557478855711113216', '1557478835716751362', '1557478783585763335', '1557413528738447360', '1557413512279908355', '1557413454692159497', '1557113793540399105', '1557113772963205121']","['1533005706974076931', '1533005706974076931', '1533005706974076931', '1533005706974076931', '1533005706974076931', '1533005706974076931', '1533005706974076931', '2349991320', '2349991320']","['1557478878389616646', '1557478855711113216', '1557478835716751362', '1557478783585763335', '1557413528738447360', '1557413512279908355', '1557413454692159497', '1557113793540399105', '1557113772963205121']","[['onu'], ['ukraine'], ['gregoire'], ['bodyboard'], ['zelensky'], ['twitter'], ['ukraine'], ['schrodinger'], ['guerreenukraine']]","[0, 0, 0, 0, 0, 0, 0, 0, 0]","0    False
+1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+382,2835451658,[],[],[],"[['antifa'], ['antifa'], ['antifa']]",[],"Series([], Name: author.verified, dtype: bool)"
+383,386800314,[],[],[],"[['ukraine'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+384,1256252656261246976,['1556240205144883200'],['108636964'],['1556240205144883200'],"[['policedog'], ['thinbluepawfoundation']]",['United Kingdom'],"0    True
+Name: author.verified, dtype: bool"
+385,1511686544943460363,[],[],[],"[['russes'], ['lion'], ['poutine'], ['poutine'], ['renard']]",[],"Series([], Name: author.verified, dtype: bool)"
+386,2388075212,[],[],[],"[['ukraine'], ['ukraine'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+387,1516345345512517632,[],[],[],"[['fella'], ['wearenafo']]",[],"Series([], Name: author.verified, dtype: bool)"
+388,27974637,"['1557452060219564034', '1557438227996368896', '1557438093971623936', '1557436851849404416']","['1089563734677340160', '27974637', '27974637', '488767960']","['1557452060219564034', '1557438227996368896', '1557438093971623936', '1557436851849404416']","[['stoppuckfair'], ['animalcruelty'], ['puckfair'], ['puckfair'], ['bangreyhoundracing']]","['Ireland', 'Ireland', 'Ireland', 'Ireland']","0    False
+3    False
+4    False
+7    False
+Name: author.verified, dtype: bool"
+389,1329510487952924673,"['1557482868728889352', '1557480458362953730', '1557480281816317953']","['1551935359105335302', '996323616672301056', '1520415912138002432']","['1557482868728889352', '1557480458362953730', '1557480281816317953']","[['johnnydepp'], ['johnnydeppisalegend'], ['johnnydeppkeepswinning']]","[0, 0, 0]","1    False
+5    False
+8    False
+Name: author.verified, dtype: bool"
+390,1503407777330475009,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+391,1493203823845949453,"['1557482570518077447', '1557482548762140672', '1557482525743878145', '1557482506387165185', '1557482487261134848', '1557482468537663500', '1557482448535052288', '1557482430835171331', '1557482412464111616', '1557482392864145409']","['1532648886673760257', '1532648886673760257', '1532648886673760257', '1532648886673760257', '1453719815160430601', '1453719815160430601', '1453719815160430601', '1448086934039969801', '1448086934039969801', '1448086934039969801']","['1557482570518077447', '1557482548762140672', '1557482525743878145', '1557482506387165185', '1557482487261134848', '1557482468537663500', '1557482448535052288', '1557482430835171331', '1557482412464111616', '1557482392864145409']","[['endtigrayfamine'], ['eritreantroopsoutoftigray'], ['stoptigraysiege'], ['tigraygenocide'], ['endtigraysiege'], ['endtigraysiege'], ['endtigraysiege'], ['tigraygenocide'], ['tigrayanslivesmatter'], ['tigraycantwait']]","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]","0    False
+1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+392,2356127598,[],[],[],"[['us'], ['latvia'], ['ukraine'], ['ukraine'], ['standwithukraine'], ['su25'], ['stoprussianaggression'], ['russia'], ['beijing'], ['china']]",[],"Series([], Name: author.verified, dtype: bool)"
+393,3018287127,[],[],[],"[['tomorrowspaperstoday'], ['tomorrowspaperstoday'], ['tomorrowspaperstoday'], ['tomorrowspaperstoday'], ['tomorrowspaperstoday'], ['tomorrowspaperstoday'], ['tomorrowspaperstoday']]",[],"Series([], Name: author.verified, dtype: bool)"
+394,304968157,"['1557458807671984130', '1557438317049925632', '1557437572544139264']","['1217094231031980034', '1346890637690499074', '302273162']","['1557458807671984130', '1557438317049925632', '1557437572544139264']","[['lyme'], ['zelenko'], ['jesoutiensperronne'], ['laveriteprendlescalier'], ['macron1']]","[0, 0, 0]","1    False
+5    False
+7    False
+Name: author.verified, dtype: bool"
+395,21192703,['1557383561182838785'],['26550418'],['1557383561182838785'],[['visaban']],['Tartu/London/MK'],"9    False
+Name: author.verified, dtype: bool"
+396,1413515249756540928,[],[],[],"[['ligadeguerreros'], ['ligadeguerreros'], ['ligadeguerreros'], ['ligadeguerreros'], ['ligadeguerreros'], ['ligadeguerreros'], ['ligadeguerreros'], ['ligadeguerreros'], ['ligadeguerreros'], ['ligadeguerreros']]",[],"Series([], Name: author.verified, dtype: bool)"
+397,1379066754,['1557331767924850692'],['52332962'],['1557331767924850692'],"[['saporischschja'], ['zaporizhzhia']]",['Wendland/Germany '],"7    True
+Name: author.verified, dtype: bool"
+398,175495448,"['1557081885821517825', '1557081857371553793', '1555279861870170115', '1554901574228578305']","['15649433', '160946337', '146569971', '146569971']","['1557081885821517825', '1557081857371553793', '1555279861870170115', '1554901574228578305']","[['covid19'], ['traveltiptuesday'], ['traveltiptuesday'], ['covid19'], ['travel'], ['monkeypox'], ['covid19'], ['monkeypox']]","['Atlanta, GA', 'Atlanta, GA', 'Atlanta, GA', 'Atlanta, GA']","1    True
+2    True
+5    True
+7    True
+Name: author.verified, dtype: bool"
+399,1891490382,[],[],[],"[['melitopol'], ['crimea'], ['crimea'], ['kharkiv']]",[],"Series([], Name: author.verified, dtype: bool)"
+400,1497193035028963365,[],[],[],"[['boycottrussia'], ['russiaisaterroriststate']]",[],"Series([], Name: author.verified, dtype: bool)"
+401,1436875183088934917,[],[],[],[['fyp']],[],"Series([], Name: author.verified, dtype: bool)"
+402,256454827,[],[],[],"[['changementclimatique'], ['usa'], ['trump']]",[],"Series([], Name: author.verified, dtype: bool)"
+403,1451974263435579393,['1557369051453718528'],['1323357436497985537'],['1557369051453718528'],"[['maga'], ['trumpraid'], ['trumpraid'], ['trump']]",[0],"5    False
+Name: author.verified, dtype: bool"
+404,1259885100415795200,"['1557479141812871168', '1557452672176951300', '1557447979031662592', '1557447957766619138', '1557447263240216576', '1557427908272087040', '1557427186612801538']","['14872237', '956064977374318592', '144157841', '144157841', '144157841', '45013575', '1491940917653168137']","['1557479141812871168', '1557452672176951300', '1557447979031662592', '1557447957766619138', '1557447263240216576', '1557427908272087040', '1557427186612801538']","[['champion5'], ['vuelayulivuela'], ['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera'], ['coma'], ['lapatriateespera'], ['lapatriateespera']]","['Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela']","0    False
+1    False
+4    False
+5    False
+6    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+405,93474576,[],[],[],"[['nieuwsuur'], ['nieuwsuur'], ['nieuwsuur'], ['nieuwsuur'], ['nieuwsuur'], ['nieuwsuur'], ['nieuwsuur'], ['nieuwsuur'], ['nieuwsuur']]",[],"Series([], Name: author.verified, dtype: bool)"
+406,1029161688942174210,[],[],[],[['__']],[],"Series([], Name: author.verified, dtype: bool)"
+407,797398947182637056,[],[],[],"[['val2022'], ['val2022'], ['svpol'], ['svpol'], ['svpol']]",[],"Series([], Name: author.verified, dtype: bool)"
+408,2451893905,"['1553880559436300291', '1553661304136552448', '1551686251924840448']","['252233750', '78957336', '1598536820']","['1553880559436300291', '1553661304136552448', '1551686251924840448']","[['perronne'], ['passvaccinal'], ['expressgate'], ['bioterrorism']]","[0, 0, 0]","6    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+409,956171191,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+410,1451442115091714050,"['1557289229788811264', '1557212179094388737']","['1491933188658462720', '28078506']","['1557289229788811264', '1557212179094388737']","[['cnft'], ['cnftprojects'], ['cardanoada'], ['cardano']]","['Cardano Blockchain', 'Cardano Blockchain']","2    False
+3    False
+Name: author.verified, dtype: bool"
+411,2149139088,[],[],[],"[['lesgrossestetes'], ['lesgrossestetes'], ['lesgrossestetes'], ['lesgrossestetes'], ['lesgrossestetes'], ['lesgrossestetes'], ['lesgrossestetes'], ['lesgrossestetes'], ['lesgrossestetes'], ['lesgrossestetes']]",[],"Series([], Name: author.verified, dtype: bool)"
+412,20968625,[],[],[],"[['amberturd'], ['johnnydeppdeservesanapology'], ['micheleduaberisamisandrist'], ['micheledauberisamisandrist']]",[],"Series([], Name: author.verified, dtype: bool)"
+413,1113439934273036288,[],[],[],[['']],[],"Series([], Name: author.verified, dtype: bool)"
+414,46837333,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+415,1298684865894928386,[],[],[],"[['learncode'], ['100daysofcode'], ['100daysofcode']]",[],"Series([], Name: author.verified, dtype: bool)"
+416,1513183558113841156,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+417,1465242782944145413,[],[],[],"[['mgtv'], ['elazg'], ['haftalkbasntoplants'], ['kitapcekilis'], ['icatlar'], ['hicriylbas1444'], ['siyonizm'], ['zekiceyhan']]",[],"Series([], Name: author.verified, dtype: bool)"
+418,1218346012873576448,[],[],[],[['putasideideology']],[],"Series([], Name: author.verified, dtype: bool)"
+419,1075876059852214277,[],[],[],"[[''], ['informnapalm']]",[],"Series([], Name: author.verified, dtype: bool)"
+420,1511994544015155205,[],[],[],"[['ukraine'], ['pakistan']]",[],"Series([], Name: author.verified, dtype: bool)"
+421,77104175,"['1557319246891438081', '1557319165207363584', '1557319144479023106', '1557319116905742336', '1557319075830841344']","['77104175', '77104175', '77104175', '77104175', '77104175']","['1557319246891438081', '1557319165207363584', '1557319144479023106', '1557319116905742336', '1557319075830841344']","[['dick'], ['gozada'], ['gozada'], ['gozada'], ['gozada']]","['Lisboa, Portugal', 'Lisboa, Portugal', 'Lisboa, Portugal', 'Lisboa, Portugal', 'Lisboa, Portugal']","0    False
+4    False
+5    False
+6    False
+8    False
+Name: author.verified, dtype: bool"
+422,1558159622,"['1557439792245116929', '1557439319618437121', '1557439223195545600', '1557439036960083968', '1557439000637370369', '1557438932031115264', '1557438753068576768']","['2155207283', '1413055064', '1245065470237126656', '1357131432804700160', '711351010', '55762356', '1338168318163705857']","['1557439792245116929', '1557439319618437121', '1557439223195545600', '1557439036960083968', '1557439000637370369', '1557438932031115264', '1557438753068576768']","[['rabbithole'], ['ourbluevoice'], ['demvoice1'], ['ourbluevoice'], ['proudblue22'], ['proudblue22'], ['proudblue22'], ['ourbluevoice'], ['ourbluevoice']]","['Pasadena, California', 'Pasadena, California', 'Pasadena, California', 'Pasadena, California', 'Pasadena, California', 'Pasadena, California', 'Pasadena, California']","0    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+Name: author.verified, dtype: bool"
+423,1314116355197743105,[],[],[],[['tagesschau']],[],"Series([], Name: author.verified, dtype: bool)"
+424,1504066472523579394,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+425,1541949020,[],[],[],"[['mediahistory'], ['twitterstorians'], ['twitterstorians'], ['twitterstorians'], ['medievaltwitter'], ['medievaltwitter'], ['twitterstorians'], ['twitterstorians'], ['classicalgreece'], ['medievaltwitter']]",[],"Series([], Name: author.verified, dtype: bool)"
+426,1041766942351212546,[],[],[],"[['johnnydeppkeepswinning'], ['amberheardlsanabuser']]",[],"Series([], Name: author.verified, dtype: bool)"
+427,478004044,"['1555609384360763393', '1552571184654520323', '1552366228588593155']","['1349519548513464320', '1179318907590578176', '765957157175058432']","['1555609384360763393', '1552571184654520323', '1552366228588593155']","[['maroc'], ['hasseniquioussen'], ['hdpros'], ['la26']]","['Région Parisienne', 'Région Parisienne', 'Région Parisienne']","1    False
+5    False
+7    False
+Name: author.verified, dtype: bool"
+428,1936999562,[],[],[],"[['43yearsofmisery'], ['iranprotests'], ['iranprotests'], ['iranprotests'], ['iranprotests'], ['iranprotests'], ['iran'], ['iran'], ['iranprotests']]",[],"Series([], Name: author.verified, dtype: bool)"
+429,420351046,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+430,1093336386789359619,['1557451237670404099'],['797398947182637056'],['1557451237670404099'],"[['immigrationinvasionireland'], ['100000weapons'], ['val2022']]",['Factland'],"5    False
+Name: author.verified, dtype: bool"
+431,1533005706974076931,[],[],[],"[['bodyboard'], ['gregoire'], ['ukraine'], ['onu'], ['ukraine'], ['twitter'], ['zelensky'], ['ukraine'], ['nudes'], ['pelosi']]",[],"Series([], Name: author.verified, dtype: bool)"
+432,4112496291,[],[],[],"[['europespaceport'], ['europespaceport'], ['europespaceport']]",[],"Series([], Name: author.verified, dtype: bool)"
+433,56575418,[],[],[],"[['russia'], ['donetsk'], ['ukraine'], ['iranian'], ['venezuela'], ['jewish'], ['russia'], ['matanzas']]",[],"Series([], Name: author.verified, dtype: bool)"
+434,1462003771525898250,[],[],[],"[['countryhumansussr'], ['countryhumans'], ['countryhumansussr']]",[],"Series([], Name: author.verified, dtype: bool)"
+435,757136972922163200,[],[],[],[['love']],[],"Series([], Name: author.verified, dtype: bool)"
+436,4361001253,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+437,1506936520661417987,[],[],[],"[['ukrainewar'], ['coronaviruspandemic'], ['mariupol'], ['europe'], ['germany'], ['un'], ['zaporozhye'], ['kiev'], ['hillaryclinton']]",[],"Series([], Name: author.verified, dtype: bool)"
+438,51241418,[],[],[],"[['trumpisguilty'], ['louderthanmaga'], ['trumpisguilty']]",[],"Series([], Name: author.verified, dtype: bool)"
+439,1266513126113136645,"['1557436984817340416', '1557436965741629441', '1557436944665165825', '1557436924113158145', '1557436841531416577', '1557436805032689665', '1557436757599289344', '1557436699109646338', '1557436676863033347', '1557436650950725634']","['1435791123587510277', '1428366062337155075', '1390309608590356483', '1280889742788300800', '149004973', '1428366062337155075', '143160039', '1428366062337155075', '1490159146116726784', '1490159146116726784']","['1557436984817340416', '1557436965741629441', '1557436944665165825', '1557436924113158145', '1557436841531416577', '1557436805032689665', '1557436757599289344', '1557436699109646338', '1557436676863033347', '1557436650950725634']","[['trabajadoresconlapatria'], ['islarebelde'], ['trabajadoresconlapatria'], ['granmarchasocialista'], ['trabajadoresconlapatria'], ['islarebelde'], ['granmarchasocialista'], ['islarebelde'], ['granmarchasocialista'], ['granmarchasocialista']]","['Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela', 'Caracas, Venezuela']","0    False
+1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+440,4452031515,[],[],[],"[['china'], ['antisemitisch'], ['boerenprotesten']]",[],"Series([], Name: author.verified, dtype: bool)"
+441,1141286573574463488,[],[],[],"[['galaxyzflip4'], ['galaxyzflip4'], ['galaxyzflip4'], ['asyura'], ['asyura']]",[],"Series([], Name: author.verified, dtype: bool)"
+442,4500218114,[],[],[],"[['mosaic_ccstca_01'], ['poppy_ccstca_25'], ['logan_ccstca_04'], ['lance_ccstca_09'], ['klay_ccstca_09'], ['anelli_ccstca_01'], ['aphroditus_ccstca_01'], ['circe_ccstca_02'], ['cj_ccstca_07'], ['rockyraccoon_ccstca_01']]",[],"Series([], Name: author.verified, dtype: bool)"
+443,546657547,[],[],[],"[['nhk'], ['shoheiohtani'], ['shoheiohtani'], ['shoheiohtani'], ['shohei'], ['ukraine'], ['heatstroke']]",[],"Series([], Name: author.verified, dtype: bool)"
+444,1364207607691546627,"['1557469077257560065', '1557468929991352320']","['1364207607691546627', '1364207607691546627']","['1557469077257560065', '1557468929991352320']","[['otan'], ['extremadura'], ['italia']]","['Nueva España, Madrid', 'Nueva España, Madrid']","6    False
+7    False
+Name: author.verified, dtype: bool"
+445,128025705,['1557162069329186817'],['51890539'],['1557162069329186817'],"[['covid'], ['leadership'], ['youbelong'], ['edunews']]","['Olympia, WA']","4    False
+Name: author.verified, dtype: bool"
+446,815297463695327234,"['1557381841354723332', '1557371918021545984', '1557360876822401025', '1557359695551234054', '1557359505985380354']","['38638268', '741847112', '49767144', '1249166186199355392', '27423868']","['1557381841354723332', '1557371918021545984', '1557360876822401025', '1557359695551234054', '1557359505985380354']","[['russia'], ['myanmar'], ['sierraleone'], ['salonetwitter'], ['salonetwitter'], ['internetshutdowns'], ['freetown'], ['sierraleone']]","['London, England', 'London, England', 'London, England', 'London, England', 'London, England']","4    True
+6    True
+7    True
+8    True
+9    True
+Name: author.verified, dtype: bool"
+447,52387663,[],[],[],"[['thread'], ['best'], ['thread'], ['thread']]",[],"Series([], Name: author.verified, dtype: bool)"
+448,966592213,"['1557472218258579459', '1557472003317268481', '1557455125547044866', '1557439133412458497', '1557438949597093888', '1557438895758925824']","['586291040', '877570096302051328', '1045271971100012544', '1059361525109010433', '1347852142070145024', '1059361525109010433']","['1557472218258579459', '1557472003317268481', '1557455125547044866', '1557439133412458497', '1557438949597093888', '1557438895758925824']","[['auschwitz'], ['m5s'], ['dontletthemdrown'], ['lega'], ['draghi'], ['bibbiano'], ['controcorrente']]","['padova', 'padova', 'padova', 'padova', 'padova', 'padova']","0    False
+1    False
+3    False
+6    False
+7    False
+8    False
+Name: author.verified, dtype: bool"
+449,1207340362643263491,[],[],[],"[['tiktokchallenge'], ['renaepeacock'], ['prettywoman'], ['saturdaymorning'], ['flexible'], ['renaepeacock'], ['renaepeacock']]",[],"Series([], Name: author.verified, dtype: bool)"
+450,87619059,['1557162113998925826'],['1002561014884335617'],['1557162113998925826'],"[['lmfaooo'], ['pullupshowup']]",['Everywhere at anytime'],"1    False
+Name: author.verified, dtype: bool"
+451,1511401338508394497,['1557472726121586689'],['1453699745541763074'],['1557472726121586689'],[['bonuspsicologo']],[0],"1    False
+Name: author.verified, dtype: bool"
+452,268385416,[],[],[],"[['ukraine'], ['ukraine'], ['pyvzavod'], ['stoprussia'], ['stoprussianow'], ['stoprussia'], ['ukraine'], ['ukraine'], ['stoprussianow']]",[],"Series([], Name: author.verified, dtype: bool)"
+453,234634464,[],[],[],"[['trump'], ['airbusalbo'], ['obama'], ['virus']]",[],"Series([], Name: author.verified, dtype: bool)"
+454,1167745005785624582,[],[],[],"[['ukrainerussianwar'], ['europa'], ['russia'], ['usa'], ['ukraine'], ['insurrectionact']]",[],"Series([], Name: author.verified, dtype: bool)"
+455,118459189,[],[],[],"[['ukraine'], ['ukraine'], ['ukraine'], ['ukraine'], ['europe'], ['ukrainians'], ['belarus'], ['russia'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+456,1461701877351911425,"['1557453533863354368', '1557267748476325888', '1557267401703829506']","['1255136770812862468', '1255136770812862468', '1364278881000259585']","['1557453533863354368', '1557267748476325888', '1557267401703829506']","[[''], [''], [''], ['']]","[0, 0, 0]","3    False
+4    False
+5    False
+Name: author.verified, dtype: bool"
+457,1527725046302535680,"['1557414964360462336', '1557406627979923459', '1557404432140095489', '1557395738472001536', '1557395493696598017', '1557393593823662080']","['828141720906846209', '1226852567872720896', '562842422', '1534488656517660672', '947389193272954880', '1545622865755508736']","['1557414964360462336', '1557406627979923459', '1557404432140095489', '1557395738472001536', '1557395493696598017', '1557393593823662080']","[[''], [''], [''], [''], [''], ['']]","[0, 0, 0, 0, 0, 0]","1    False
+4    False
+5    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+458,2288308578,[],[],[],"[['ukrainefrontlines'], ['ukrainefrontlines'], ['ukrainefrontlines'], ['ukrainefrontlines'], ['ukrainefrontlines'], ['ukrainefrontlines'], ['ukrainefrontlines']]",[],"Series([], Name: author.verified, dtype: bool)"
+459,1418229463796625415,"['1557432367681339394', '1557431488232161282']","['1264636116831031296', '2340164042']","['1557432367681339394', '1557431488232161282']","[['apero'], ['canicule']]","['Charente, Poitou-Charentes', 'Charente, Poitou-Charentes']","6    False
+8    False
+Name: author.verified, dtype: bool"
+460,1507161045093265416,[],[],[],"[['ukraine'], ['ukraine'], ['ukraine'], ['ukraine'], ['slavaukraini']]",[],"Series([], Name: author.verified, dtype: bool)"
+461,1457022455738998798,"['1557459405049942018', '1557445389648896003', '1557443787680628739', '1557443174913769479', '1557415112193052672', '1557414204885417986']","['1462833737599705096', '827439919', '1457022455738998798', '827439919', '1422995543907840005', '3740334387']","['1557459405049942018', '1557445389648896003', '1557443787680628739', '1557443174913769479', '1557415112193052672', '1557414204885417986']","[['tplfisthecause'], ['africa'], [''], ['ukraine'], [''], ['nomoreusdictations']]","[0, 0, 0, 0, 0, 0]","0    False
+2    False
+3    False
+4    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+462,213616021,[],[],[],"[['salamida'], ['iggypop']]",[],"Series([], Name: author.verified, dtype: bool)"
+463,1164494431275425797,"['1557127515239489536', '1556941434200199172', '1556627256075763713']","['988992203568562176', '953284716945399809', '953284716945399809']","['1557127515239489536', '1556941434200199172', '1556627256075763713']","[['verasity'], ['brazil'], ['pov'], ['adtech'], ['pov']]","['London', 'London', 'London']","0    False
+1    False
+6    False
+Name: author.verified, dtype: bool"
+464,1146819539654418433,"['1557367921776726016', '1557367206257852418', '1543623611650830337']","['1386003976995295233', '1503016820541837312', '1208275832981975042']","['1557367921776726016', '1557367206257852418', '1543623611650830337']","[['countryhumans'], ['countryhumans'], ['countryhumanschina'], ['countryhumansrussia'], ['countryhumans'], ['countryhumansussr']]","[0, 0, 0]","0    False
+1    False
+8    False
+Name: author.verified, dtype: bool"
+465,784636611183214592,[],[],[],"[['trump'], ['ukraine'], ['covid19'], ['beluga'], ['russiaukrainewar'], ['putinwarcrimes'], ['googleisdown'], ['olivianewtonjohn'], ['shooting'], ['maralagoraid']]",[],"Series([], Name: author.verified, dtype: bool)"
+466,4857355737,[],[],[],"[['eeuu'], ['eeuu'], ['corea'], ['china'], ['china'], ['china'], ['corea'], ['japon'], ['eeuu']]",[],"Series([], Name: author.verified, dtype: bool)"
+467,436953678,[],[],[],"[['trump'], ['sephora'], ['strangerthings4'], ['texas'], ['florida']]",[],"Series([], Name: author.verified, dtype: bool)"
+468,1392589871449993216,[],[],[],[['covidtheatre']],[],"Series([], Name: author.verified, dtype: bool)"
+469,1488554359940128772,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+470,36266589,"['1557483606062366722', '1557482244754767872', '1557447817198804998']","['36266589', '1266702718808227840', '36266589']","['1557483606062366722', '1557482244754767872', '1557447817198804998']","[['loudmajority'], ['trump'], ['loudmajority'], ['loudmajority'], ['loudmajority'], ['captaindeplorable']]","['Long Island, NY ', 'Long Island, NY ', 'Long Island, NY ']","0    False
+1    False
+9    False
+Name: author.verified, dtype: bool"
+471,1408435287060107264,"['1557484980049268736', '1557298317159186432', '1557270467832061952']","['1541429699896918016', '1408435287060107264', '1541429699896918016']","['1557484980049268736', '1557298317159186432', '1557270467832061952']","[['partidelafrance'], ['pdf'], ['reconquete'], ['pdf'], ['pdf'], ['vote'], ['voteetrangers'], ['vote']]","[0, 0, 0]","0    False
+6    False
+8    False
+Name: author.verified, dtype: bool"
+472,1216550422191587328,"['1557484246348238848', '1557480683517673472', '1557480202376466433', '1557480166288666624', '1557476327011532800', '1557476306866307072', '1557476280358293504']","['1554353248500387840', '1216550422191587328', '1216550422191587328', '1216550422191587328', '188143601', '188143601', '188143601']","['1557484246348238848', '1557480683517673472', '1557480202376466433', '1557480166288666624', '1557476327011532800', '1557476306866307072', '1557476280358293504']","[['ukrainekrieg'], ['whatsapp'], ['russiaisaterroriststate'], [''], ['lifelessons'], ['qldpol'], ['auspol']]","['Indonesia', 'Indonesia', 'Indonesia', 'Indonesia', 'Indonesia', 'Indonesia', 'Indonesia']","0    False
+1    False
+2    False
+3    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+473,47375691,[],[],[],"[['lindner'], ['infektionsschutzgesetz'], ['amnesty'], ['ampel'], ['wirtschaftskrieg'], ['china'], ['klimawandel'], ['insa'], ['sanktionspolitik']]",[],"Series([], Name: author.verified, dtype: bool)"
+474,4374484241,['1557370067863601158'],['1346890637690499074'],['1557370067863601158'],"[['mauricette'], ['mauricette'], ['mauricette'], ['mauricette'], ['zelenko'], ['maximebeltra']]","['Breuil-le-Vert, Picardie']","6    False
+Name: author.verified, dtype: bool"
+475,95485743,[],[],[],[['telegraafextra']],[],"Series([], Name: author.verified, dtype: bool)"
+476,33669915,"['1557398562220171273', '1557014654509088772']","['1350150750966603777', '9624742']","['1557398562220171273', '1557014654509088772']","[['2021womenofcourage'], ['unitedwithukraine'], ['unitedwithukraine'], ['indigenousday']]","['Washington, DC & New York, NY', 'Washington, DC & New York, NY']","1    True
+9    True
+Name: author.verified, dtype: bool"
+477,257244522,"['1557482265390862336', '1557477103423176714']","['792054557501038592', '1366917859']","['1557482265390862336', '1557477103423176714']","[['urbanwarfare'], ['wildatlanticway']]","['Sweet Sweet Athy Forever', 'Sweet Sweet Athy Forever']","2    False
+9    False
+Name: author.verified, dtype: bool"
+478,1032966192187748352,[],[],[],"[['controcorrente'], ['controcorrente'], ['controcorrente']]",[],"Series([], Name: author.verified, dtype: bool)"
+479,1077181999,[],[],[],"[['crimea'], ['guinea'], ['kremlin'], ['crimea'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+480,1306602592680710144,[],[],[],"[['ucraniarussia'], ['ahmetkaya'], ['ucrania'], ['qsd']]",[],"Series([], Name: author.verified, dtype: bool)"
+481,82709293,['1555558200962945024'],['2611886066'],['1555558200962945024'],"[['kyiv'], ['ukrainian'], ['ripolivianewtonjohn'], ['standwithukraine'], ['ukraine']]",['Ukraine'],"7    True
+Name: author.verified, dtype: bool"
+482,193757522,"['1557296844992126977', '1557296587218501633', '1557293115240845312', '1557292180980498432', '1557003039910805506']","['73404191', '41797768', '1176832798214279170', '196971337', '184258120']","['1557296844992126977', '1557296587218501633', '1557293115240845312', '1557292180980498432', '1557003039910805506']","[['bobdylan'], ['artexhibition'], ['johnnydepp'], ['castlegalleries'], ['beauty'], ['brum4bch']]","['Nationwide', 'Nationwide', 'Nationwide', 'Nationwide', 'Nationwide']","1    False
+2    False
+3    False
+4    False
+8    False
+Name: author.verified, dtype: bool"
+483,1520494476405452810,"['1557453325183885317', '1557453143021068288', '1557453092857184259', '1557452127714394119', '1557452091429371909', '1557450872250064896']","['1346699173', '3523550715', '381113374', '1180211384392531968', '35471877', '955429195']","['1557453325183885317', '1557453143021068288', '1557453092857184259', '1557452127714394119', '1557452091429371909', '1557450872250064896']","[['drc'], ['genocost'], ['genocost'], ['rwanda'], ['dictator'], ['rapportmapping'], ['m23']]","[0, 0, 0, 0, 0, 0]","1    False
+2    False
+3    False
+5    False
+6    False
+9    False
+Name: author.verified, dtype: bool"
+484,1443706704,['1557433725545324545'],['1392726045082767360'],['1557433725545324545'],"[['controcorrente'], ['monkeypox'], ['biden']]",['ITALIA'],"8    False
+Name: author.verified, dtype: bool"
+485,775355256410701824,['1557475678425071624'],['1012456550328406019'],['1557475678425071624'],"[['johnnydeppkeepswinning'], ['johnnydepp']]",['she/her'],"9    False
+Name: author.verified, dtype: bool"
+486,1114675538,[],[],[],"[['ampel'], ['orban'], ['ns2'], ['merkel']]",[],"Series([], Name: author.verified, dtype: bool)"
+487,1226068086,[],[],[],[['gegenhassimnetz']],[],"Series([], Name: author.verified, dtype: bool)"
+488,1295405245011460096,[],[],[],"[['gaza'], ['iran'], ['palestine'], ['iraq'], ['syria'], ['unitednations'], ['england'], ['palestine']]",[],"Series([], Name: author.verified, dtype: bool)"
+489,47941897,"['1557479887295897604', '1557454804527583234', '1557453078915436548', '1557388424709038080', '1557387988493127682', '1557387786218520577']","['1506936520661417987', '1295405245011460096', '47941897', '1115874631', '47941897', '47941897']","['1557479887295897604', '1557454804527583234', '1557453078915436548', '1557388424709038080', '1557387988493127682', '1557387786218520577']","[['zelensky'], ['japanese'], ['taiwan'], ['russian'], ['cgtnamerica'], ['lavrov'], ['palestine']]","['England ', 'England ', 'England ', 'England ', 'England ', 'England ']","0    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+490,3232960847,"['1557418235506704386', '1557397837985480712']","['1552625636048621568', '1141454975094153216']","['1557418235506704386', '1557397837985480712']","[['systemchange'], ['kolonialegewaltstoppen'], ['kolonialegewaltstoppen'], ['lngstoppen'], ['systemchangecamp']]","['Hamburg, Rheinland, Lausitz', 'Hamburg, Rheinland, Lausitz']","2    False
+4    False
+Name: author.verified, dtype: bool"
+491,103106629,"['1557476201773633536', '1557470703640842240', '1557318347041247232']","['815708250217840640', '823583545100816390', '874415903978508289']","['1557476201773633536', '1557470703640842240', '1557318347041247232']","[['flgov'], ['nooneisabovethelaw'], ['nv04'], ['beavoter'], ['defendourdemocracy'], ['voteblue']]","['Katonah, NY', 'Katonah, NY', 'Katonah, NY']","1    False
+3    False
+8    False
+Name: author.verified, dtype: bool"
+492,1551935359105335302,[],[],[],"[['johnnydepp'], ['johnnydepp'], ['amberheardisamonster'], ['neverfeartruth'], ['johnnydeppdeservesanapology']]",[],"Series([], Name: author.verified, dtype: bool)"
+493,1296421201196322828,[],[],[],"[['ukraine'], [''], ['crimea'], ['saki'], ['himars'], ['saki']]",[],"Series([], Name: author.verified, dtype: bool)"
+494,1493723792471908358,"['1557469538903625730', '1557469529244155906', '1557469515805560832', '1557469506057945088', '1557469495169585153', '1557469481881976832', '1557469467516469256', '1557469467281690624', '1557469445580374017', '1557468334278340608']","['1370438330916159492', '1490935659380494337', '1466364358955450374', '1500686261727764484', '1552647745734905856', '1551232260564738048', '1504128206693150724', '1370438330916159492', '1509218816034803713', '1494050871310700550']","['1557469538903625730', '1557469529244155906', '1557469515805560832', '1557469506057945088', '1557469495169585153', '1557469481881976832', '1557469467516469256', '1557469467281690624', '1557469445580374017', '1557468334278340608']","[['stoptigrayfamine'], ['endtigraygenocide'], ['tigrayfamine'], ['tigray'], ['eritrea'], ['tigrayanslivesmatter'], ['endtigrayfamine'], ['endtigraysiege'], ['tigrayfamine'], ['callitagenocide']]","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]","0    False
+1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+495,797931564197941248,[],[],[],[['johnnydepp']],[],"Series([], Name: author.verified, dtype: bool)"
+496,1603887084,['1557440186023378945'],['1114097639811760128'],['1557440186023378945'],"[['fcblive'], ['fcblive'], ['fcblive'], ['fcblive'], ['fcblive'], ['fcblive'], ['fcblive']]","['Catalonia, Spain']","6    False
+Name: author.verified, dtype: bool"
+497,1447841883275857921,[],[],[],"[['sowacja'], ['wojna'], ['wegry'], ['wielkabrytania'], ['rosja'], ['covid'], ['usa'], ['szczepionka'], ['rosja'], ['prad']]",[],"Series([], Name: author.verified, dtype: bool)"
+498,1497868873411878915,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+499,1228725567832363008,['1557453121886076931'],['526262684'],['1557453121886076931'],[['postvacsyndrom']],['Berlin'],"5    True
+Name: author.verified, dtype: bool"
+500,47016152,[],[],[],"[['marilynmanson'], ['amberheard'], ['johnnydepp']]",[],"Series([], Name: author.verified, dtype: bool)"
+501,49035671,[],[],[],"[['ccp'], ['vladimirkaramurza'], ['ccp'], ['whatshappeninginmyanmar']]",[],"Series([], Name: author.verified, dtype: bool)"
+502,124016104,"['1557481468569452546', '1557481424441298951', '1557474597582376961', '1557474490875092994', '1557474409140682759', '1557474318522654720', '1557474297597288448', '1557474261387952133']","['587202054', '1452960449574670339', '1452960449574670339', '227689827', '1440115459454537731', '1470223379735142403', '1496558370358239233', '1452960449574670339']","['1557481468569452546', '1557481424441298951', '1557474597582376961', '1557474490875092994', '1557474409140682759', '1557474318522654720', '1557474297597288448', '1557474261387952133']","[['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera'], ['10agosto'], ['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera'], ['forzadoria']]","[0, 0, 0, 0, 0, 0, 0, 0]","0    False
+1    False
+2    False
+3    False
+4    False
+5    False
+6    False
+7    False
+Name: author.verified, dtype: bool"
+503,1475788963,"['1557468380868886530', '1557280206179672064']","['1458294760108560389', '4077439067']","['1557468380868886530', '1557280206179672064']","[['colorsofunity'], ['colorsofunity'], ['greenlegacy']]","['Europa ', 'Europa ']","0    False
+9    False
+Name: author.verified, dtype: bool"
+504,1509646471263621123,[],[],[],"[['lgtbq'], ['ukgovernment']]",[],"Series([], Name: author.verified, dtype: bool)"
+505,1277544278013759488,[],[],[],"[['awesomewithoutallah'], ['muslims']]",[],"Series([], Name: author.verified, dtype: bool)"
+506,1069007839,"['1557485012710264834', '1557484933031026688', '1557467141300944902', '1557466656301060096', '1557466594686672896', '1557464644184334349']","['1552134420601126913', '1329380227517214721', '1395657254544855042', '1379104751766343682', '1359393839790886912', '1549289135957065729']","['1557485012710264834', '1557484933031026688', '1557467141300944902', '1557466656301060096', '1557466594686672896', '1557464644184334349']","[['teampatriotes'], ['teampatriotes'], ['macronie'], ['reconquete'], ['jesoutiensperronne'], ['honte']]","[0, 0, 0, 0, 0, 0]","0    False
+1    False
+4    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+507,984046386902683648,[],[],[],"[['war'], ['war'], ['war']]",[],"Series([], Name: author.verified, dtype: bool)"
+508,86058205,[],[],[],"[['midjourney'], ['midjourney'], ['ai']]",[],"Series([], Name: author.verified, dtype: bool)"
+509,1517433126,['1555935011605553152'],['88630242'],['1555935011605553152'],"[['trump'], ['erneuerbareenergien']]",['Berlin'],"6    True
+Name: author.verified, dtype: bool"
+510,68964628,[],[],[],"[['belarus'], ['europe'], ['georgia'], ['european'], ['switzerland'], ['dinerrepublicain']]",[],"Series([], Name: author.verified, dtype: bool)"
+511,746823929881313280,[],[],[],"[['finland'], ['poland'], ['poland'], ['poland'], ['finland'], ['poland'], ['poland'], ['finland'], ['poland'], ['poland']]",[],"Series([], Name: author.verified, dtype: bool)"
+512,1495479145303887878,[],[],[],[['canada']],[],"Series([], Name: author.verified, dtype: bool)"
+513,20170683,"['1557282765602787328', '1557257126824787969']","['32861321', '68440549']","['1557282765602787328', '1557257126824787969']","[['crimea'], ['rfimatin'], ['ukraine']]","['m', 'm']","6    False
+8    False
+Name: author.verified, dtype: bool"
+514,1137648990835675136,['1557479738305822729'],['1137648990835675136'],['1557479738305822729'],[['ukraine']],['— they 17\\ndtqk+ & sbiッ'],"0    False
+Name: author.verified, dtype: bool"
+515,498672645,"['1557361603548516353', '1557350019115761666', '1557349615401406467', '1557349586716483584']","['768880298310402048', '1005980574', '768880298310402048', '768880298310402048']","['1557361603548516353', '1557350019115761666', '1557349615401406467', '1557349586716483584']","[['iovotorenzi'], ['terzopolo'], ['terzopolo'], ['terzopolo'], ['iovotoitaliaviva'], ['iovotoitaliaviva']]","['Monza, Lombardia', 'Monza, Lombardia', 'Monza, Lombardia', 'Monza, Lombardia']","4    False
+6    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+516,1410591083629740034,"['1557357476286238720', '1557357410523791361']","['1430188531117436933', '1436396163381530625']","['1557357476286238720', '1557357410523791361']","[['stayhome'], ['coronawarnapp'], ['coronawarnapp'], ['cwa']]","[0, 0]","8    False
+9    False
+Name: author.verified, dtype: bool"
+517,155930120,[],[],[],"[['ottawa'], ['safeseptember'], ['covidisairborne'], ['healthcarecrisis']]",[],"Series([], Name: author.verified, dtype: bool)"
+518,762338231845326848,[],[],[],"[['series'], ['series'], ['series'], ['series'], ['series'], ['series'], ['series'], ['series'], ['series'], ['series']]",[],"Series([], Name: author.verified, dtype: bool)"
+519,1206611432063799302,"['1557485090288144385', '1557481690557210625', '1557477530281598979']","['1206611432063799302', '1206611432063799302', '1206611432063799302']","['1557485090288144385', '1557481690557210625', '1557477530281598979']","[['jan6th'], ['jan6th'], ['datelinewh'], ['datelinewh'], ['datelinewh'], ['datelinewh']]","['USA', 'USA', 'USA']","0    False
+2    False
+8    False
+Name: author.verified, dtype: bool"
+520,2456187006,[],[],[],"[['us'], ['afghanistan'], ['factsmatter'], ['us'], ['taiwan'], ['racism'], ['us'], ['pelosi'], ['pelosi'], ['g7']]",[],"Series([], Name: author.verified, dtype: bool)"
+521,769191974041587713,[],[],[],"[['johnnydeppwillwinagain'], ['supportmilani']]",[],"Series([], Name: author.verified, dtype: bool)"
+522,1459265931209633798,[],[],[],"[['ab2098'], ['noonab2098']]",[],"Series([], Name: author.verified, dtype: bool)"
+523,827439919,"['1557460483808043009', '1557432682740682753', '1557427142450978816', '1557419632255983618', '1557412445479735297']","['827439919', '827439919', '29609364', '827439919', '438370063']","['1557460483808043009', '1557432682740682753', '1557427142450978816', '1557419632255983618', '1557412445479735297']","[['ukraine'], ['africa'], ['africa'], ['ukraine'], ['circuitfrancobelge'], ['tplf'], ['tplf'], ['eritreafestivalseaon']]","['Washington, DC', 'Washington, DC', 'Washington, DC', 'Washington, DC', 'Washington, DC']","0    False
+3    False
+6    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+524,1315581023275679744,[],[],[],"[['ardeche'], ['eschatonfondationanselmkiefer'], ['zeitenwende'], ['ravivagedelaflamme'], ['amitiefrancoallemande'], ['pithiviers']]",[],"Series([], Name: author.verified, dtype: bool)"
+525,110398672,[],[],[],[['']],[],"Series([], Name: author.verified, dtype: bool)"
+526,1521919719099572225,"['1557370575462416389', '1557370529538908160']","['1521919719099572225', '309678907']","['1557370575462416389', '1557370529538908160']","[['naturephotography'], ['nosmallroles']]","[0, 0]","0    False
+1    False
+Name: author.verified, dtype: bool"
+527,1137273540,[],[],[],"[['prochoice'], ['bible'], ['atheist'], ['faith'], ['islam']]",[],"Series([], Name: author.verified, dtype: bool)"
+528,4723888701,"['1556962963474579456', '1556962400825495552']","['20445006', '1301235876']","['1556962963474579456', '1556962400825495552']","[['belarus'], ['belarus'], ['standwithbelarus'], ['pressfreedom'], ['belarus']]","['Minsk', 'Minsk']","3    False
+4    False
+Name: author.verified, dtype: bool"
+529,1538209257593753601,['1557479328455266304'],['1538209257593753601'],['1557479328455266304'],"[['russia'], [''], [''], ['']]",[0],"8    False
+Name: author.verified, dtype: bool"
+530,824499579274035200,[],[],[],[['mvci_jed']],[],"Series([], Name: author.verified, dtype: bool)"
+531,1492954767374622721,[],[],[],"[['ouestmoncycle'], ['ouestmoncycle'], ['realnotrare']]",[],"Series([], Name: author.verified, dtype: bool)"
+532,334465231,['1557473899599773698'],['1495480590572961792'],['1557473899599773698'],"[['crimea'], ['slavaukraini']]",[0],"1    False
+Name: author.verified, dtype: bool"
+533,586291040,[],[],[],"[['auschwitz'], ['auschwitz'], ['theresienstadt'], ['auschwitz'], ['auschwitz'], ['auschwitz'], ['auschwitz'], ['auschwitz'], ['auschwitz'], ['podcast']]",[],"Series([], Name: author.verified, dtype: bool)"
+534,379082219,['1557457054037590018'],['45861760'],['1557457054037590018'],"[['walkawayfromdemocrats'], ['fauci']]","['Texas, USA']","4    False
+Name: author.verified, dtype: bool"
+535,1318072127959040000,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+536,1542046952505966592,['1557479837799010311'],['1526190415929810944'],['1557479837799010311'],[['animals']],['Kharkiv Ukraine '],"1    False
+Name: author.verified, dtype: bool"
+537,1052877677605134336,[],[],[],"[['putin'], ['putin'], ['putin'], ['putin'], ['putin'], ['putin'], ['putin'], ['putin']]",[],"Series([], Name: author.verified, dtype: bool)"
+538,3948706576,[],[],[],[['caumes']],[],"Series([], Name: author.verified, dtype: bool)"
+539,123910041,"['1557367735167885313', '1557106562526740482']","['485710746', '431029718']","['1557367735167885313', '1557106562526740482']","[['_'], ['gaza'], [''], ['']]","['USA', 'USA']","0    True
+5    True
+Name: author.verified, dtype: bool"
+540,1195773254,"['1557483673909223424', '1557479111651573760']","['1527702246070398979', '1539053415262826499']","['1557483673909223424', '1557479111651573760']","[['k4mil1agotexposed'], ['johnnydeppkeepswinning'], ['amberheardisanabuser'], ['k4mil1agotexposed'], ['k4mil1agotexposed'], ['johnnydeppdeservesanapology'], ['k4mil1agotexposed']]","['New Mexico, USA', 'New Mexico, USA']","0    False
+3    False
+Name: author.verified, dtype: bool"
+541,221091014,['1555546595743223811'],['162063442'],['1555546595743223811'],"[['ukraine'], ['ukraine'], ['badbeats'], ['agnescallamardmustresign']]","['Nashville, TN']","8    False
+Name: author.verified, dtype: bool"
+542,1045714819167531008,['1557407214469632000'],['1045714819167531008'],['1557407214469632000'],"[['catsoftwitter'], ['catsoftwitter'], ['catsoftwitter'], ['catsoftwitter']]","['London, England']","2    False
+Name: author.verified, dtype: bool"
+543,2379986716,[],[],[],"[['ue'], ['draghi']]",[],"Series([], Name: author.verified, dtype: bool)"
+544,18838800,[],[],[],"[['quebechistory'], ['genealogiequebec'], ['quebechistory'], ['histoire'], ['quebechistory'], ['histoireduquebec'], ['quebechistory'], ['histoireduquebec'], ['histoireduquebec'], ['quebechistory']]",[],"Series([], Name: author.verified, dtype: bool)"
+545,19802110,"['1557448628066721793', '1557447852145647616']","['1537919093482737664', '1132638867432116225']","['1557448628066721793', '1557447852145647616']","[['schweiz'], ['bayern'], ['qatar'], ['quatschjura']]","[0, 0]","4    True
+5    True
+Name: author.verified, dtype: bool"
+546,22243285,[],[],[],"[['johnnydeppisasurvivor'], ['johnnydeppisalegend'], ['johnnydeppisalegend'], ['amberheardisapsycopath'], ['amberheardisanabuser'], ['amberheardisapsychopath'], ['amberheardisapsycopath'], ['amberheardisapsycopath'], ['amberheardisapsycopath']]",[],"Series([], Name: author.verified, dtype: bool)"
+547,1552772322154762252,['1557408888634413056'],['1552772322154762252'],['1557408888634413056'],"[['ukraine'], ['tanzania']]",['Somalia'],"9    False
+Name: author.verified, dtype: bool"
+548,1374433710108340226,['1557381804591616001'],['19140613'],['1557381804591616001'],"[['dortmund'], ['maschinenpistole'], ['lauterbach']]",[0],"7    False
+Name: author.verified, dtype: bool"
+549,98141307,"['1557462814847115270', '1557462768361656320', '1557462182421577728', '1557431871423844359']","['98141307', '98141307', '245145871', '6135622']","['1557462814847115270', '1557462768361656320', '1557462182421577728', '1557431871423844359']","[['dropthecharges'], ['freeassangenow'], ['toryguide'], ['eeuu'], ['dropthecharges']]","['Empire of Exposed Secrets', 'Empire of Exposed Secrets', 'Empire of Exposed Secrets', 'Empire of Exposed Secrets']","0    False
+1    False
+2    False
+4    False
+Name: author.verified, dtype: bool"
+550,3317509919,[],[],[],[['kherson']],[],"Series([], Name: author.verified, dtype: bool)"
+551,36961157,[],[],[],"[['amberheardisanabuser'], ['amberheardisanabuser'], ['johnnydeppwon'], ['johnnydeppwon'], ['louisxv'], ['louisxv']]",[],"Series([], Name: author.verified, dtype: bool)"
+552,132512167,[],[],[],"[['ukraine'], ['crimea'], ['ukraine'], ['russia'], ['ukraine'], ['ukraine'], ['ukraine'], ['ukraine'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+553,405650302,"['1557421046600552450', '1556975721440055296']","['1059753658127138816', '1056944124715253760']","['1557421046600552450', '1556975721440055296']","[['thueringen'], ['dresden'], ['afd'], ['hassliebe']]","['Berlin', 'Berlin']","0    True
+4    True
+Name: author.verified, dtype: bool"
+554,705912192546312193,"['1557121628986740737', '1557114533214162944']","['812361923304034304', '1461766105110831112']","['1557121628986740737', '1557114533214162944']","[['gopdeathcult'], ['healthcareawarenessmonth'], ['armtheanimals'], ['trumpisguilty'], ['magameltdown'], ['irs'], ['politics'], ['abuse']]","['The Interwebs', 'The Interwebs']","2    False
+5    False
+Name: author.verified, dtype: bool"
+555,1318537581185896448,[],[],[],"[['gaza'], ['shireenabuakleh'], ['gaza']]",[],"Series([], Name: author.verified, dtype: bool)"
+556,3664109892,"['1557480339915898892', '1557405247567454208']","['808855336815919104', '763829550']","['1557480339915898892', '1557405247567454208']","[['polqc'], ['cdnpoli'], ['cdnpoli'], ['cdnpoli'], ['cdnpoli'], ['cdnpoli'], ['cdnpoli'], ['cdnpoli'], ['abpoli']]","['Toronto, Ontario', 'Toronto, Ontario']","0    True
+8    True
+Name: author.verified, dtype: bool"
+557,1503385865996935168,"['1557462878852206600', '1557456213800919040', '1557451204552265728']","['143490747', '1550802489070477312', '977609349211348992']","['1557462878852206600', '1557456213800919040', '1557451204552265728']","[['_'], ['not_my_national_team'], ['_'], ['']]","[0, 0, 0]","5    False
+7    False
+9    False
+Name: author.verified, dtype: bool"
+558,277587469,"['1557483013004574720', '1557481644205940736']","['3104222776', '3104222776']","['1557483013004574720', '1557481644205940736']","[['ukrainewar'], ['ukrainewar'], ['ukraine']]","[0, 0]","0    False
+1    False
+Name: author.verified, dtype: bool"
+559,1503834254022688769,[],[],[],"[['silver'], ['bitcoin']]",[],"Series([], Name: author.verified, dtype: bool)"
+560,1198909097908854784,[],[],[],"[['trasportoaereo'], ['voloinritardo'], ['diritti'], ['trasportoaereo'], ['cartadeidirittidelpasseggero'], ['trasportoaereo'], ['aerospazio'], ['bagaglioamano'], ['aerospazio'], ['icao']]",[],"Series([], Name: author.verified, dtype: bool)"
+561,1148174019440631810,"['1557479797424521216', '1557479784011243527', '1557129520141975552', '1557129461094555660']","['1148174019440631810', '1148174019440631810', '1148174019440631810', '1148174019440631810']","['1557479797424521216', '1557479784011243527', '1557129520141975552', '1557129461094555660']","[['headlines'], ['nato'], ['nato'], ['headlines'], ['donaldtrump'], ['headlines'], ['headlines'], ['donaldtrump'], ['donaldtrump'], ['headlines']]","['South Africa', 'South Africa', 'South Africa', 'South Africa']","0    False
+1    False
+6    False
+7    False
+Name: author.verified, dtype: bool"
+562,738115448428957696,['1557435786852704259'],['3309371255'],['1557435786852704259'],"[['johnnydeppkeepswinning'], ['jeannedubarry'], ['amberheardisaliar'], ['justiceforjohhnydepp'], ['amberheardisaliar'], ['justiceforjohnnydepp']]","['New York, USA']","4    False
+Name: author.verified, dtype: bool"
+563,1533857787486388226,[],[],[],"[['gaysagainstgroomers'], ['gaysagainstgroomers'], ['gaysagainstgroomers']]",[],"Series([], Name: author.verified, dtype: bool)"
+564,1295667109343768579,"['1557410717329915904', '1557410461209042946']","['801203059359678464', '2451893905']","['1557410717329915904', '1557410461209042946']","[['letnovakplay'], ['perronne']]","[0, 0]","2    False
+4    False
+Name: author.verified, dtype: bool"
+565,1012456550328406019,[],[],[],[['johnnydepp']],[],"Series([], Name: author.verified, dtype: bool)"
+566,1012040911147225100,"['1557478065911078912', '1557451790567833604', '1557440319947415555']","['1467880193427714054', '871091353970716673', '24363209']","['1557478065911078912', '1557451790567833604', '1557440319947415555']","[['lauterbachruecktrittsofort'], ['stopptdenhass'], ['orr'], ['schlesinger']]","['Ostdeutschland ', 'Ostdeutschland ', 'Ostdeutschland ']","0    False
+3    False
+7    False
+Name: author.verified, dtype: bool"
+567,85374055,"['1557483744591855621', '1557397255711252482', '1557377003124396034', '1557328930885046272']","['1440445231', '79910526', '1463963242250838031', '85374055']","['1557483744591855621', '1557397255711252482', '1557377003124396034', '1557328930885046272']","[['muzquiz'], ['sergiocarmona'], ['eshoy'], ['morena']]","[0, 0, 0, 0]","0    False
+2    False
+5    False
+8    False
+Name: author.verified, dtype: bool"
+568,1526228207946452992,[],[],[],"[['usa'], ['usa'], ['usa'], ['usa'], ['sierraleoneprotests'], ['usa'], ['usa']]",[],"Series([], Name: author.verified, dtype: bool)"
+569,1261286502065041410,[],[],[],"[[''], [''], [''], [''], [''], [''], [''], [''], [''], ['']]",[],"Series([], Name: author.verified, dtype: bool)"
+570,1468603672708149251,[],[],[],"[['monkeypox'], ['jesoutiensperronne'], ['covid'], ['davos'], ['omicron'], ['covid19'], ['effetssecondairesvaccins19'], ['pfizer']]",[],"Series([], Name: author.verified, dtype: bool)"
+571,53892169,[],[],[],"[['warthunder'], ['nh90']]",[],"Series([], Name: author.verified, dtype: bool)"
+572,1432884855289827333,[],[],[],"[['nordstream'], ['standwithukraine'], ['zelensky'], ['ukraine'], ['mykolaiv'], ['russians'], ['russians']]",[],"Series([], Name: author.verified, dtype: bool)"
+573,19019465,[],[],[],[['hartleaks']],[],"Series([], Name: author.verified, dtype: bool)"
+574,329857969,[],[],[],"[['educamaisbrasil'], ['sovaquinhaboa'], ['video'], ['ajudar'], ['transformar'], ['criancas'], ['pessoascarentes'], ['cinema']]",[],"Series([], Name: author.verified, dtype: bool)"
+575,1470223379735142403,"['1557481801848946690', '1557481765240836096', '1557481670214918144', '1557481630218027010', '1557481595669544961', '1557481303590797312', '1557481271026225166', '1557481239673724928', '1557481188696145920']","['1496558370358239233', '227689827', '1440115459454537731', '227689827', '227689827', '1496558370358239233', '124016104', '227689827', '1496558370358239233']","['1557481801848946690', '1557481765240836096', '1557481670214918144', '1557481630218027010', '1557481595669544961', '1557481303590797312', '1557481271026225166', '1557481239673724928', '1557481188696145920']","[['lapatriateespera'], ['lapatriateespera'], ['10agosto'], ['lapatriateespera'], ['lapatriateespera'], ['lapatriateespera'], ['freealexsaab'], ['lapatriateespera'], ['lapatriateespera']]","[0, 0, 0, 0, 0, 0, 0, 0, 0]","0    False
+1    False
+3    False
+4    False
+5    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+576,1501667716104704000,[],[],[],"[['russiaisaterroriststate'], ['russiaisateroriststate'], ['russiaisateroriststate'], ['russiaisateroriststate'], ['russiaisateroriststate'], ['russiaisateroriststate'], ['russiaisateroriststate'], ['russiaisateroriststate'], ['russiaisateroriststate'], ['russiaisateroriststate']]",[],"Series([], Name: author.verified, dtype: bool)"
+577,1123511060852613120,[],[],[],"[['putinknechte'], ['putinknechte'], ['covidioten'], ['putinknechte']]",[],"Series([], Name: author.verified, dtype: bool)"
+578,254954886,"['1557298509623177216', '1557236939480174592']","['1548092275225677826', '1149048622538825729']","['1557298509623177216', '1557236939480174592']","[[''], [''], [''], [''], [''], [''], ['beach']]","[0, 0]","4    False
+9    False
+Name: author.verified, dtype: bool"
+579,450482724,"['1556640043573411840', '1556535180717850625', '1556528463317704705', '1555152339316645888']","['2301242305', '2301242305', '632237171', '2301242305']","['1556640043573411840', '1556535180717850625', '1556528463317704705', '1555152339316645888']","[['trabajo'], ['espana'], ['empleo'], ['teoriacrip'], ['jovenes'], ['bienestarsocial'], ['espana'], ['emergencias'], ['abuso']]","['San Sebastiano, Spagna', 'San Sebastiano, Spagna', 'San Sebastiano, Spagna', 'San Sebastiano, Spagna']","2    False
+3    False
+4    False
+7    False
+Name: author.verified, dtype: bool"
+580,393902100,['1557475293421621255'],['52332962'],['1557475293421621255'],"[['donezk'], ['saporischschja'], ['ukrainekrieg']]","['Kyiv, Stuttgart, Cologne']","2    False
+Name: author.verified, dtype: bool"
+581,50689313,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+582,1500829191650287616,['1557460199753265152'],['1522815639563296773'],['1557460199753265152'],"[[''], ['countryhumansddr'], ['countryhumansroc']]",['Axis warning'],"1    False
+Name: author.verified, dtype: bool"
+583,705409131079929858,[],[],[],"[[''], ['socialinjustice'], ['singapore']]",[],"Series([], Name: author.verified, dtype: bool)"
+584,114909288,[],[],[],"[['lapatriateespera'], ['esnoticia'], ['urgente']]",[],"Series([], Name: author.verified, dtype: bool)"
+585,68731365,['1557377188898414593'],['193757522'],['1557377188898414593'],"[['jeannedubarry'], ['bobdylan'], ['johnnydepp'], ['johnnydepp'], ['johnnydepp'], ['johnnydepp']]",['ONLINE SINCE 2003'],"3    False
+Name: author.verified, dtype: bool"
+586,1272821807658172418,[],[],[],"[['pd'], ['degregorio'], ['dimaio'], ['cromosomax']]",[],"Series([], Name: author.verified, dtype: bool)"
+587,69548216,['1557432237464948736'],['3899254043'],['1557432237464948736'],"[['russia'], ['banrussiantourists'], ['risorse'], ['ucraina']]",[0],"5    False
+Name: author.verified, dtype: bool"
+588,298677835,[],[],[],[['impfpasse']],[],"Series([], Name: author.verified, dtype: bool)"
+589,233578764,[],[],[],"[['follow'], ['bucarest'], ['gil']]",[],"Series([], Name: author.verified, dtype: bool)"
+590,163565583,['1557405247366221824'],['1552748295151312897'],['1557405247366221824'],"[['nhs'], ['enoughisenough']]",[0],"8    False
+Name: author.verified, dtype: bool"
+591,15361389,"['1557474090671165440', '1557471107208265728', '1557423898785751040', '1557403514749325313']","['15361389', '15361389', '353274716', '1417158611290165249']","['1557474090671165440', '1557471107208265728', '1557423898785751040', '1557403514749325313']","[['oilers'], ['letsgooilers'], ['letsgooilers'], ['nhl'], ['letsgooilers']]","['Edmonton, Alberta', 'Edmonton, Alberta', 'Edmonton, Alberta', 'Edmonton, Alberta']","2    True
+4    True
+7    True
+9    True
+Name: author.verified, dtype: bool"
+592,1517586460488220672,['1557325419430514688'],['1517586460488220672'],['1557325419430514688'],"[['ukraine'], ['ukraine'], ['ukraine'], ['ukraine'], ['ukraine'], ['ukraine'], ['ukrainerussiawar'], ['ukraine'], ['ukraine']]","['Kyiv Oblast, Zazymie ']","9    False
+Name: author.verified, dtype: bool"
+593,1898858948,[],[],[],"[['inflation'], ['impotcanicule']]",[],"Series([], Name: author.verified, dtype: bool)"
+594,1006519416425721858,"['1557482950035398656', '1557482894091866112']","['2868860479', '2868860479']","['1557482950035398656', '1557482894091866112']","[['ig'], ['ig']]","['🌞 ☔ 🌈 ', '🌞 ☔ 🌈 ']","1    False
+2    False
+Name: author.verified, dtype: bool"
+595,1394560106352635905,"['1557426807896526848', '1557426570343682052', '1557426523732410368', '1557425814462992384', '1557425777884467201']","['3147365088', '1386042933594542084', '4749261385', '1235315691194134528', '777230952523112452']","['1557426807896526848', '1557426570343682052', '1557426523732410368', '1557425814462992384', '1557425777884467201']","[['indiegame'], ['indiegame'], ['mobilegame'], ['nintendoswitch'], ['indiegamedev'], ['supportsmallstreamers']]","[0, 0, 0, 0, 0]","2    False
+5    False
+6    False
+7    False
+8    False
+Name: author.verified, dtype: bool"
+596,996263440120397824,"['1557464664157687812', '1557108907696431107', '1557108308766507008', '1557055448943050752', '1557055429103984641', '1556800486124265473']","['1514893924543967233', '785510231635693568', '813359087744233473', '1355060471397642243', '1105840322754441216', '1511773868129718280']","['1557464664157687812', '1557108907696431107', '1557108308766507008', '1557055448943050752', '1557055429103984641', '1556800486124265473']","[['doa6photography'], ['ps4'], ['doacosplay'], ['doacosplay'], ['doacosplay'], [''], [''], [''], ['']]","[0, 0, 0, 0, 0, 0]","0    False
+4    False
+6    False
+7    False
+8    False
+9    False
+Name: author.verified, dtype: bool"
+597,801203059359678464,['1557418301889908738'],['801203059359678464'],['1557418301889908738'],[['letnovakplay']],[0],"9    True
+Name: author.verified, dtype: bool"
+598,2317202599,[],[],[],"[['arttrafficking'], ['fincrime'], ['culturalheritage']]",[],"Series([], Name: author.verified, dtype: bool)"
+599,1307238281902321664,[],[],[],"[[''], [''], ['']]",[],"Series([], Name: author.verified, dtype: bool)"
+600,798054644853407744,[],[],[],[],[],"Series([], Name: author.verified, dtype: bool)"
+601,3899254043,[],[],[],"[['himars'], ['banrussiantourists'], ['ukraine'], ['banrussiantourists'], ['ukraine']]",[],"Series([], Name: author.verified, dtype: bool)"
+602,140180388,"['1557323970403246083', '1557305202457329664', '1557289496676368385', '1557123567346716673', '1557072114381111296']","['140180388', '1404459690013216776', '835118381992972288', '1404459690013216776', '130406156']","['1557323970403246083', '1557305202457329664', '1557289496676368385', '1557123567346716673', '1557072114381111296']","[['bvnl'], ['bvnl'], ['asielcrisis'], ['grafiekvandedag'], ['bvnl'], ['azc'], ['depowereu']]","['Haarlem, Nederland', 'Haarlem, Nederland', 'Haarlem, Nederland', 'Haarlem, Nederland', 'Haarlem, Nederland']","3    True
+5    True
+6    True
+8    True
+9    True
+Name: author.verified, dtype: bool"
+603,1042979148057047041,"['1557428432572923904', '1557047795009347587', '1556988909757800450']","['556160767', '350499770', '3433849151']","['1557428432572923904', '1557047795009347587', '1556988909757800450']","[['saudiarabia'], ['diplomacy'], ['canada'], ['ukraine'], ['ukraine'], ['taiwan'], ['canada']]","['Toronto, Ontario', 'Toronto, Ontario', 'Toronto, Ontario']","2    False
+6    False
+9    False
+Name: author.verified, dtype: bool"
+604,2415072836,[],[],[],[['russiaisaterroriststate']],[],"Series([], Name: author.verified, dtype: bool)"
+605,1499828316177674247,[],[],[],[['russia']],[],"Series([], Name: author.verified, dtype: bool)"
