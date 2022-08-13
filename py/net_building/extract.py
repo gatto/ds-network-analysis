@@ -82,8 +82,8 @@ def construct_query_for_twarc(root_tags: dict) -> str:
 def extract_tags(list_of_hashtags) -> list:
     # takes a list of dictionaries, each represents a hashtag appearing in a single tweet,
     # and returns a list of the hashtags appearing in that tweet
+    results = []
     for my_dict in list_of_hashtags:
-        results = []
         # here we clean any hashtags e.g. with lower()
         cleaned = my_dict["tag"].lower()
         cleaned = ensure_latin(cleaned)
@@ -201,7 +201,7 @@ class Count:
             query=self.query,
             granularity="day",
             start_time=datetime.datetime(
-                2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
+                2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
             ),
         )
         df = pd.DataFrame(
@@ -234,6 +234,7 @@ class UserETL:
 
     @df.default
     def _df_default(self):
+        global df
         if self.secret is None:
             my_secret = _get_local_credentials()
         else:
@@ -243,7 +244,7 @@ class UserETL:
         search_results = t.timeline(
             user=self.id,
             start_time=datetime.datetime(
-                2022, 2, 24, 0, 0, 0, 0, datetime.timezone.utc
+                2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
             ),
             max_results=self.max_results,
         )
