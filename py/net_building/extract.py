@@ -92,7 +92,7 @@ def extract_tags(list_of_hashtags) -> list:
 
 
 def _get_local_credentials():
-    my_secret_path = Path().cwd().parent / "data/my_secrets.yaml"
+    my_secret_path = Path().cwd().parent.parent / "data/my_secrets.yaml"
     try:
         with open(my_secret_path) as f:
             print(f"Reading secret from {my_secret_path}…")
@@ -143,7 +143,7 @@ class SocialETL:
                     2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
                 ),
             )
-        converter = DataFrameConverter()
+        converter = DataFrameConverter(extra_input_columns="edit_history_tweet_ids,edit_controls.edits_remaining,edit_controls.editable_until,edit_controls.is_edit_eligible")
 
         with Progress() as progress:
             task = progress.add_task("Downloading 🐦…", total=self.pages)
