@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pandas as pd
 import pkg_resources
-from attrs import define, field
+from attrs import define, field, validators
 from rich import print
 from rich.progress import Progress, track
 from twarc.client2 import Twarc2
@@ -69,7 +69,9 @@ def classify_user(categories: list, root_tags: dict) -> str:
             case "pax":
                 my_scores["pax"] += 1
             case _:
-                raise Exception(f"Wut? Category {category} doesn't exist\ncategories are:{categories}")
+                raise Exception(
+                    f"Wut? Category {category} doesn't exist\ncategories are:{categories}"
+                )
     return get_unique_max(my_scores)
 
 
@@ -89,6 +91,21 @@ def extract_tags(list_of_hashtags) -> list:
         cleaned = ensure_latin(cleaned)
         results.append(cleaned)
     return results
+
+
+def load_tag_madre(k: int = 3):
+    with open(Path().cwd() / "hashtags_300.json", "r") as f:
+        tag_madre = json.load(f)
+    tag_madre = {a: [x[0] for x in b[:k]] for a, b in tag_madre.items()}
+
+    # remember to extend the "tag_madre" with the original tag_madre
+    if "slavaukraini" not in tag_madre["proukr"]:
+        tag_madre["proukr"].append("slavaukraini")
+    if "istandwithputin" not in tag_madre["prorus"]:
+        tag_madre["prorus"].append("istandwithputin")
+    if "stopwarinukraine" not in tag_madre["pax"]:
+        tag_madre["pax"].append("stopwarinukraine")
+    return tag_madre
 
 
 def _get_local_credentials():
@@ -143,7 +160,9 @@ class SocialETL:
                     2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
                 ),
             )
-        converter = DataFrameConverter(extra_input_columns="edit_history_tweet_ids,edit_controls.edits_remaining,edit_controls.editable_until,edit_controls.is_edit_eligible")
+        converter = DataFrameConverter(
+            extra_input_columns="edit_history_tweet_ids,edit_controls.edits_remaining,edit_controls.editable_until,edit_controls.is_edit_eligible"
+        )
 
         with Progress() as progress:
             task = progress.add_task("Downloading 🐦…", total=self.pages)
@@ -151,14 +170,6 @@ class SocialETL:
 
             for page in search_results:
                 miao = converter.process([page])
-                #miao = miao[
-                #    [
-                #        "author_id",
-                #        "entities.hashtags",
-                #        "id",
-                #    ]
-                #]
-
                 try:
                     df = pd.concat([df, miao], ignore_index=True)
                 except NameError:
@@ -248,7 +259,9 @@ class UserETL:
             ),
             max_results=self.max_results,
         )
-        converter = DataFrameConverter()
+        converter = DataFrameConverter(
+            extra_input_columns="edit_history_tweet_ids,edit_controls.edits_remaining,edit_controls.editable_until,edit_controls.is_edit_eligible"
+        )
 
         with Progress() as progress:
             task = progress.add_task("Downloading 🐦…", total=self.pages)
@@ -298,7 +311,7 @@ class SocialDB:
             df["class"] = df["class"].astype("category")
             return df
         else:
-            with open(Path().cwd() / "hashtags.json", "r") as f:
+            with open(Path().cwd() / "hashtags_300.json", "r") as f:
                 tag_madre = json.load(f)
             tag_madre = {a: [x[0] for x in b[: self.k]] for a, b in tag_madre.items()}
 
@@ -379,3 +392,39 @@ class SocialDB:
                     print(f"[red]The edges I've extracted are[/red]:\n{my_edges}")
                     results.extend(my_edges)
             return results
+
+
+@define
+class CategorizeUsers:
+    user_ids: set = field(validator=validators.instance_of(set))
+    users: dict = field(init=False)
+
+    @users.default
+    def _users_default(self):
+        tag_madre = load_tag_madre()
+        results = {}
+
+        for user_id in self.user_ids:
+            u = UserETL(id=user_id, pages=5)
+            print(u.df.head())
+            # classify tweets
+            u.df = u.df[["id", "entities.hashtags", "author_id"]]
+            print("[red]Hey yoooooo")
+            u.df = u.df.dropna(subset=["entities.hashtags"])
+            u.df["tags"] = u.df["entities.hashtags"].map(eval).map(extract_tags)
+            u.df["tweet_class"] = u.df["tags"].apply(
+                classify_tweet, root_tags=tag_madre
+            )
+            u.df["tweet_class"] = u.df["tweet_class"].astype("category")
+
+            # classify users
+            users_df = pd.DataFrame(
+                u.df.groupby("author_id")["tweet_class"].apply(list)
+            )
+            hi = users_df["tweet_class"].apply(classify_user, root_tags=tag_madre)
+            results[user_id] = hi
+        return results
+
+
+if __name__ == "__main__":
+    a = CategorizeUsers(user_ids=set((922678836,)))
