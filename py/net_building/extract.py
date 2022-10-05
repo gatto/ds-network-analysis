@@ -1,5 +1,6 @@
 import datetime
 import json
+import logging
 import os
 import platform
 import random
@@ -10,6 +11,7 @@ import pandas as pd
 import pkg_resources
 from attrs import define, field, validators
 from rich import print
+from rich.logging import RichHandler
 from rich.progress import Progress, track
 from twarc.client2 import Twarc2
 from twarc.expansions import ensure_flattened
@@ -19,6 +21,13 @@ try:
     DATA_PATH = pkg_resources.resource_filename("socialetl", "data/")
 except ModuleNotFoundError:
     DATA_PATH = "data/"
+
+
+FORMAT = "%(message)s"
+logging.basicConfig(
+    level="WARNING", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()]
+)
+log = logging.getLogger("rich")
 
 
 def ensure_latin(s):
@@ -38,8 +47,13 @@ def classify_tweet(hashtags: list, root_tags: dict) -> str:
                 my_scores["prorus"] += 1
             elif hashtag in root_tags["pax"]:
                 my_scores["pax"] += 1
+    my_cat = get_unique_max(my_scores)
 
-    return get_unique_max(my_scores)
+    if not my_cat:  # didn't find any of the hashtags in the root_tags
+        my_cat = "dontcare"
+
+    log.warning(f"my_cat for hashtags {hashtags} is: {my_cat}")
+    return my_cat
 
 
 def get_unique_max(scores: dict):
@@ -60,6 +74,7 @@ def get_unique_max(scores: dict):
 
 def classify_user(categories: list, root_tags: dict) -> str:
     my_scores = {k: 0 for k in root_tags}
+    my_scores["dontcare"] = 0
     for category in categories:
         match category:
             case "proukr":
@@ -68,10 +83,14 @@ def classify_user(categories: list, root_tags: dict) -> str:
                 my_scores["prorus"] += 1
             case "pax":
                 my_scores["pax"] += 1
+            case "dontcare":
+                my_scores["dontcare"] += 1
             case _:
-                raise Exception(
+                log.error(
                     f"Wut? Category {category} doesn't exist\ncategories are:{categories}"
                 )
+                return "error"
+
     return get_unique_max(my_scores)
 
 
@@ -396,7 +415,7 @@ class SocialDB:
 
 @define
 class CategorizeUsers:
-    user_ids: set = field(validator=validators.instance_of(set))
+    user_ids: set = field(validator=validators.instance_of(set), repr=False)
     users: dict = field(init=False)
 
     @users.default
@@ -405,11 +424,10 @@ class CategorizeUsers:
         results = {}
 
         for user_id in self.user_ids:
-            u = UserETL(id=user_id, pages=5)
-            print(u.df.head())
+            u = UserETL(id=user_id, pages=20)
+
             # classify tweets
             u.df = u.df[["id", "entities.hashtags", "author_id"]]
-            print("[red]Hey yoooooo")
             u.df = u.df.dropna(subset=["entities.hashtags"])
             u.df["tags"] = u.df["entities.hashtags"].map(eval).map(extract_tags)
             u.df["tweet_class"] = u.df["tags"].apply(
@@ -417,14 +435,18 @@ class CategorizeUsers:
             )
             u.df["tweet_class"] = u.df["tweet_class"].astype("category")
 
+            # log.warning(u.df)
+
             # classify users
             users_df = pd.DataFrame(
                 u.df.groupby("author_id")["tweet_class"].apply(list)
             )
-            hi = users_df["tweet_class"].apply(classify_user, root_tags=tag_madre)
-            results[user_id] = hi
+            results[user_id] = users_df["tweet_class"].apply(
+                classify_user, root_tags=tag_madre
+            )[str(user_id)]
         return results
 
 
 if __name__ == "__main__":
     a = CategorizeUsers(user_ids=set((922678836,)))
+    print(a)
