@@ -52,7 +52,6 @@ def classify_tweet(hashtags: list, root_tags: dict) -> str:
             elif hashtag in root_tags["pax"]:
                 my_scores["pax"] += 1
     my_cat = get_unique_max(my_scores)
-    print(sum(my_scores.values()))
 
     ## now we discriminate what we found
     # case of no interesting tags in hashtags:
@@ -99,6 +98,8 @@ def classify_user(categories: list, root_tags: dict) -> str:
                 my_scores["pax"] += 1
             case "dontcare":
                 my_scores["dontcare"] += 1
+            case None:  # tweet can't be categorized bc no majority, we just skip it
+                pass
             case _:
                 log.error(
                     f"Wut? Category {category} doesn't exist\ncategories are:{categories}"
@@ -445,7 +446,8 @@ class CategorizeUsers:
             )
             results[user_id] = users_df["tweet_class"].apply(
                 classify_user, root_tags=tag_madre
-            )[str(user_id)]
+            )[0]
+            # what if no majority? [0] is suspect above
         return results
 
 
