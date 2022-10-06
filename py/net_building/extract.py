@@ -37,6 +37,10 @@ def ensure_latin(s):
 
 
 def classify_tweet(hashtags: list, root_tags: dict) -> str:
+    """
+    Tweet is classified according to majority of hashtags. If no hashtags are found among root_tags,
+    then category is `dontcare`. If there is no majority, category is `None`.
+    """
     my_scores = {k: 0 for k in root_tags}
     interesting_tags = set().union(*root_tags.values())
     for hashtag in hashtags:
@@ -48,11 +52,18 @@ def classify_tweet(hashtags: list, root_tags: dict) -> str:
             elif hashtag in root_tags["pax"]:
                 my_scores["pax"] += 1
     my_cat = get_unique_max(my_scores)
+    print(sum(my_scores.values()))
 
-    if not my_cat:  # didn't find any of the hashtags in the root_tags
+    ## now we discriminate what we found
+    # case of no interesting tags in hashtags:
+    if sum(my_scores.values()) == 0:
         my_cat = "dontcare"
 
-    log.warning(f"my_cat for hashtags {hashtags} is: {my_cat}")
+    topscore_repr = (
+        "" if my_cat in ("dontcare", None) else f", with score {my_scores[my_cat]}"
+    )
+    log.warning(f"cat for hashtags {hashtags} is: {my_cat}{topscore_repr}")
+
     return my_cat
 
 
@@ -73,6 +84,9 @@ def get_unique_max(scores: dict):
 
 
 def classify_user(categories: list, root_tags: dict) -> str:
+    """
+    User is classified according to simple majority of tweets for their category. If no majority, returns None.
+    """
     my_scores = {k: 0 for k in root_tags}
     my_scores["dontcare"] = 0
     for category in categories:
@@ -112,8 +126,8 @@ def extract_tags(list_of_hashtags) -> list:
     return results
 
 
-def load_tag_madre(k: int = 3):
-    with open(Path().cwd() / "hashtags_300.json", "r") as f:
+def load_tag_madre(k: int = 50):
+    with open(Path().cwd() / "list_hashtags.json", "r") as f:
         tag_madre = json.load(f)
     tag_madre = {a: [x[0] for x in b[:k]] for a, b in tag_madre.items()}
 
@@ -137,15 +151,6 @@ def _get_local_credentials():
     except FileNotFoundError:
         pass
     raise FileNotFoundError(f"There was no secrets file in {my_secret_path}.")
-
-
-@define
-class OneTweet:
-    text: str = field()
-
-    @text.default
-    def _text_default(self):
-        pass
 
 
 @define
@@ -178,6 +183,9 @@ class SocialETL:
                 start_time=datetime.datetime(
                     2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
                 ),
+                end_time=datetime.datetime(
+                    2022, 6, 15, 0, 0, 0, 0, datetime.timezone.utc
+                ),
             )
         converter = DataFrameConverter(
             extra_input_columns="edit_history_tweet_ids,edit_controls.edits_remaining,edit_controls.editable_until,edit_controls.is_edit_eligible"
@@ -203,12 +211,6 @@ class SocialETL:
         df.rename(columns=ensure_latin, inplace=True)
 
         return df
-
-    def is_interesting(self, tweet: OneTweet) -> bool:
-        if tweet:  # condition of interestingness
-            return True
-        else:
-            return False
 
 
 @define
@@ -258,7 +260,7 @@ class Count:
 class UserETL:
     id: int = field()
     pages: int = field(default=1)  # each page is max_results tweets
-    max_results: int = field(init=False, default=5)
+    max_results: int = field(init=False, default=20)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
 
@@ -424,7 +426,7 @@ class CategorizeUsers:
         results = {}
 
         for user_id in self.user_ids:
-            u = UserETL(id=user_id, pages=20)
+            u = UserETL(id=user_id, pages=5)
 
             # classify tweets
             u.df = u.df[["id", "entities.hashtags", "author_id"]]
@@ -448,5 +450,9 @@ class CategorizeUsers:
 
 
 if __name__ == "__main__":
-    a = CategorizeUsers(user_ids=set((922678836,)))
+    a = CategorizeUsers(
+        user_ids=set(
+            (1011495440, 1363208713432145925, 357142859, 1492093926303580160, 142535879)
+        )
+    )
     print(a)
