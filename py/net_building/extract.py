@@ -274,6 +274,7 @@ class UserETL:
             my_secret = self.secret
         t = Twarc2(bearer_token=my_secret)
 
+        log.warning(f"executing userETL on {self.id}")
         search_results = t.search_all(
             query=f"from:{self.id} has:hashtags",
             start_time=datetime.datetime(
