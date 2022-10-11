@@ -124,6 +124,12 @@ def extract_tags(list_of_hashtags) -> list:
         cleaned = my_dict["tag"].lower()
         cleaned = ensure_latin(cleaned)
         results.append(cleaned)
+    # debugging of "" being in the extracted hashtags
+    if "" in results:
+        log.warning(
+            f"201: original hashtags were {list_of_hashtags},\nout of which we extracted {results}"
+        )
+
     return results
 
 
