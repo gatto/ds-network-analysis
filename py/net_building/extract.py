@@ -41,8 +41,13 @@ def classify_tweet(hashtags: list, root_tags: dict) -> str:
     Tweet is classified according to majority of hashtags. If no hashtags are found among root_tags,
     then category is `dontcare`. If there is no majority, category is `None`.
     """
+    #tags=hashtags.copy()
     my_scores = {k: 0 for k in root_tags}
     interesting_tags = set().union(*root_tags.values())
+    #tags = ['no_hash' if x == '' else x for x in tags]
+    #for e in tags:
+    #    if e=='no_hash':
+    #        tags.remove(e)
     for hashtag in hashtags:
         if hashtag in interesting_tags:
             if hashtag in root_tags["proukr"]:
@@ -105,8 +110,25 @@ def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
                         f"Wut? Category {category} doesn't exist\nuser's tweets are classified as: {user_tweets_categories}"
                     )
                     return "error"
-
-    return get_unique_max(my_scores)
+    list_score=[]
+    care=0
+    nocare=0
+    for key, value in my_scores.items():
+        if key !='dontcare':
+            list_score.append(value)
+            care += value
+        else:
+            nocare += value
+    tot_score=care+nocare
+    my_max=max(list_score)
+    
+    if care/tot_score>=0.05:
+        for k,v in my_scores.items():
+            if v==my_max:
+                return k,v
+                
+    else:
+        return get_unique_max(my_scores)
 
 
 def construct_query_for_twarc(root_tags: dict) -> str:
@@ -441,6 +463,7 @@ class CategorizeUsers:
             u.df = u.df[["id", "entities.hashtags", "author_id"]]
             u.df = u.df.dropna(subset=["entities.hashtags"])
             u.df["tags"] = u.df["entities.hashtags"].map(eval).map(extract_tags)
+            
             u.df["tweet_class"] = u.df["tags"].apply(
                 classify_tweet, root_tags=tag_madre
             )
