@@ -274,11 +274,12 @@ class UserETL:
             my_secret = self.secret
         t = Twarc2(bearer_token=my_secret)
 
-        search_results = t.timeline(
-            user=self.id,
+        search_results = t.search_all(
+            query=f"from:{self.id} has:hashtags",
             start_time=datetime.datetime(
                 2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
             ),
+            end_time=datetime.datetime(2022, 5, 15, 0, 0, 0, 0, datetime.timezone.utc),
             max_results=self.max_results,
         )
         converter = DataFrameConverter(
