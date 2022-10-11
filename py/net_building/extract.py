@@ -82,29 +82,29 @@ def get_unique_max(scores: dict):
         raise Exception(f"cocco {cocco}")
 
 
-def classify_user(categories: list, root_tags: dict) -> str:
+def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
     """
     User is classified according to simple majority of tweets for their category. If no majority, returns None.
     """
     my_scores = {k: 0 for k in root_tags}
     my_scores["dontcare"] = 0
-    for category in categories:
-        match category:
-            case "proukr":
-                my_scores["proukr"] += 1
-            case "prorus":
-                my_scores["prorus"] += 1
-            case "pax":
-                my_scores["pax"] += 1
-            case "dontcare":
-                my_scores["dontcare"] += 1
-            case None:  # tweet can't be categorized bc no majority, we just skip it
-                pass
-            case _:
-                log.error(
-                    f"Wut? Category {category} doesn't exist\ncategories are:{categories}"
-                )
-                return "error"
+    for category in user_tweets_categories:
+        # this if ignores any tweet classified as None in classify_tweet() -> get_unique_max():
+        if category:
+            match category:
+                case "proukr":
+                    my_scores["proukr"] += 1
+                case "prorus":
+                    my_scores["prorus"] += 1
+                case "pax":
+                    my_scores["pax"] += 1
+                case "dontcare":
+                    my_scores["dontcare"] += 1
+                case _:
+                    log.error(
+                        f"Wut? Category {category} doesn't exist\nuser's tweets are classified as: {user_tweets_categories}"
+                    )
+                    return "error"
 
     return get_unique_max(my_scores)
 
@@ -127,7 +127,7 @@ def extract_tags(list_of_hashtags) -> list:
     return results
 
 
-def load_tag_madre(k: int = 50):
+def load_tag_madre(k: int = 1000):
     with open(Path().cwd() / "list_hashtags.json", "r") as f:
         tag_madre = json.load(f)
     tag_madre = {a: [x[0] for x in b[:k]] for a, b in tag_madre.items()}
