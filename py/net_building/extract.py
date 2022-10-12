@@ -145,7 +145,8 @@ def extract_tags(list_of_hashtags) -> list:
         # here we clean any hashtags e.g. with lower()
         cleaned = my_dict["tag"].lower()
         cleaned = ensure_latin(cleaned)
-        results.append(cleaned)
+        if cleaned:  # forgetting about "" empty strings
+            results.append(cleaned)
     # debugging of "" being in the extracted hashtags
     if "" in results:
         log.warning(
