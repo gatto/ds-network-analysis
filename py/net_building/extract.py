@@ -44,10 +44,7 @@ def classify_tweet(hashtags: list, root_tags: dict) -> str:
     #tags=hashtags.copy()
     my_scores = {k: 0 for k in root_tags}
     interesting_tags = set().union(*root_tags.values())
-    #tags = ['no_hash' if x == '' else x for x in tags]
-    #for e in tags:
-    #    if e=='no_hash':
-    #        tags.remove(e)
+    
     for hashtag in hashtags:
         if hashtag in interesting_tags:
             if hashtag in root_tags["proukr"]:
@@ -64,9 +61,9 @@ def classify_tweet(hashtags: list, root_tags: dict) -> str:
         my_cat = "dontcare"
 
     topscore_repr = (
-        "" if my_cat in ("dontcare", None) else f", with score {my_scores[my_cat]}"
+        "" if my_cat in ("dontcare", None ) else f", with score {my_scores[my_cat]}"
     )
-    log.warning(f"cat for hashtags {hashtags} is: {my_cat}{topscore_repr}")
+    #log.warning(f"cat for hashtags {hashtags} is: {my_cat}{topscore_repr}")
 
     return my_cat
 
@@ -78,13 +75,14 @@ def get_unique_max(scores: dict):
     for value in scores.values():
         if value == scores[my_max]:
             cocco += 1
+    return my_max
     # and now we return, discriminating on whether the max was unique or not
-    if cocco > 1:  # non unique maximum found
-        return None
-    elif cocco == 1:  # unique maximum found
-        return my_max
-    else:  # wut tis
-        raise Exception(f"cocco {cocco}")
+    #if cocco > 1:  # non unique maximum found
+    #    None
+    #elif cocco == 1:  # unique maximum found
+    #    return my_max
+    #else:  # wut tis
+    #    raise Exception(f"cocco {cocco}")
 
 
 def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
@@ -106,9 +104,9 @@ def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
                 case "dontcare":
                     my_scores["dontcare"] += 1
                 case _:
-                    log.error(
-                        f"Wut? Category {category} doesn't exist\nuser's tweets are classified as: {user_tweets_categories}"
-                    )
+                    #log.error(
+                    #    f"Wut? Category {category} doesn't exist\nuser's tweets are classified as: {user_tweets_categories}"
+                    #)
                     return "error"
     list_score=[]
     care=0
@@ -122,10 +120,10 @@ def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
     tot_score=care+nocare
     my_max=max(list_score)
     
-    if care/tot_score>=0.05:
+    if care/tot_score>=0.07:
         for k,v in my_scores.items():
             if v==my_max:
-                return k,v
+                return k
                 
     else:
         return get_unique_max(my_scores)
@@ -290,7 +288,7 @@ class Count:
 class UserETL:
     id: int = field()
     pages: int = field(default=1)  # each page is max_results tweets
-    max_results: int = field(init=False, default=20)
+    max_results: int = field(init=False, default=50)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
 
@@ -303,7 +301,7 @@ class UserETL:
             my_secret = self.secret
         t = Twarc2(bearer_token=my_secret)
 
-        log.warning(f"executing userETL on {self.id}")
+        #log.warning(f"executing userETL on {self.id}")
         search_results = t.search_all(
             query=f"from:{self.id} has:hashtags",
             start_time=datetime.datetime(
@@ -317,7 +315,7 @@ class UserETL:
         )
 
         with Progress() as progress:
-            task = progress.add_task("Downloading 🐦…", total=self.pages)
+            #task = progress.add_task("Downloading 🐦…", total=self.pages)
             i = 1
 
             for page in search_results:
@@ -328,7 +326,7 @@ class UserETL:
                 except NameError:
                     df = miao
 
-                progress.update(task, advance=1, refresh=True)
+                #progress.update(task, advance=1, refresh=True)
                 if i == self.pages:
                     break
                 i += 1
