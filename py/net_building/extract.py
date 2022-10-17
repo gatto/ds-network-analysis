@@ -120,7 +120,7 @@ def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
     tot_score=care+nocare
     my_max=max(list_score)
     
-    if care/tot_score>=0.07:
+    if care/tot_score>=0.10:
         for k,v in my_scores.items():
             if v==my_max:
                 return k
@@ -154,8 +154,8 @@ def extract_tags(list_of_hashtags) -> list:
     return results
 
 
-def load_tag_madre(k: int = 1000):
-    with open(Path().cwd() / "list_hashtags.json", "r") as f:
+def load_tag_madre(k: int = 250):
+    with open(Path().cwd() / "hashtags_new2_300.json", "r") as f:
         tag_madre = json.load(f)
     tag_madre = {a: [x[0] for x in b[:k]] for a, b in tag_madre.items()}
 
@@ -263,6 +263,9 @@ class Count:
             start_time=datetime.datetime(
                 2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
             ),
+            end_time=datetime.datetime(
+                    2022, 6, 15, 0, 0, 0, 0, datetime.timezone.utc
+                ),
         )
         df = pd.DataFrame(
             self._unpack_counts(search_results),
@@ -288,7 +291,7 @@ class Count:
 class UserETL:
     id: int = field()
     pages: int = field(default=1)  # each page is max_results tweets
-    max_results: int = field(init=False, default=50)
+    max_results: int = field(init=False, default=100)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
 
@@ -307,8 +310,8 @@ class UserETL:
             start_time=datetime.datetime(
                 2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
             ),
-            end_time=datetime.datetime(2022, 5, 15, 0, 0, 0, 0, datetime.timezone.utc),
-            max_results=self.max_results,
+            end_time=datetime.datetime(2022, 6, 15, 0, 0, 0, 0, datetime.timezone.utc),
+            max_results=50,
         )
         converter = DataFrameConverter(
             extra_input_columns="edit_history_tweet_ids,edit_controls.edits_remaining,edit_controls.editable_until,edit_controls.is_edit_eligible"
