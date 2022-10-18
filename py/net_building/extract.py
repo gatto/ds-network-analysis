@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 
 FORMAT = "%(message)s"
 logging.basicConfig(
-    level="WARNING", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()]
+    level="ERROR", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()]
 )
 log = logging.getLogger("rich")
 
@@ -41,10 +41,9 @@ def classify_tweet(hashtags: list, root_tags: dict) -> str:
     Tweet is classified according to majority of hashtags. If no hashtags are found among root_tags,
     then category is `dontcare`. If there is no majority, category is `None`.
     """
-    #tags=hashtags.copy()
     my_scores = {k: 0 for k in root_tags}
     interesting_tags = set().union(*root_tags.values())
-    
+
     for hashtag in hashtags:
         if hashtag in interesting_tags:
             if hashtag in root_tags["proukr"]:
@@ -61,9 +60,9 @@ def classify_tweet(hashtags: list, root_tags: dict) -> str:
         my_cat = "dontcare"
 
     topscore_repr = (
-        "" if my_cat in ("dontcare", None ) else f", with score {my_scores[my_cat]}"
+        "" if my_cat in ("dontcare", None) else f", with score {my_scores[my_cat]}"
     )
-    #log.warning(f"cat for hashtags {hashtags} is: {my_cat}{topscore_repr}")
+    log.warning(f"cat for hashtags {hashtags} is: {my_cat}{topscore_repr}")
 
     return my_cat
 
@@ -75,14 +74,13 @@ def get_unique_max(scores: dict):
     for value in scores.values():
         if value == scores[my_max]:
             cocco += 1
-    return my_max
     # and now we return, discriminating on whether the max was unique or not
-    #if cocco > 1:  # non unique maximum found
-    #    None
-    #elif cocco == 1:  # unique maximum found
-    #    return my_max
-    #else:  # wut tis
-    #    raise Exception(f"cocco {cocco}")
+    if cocco > 1:  # non unique maximum found
+        return None
+    elif cocco == 1:  # unique maximum found
+        return my_max
+    else:  # wut tis
+        raise Exception(f"cocco {cocco}")
 
 
 def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
@@ -104,27 +102,27 @@ def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
                 case "dontcare":
                     my_scores["dontcare"] += 1
                 case _:
-                    #log.error(
-                    #    f"Wut? Category {category} doesn't exist\nuser's tweets are classified as: {user_tweets_categories}"
-                    #)
+                    log.error(
+                        f"Wut? Category {category} doesn't exist\nuser's tweets are classified as: {user_tweets_categories}"
+                    )
                     return "error"
-    list_score=[]
-    care=0
-    nocare=0
+    list_score = []
+    care = 0
+    nocare = 0
     for key, value in my_scores.items():
-        if key !='dontcare':
+        if key != "dontcare":
             list_score.append(value)
             care += value
         else:
             nocare += value
-    tot_score=care+nocare
-    my_max=max(list_score)
-    
-    if care/tot_score>=0.10:
-        for k,v in my_scores.items():
-            if v==my_max:
+    tot_score = care + nocare
+    my_max = max(list_score)
+
+    if care / tot_score >= 0.10:
+        for k, v in my_scores.items():
+            if v == my_max:
                 return k
-                
+
     else:
         return get_unique_max(my_scores)
 
@@ -155,7 +153,7 @@ def extract_tags(list_of_hashtags) -> list:
 
 
 def load_tag_madre(k: int = 250):
-    with open(Path().cwd() / "hashtags_new2_300.json", "r") as f:
+    with open(Path().cwd() / "list_hashtags.json", "r") as f:
         tag_madre = json.load(f)
     tag_madre = {a: [x[0] for x in b[:k]] for a, b in tag_madre.items()}
 
@@ -263,9 +261,7 @@ class Count:
             start_time=datetime.datetime(
                 2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
             ),
-            end_time=datetime.datetime(
-                    2022, 6, 15, 0, 0, 0, 0, datetime.timezone.utc
-                ),
+            end_time=datetime.datetime(2022, 6, 15, 0, 0, 0, 0, datetime.timezone.utc),
         )
         df = pd.DataFrame(
             self._unpack_counts(search_results),
@@ -304,21 +300,21 @@ class UserETL:
             my_secret = self.secret
         t = Twarc2(bearer_token=my_secret)
 
-        #log.warning(f"executing userETL on {self.id}")
+        log.warning(f"executing userETL on {self.id}")
         search_results = t.search_all(
             query=f"from:{self.id} has:hashtags",
             start_time=datetime.datetime(
                 2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
             ),
             end_time=datetime.datetime(2022, 6, 15, 0, 0, 0, 0, datetime.timezone.utc),
-            max_results=50,
+            max_results=self.max_results,
         )
         converter = DataFrameConverter(
             extra_input_columns="edit_history_tweet_ids,edit_controls.edits_remaining,edit_controls.editable_until,edit_controls.is_edit_eligible"
         )
 
         with Progress() as progress:
-            #task = progress.add_task("Downloading 🐦…", total=self.pages)
+            task = progress.add_task("Downloading 🐦…", total=self.pages)
             i = 1
 
             for page in search_results:
@@ -329,7 +325,7 @@ class UserETL:
                 except NameError:
                     df = miao
 
-                #progress.update(task, advance=1, refresh=True)
+                progress.update(task, advance=1, refresh=True)
                 if i == self.pages:
                     break
                 i += 1
@@ -365,17 +361,7 @@ class SocialDB:
             df["class"] = df["class"].astype("category")
             return df
         else:
-            with open(Path().cwd() / "hashtags_300.json", "r") as f:
-                tag_madre = json.load(f)
-            tag_madre = {a: [x[0] for x in b[: self.k]] for a, b in tag_madre.items()}
-
-            # remember to extend the "tag_madre" with the original tag_madre
-            if "slavaukraini" not in tag_madre["proukr"]:
-                tag_madre["proukr"].append("slavaukraini")
-            if "istandwithputin" not in tag_madre["prorus"]:
-                tag_madre["prorus"].append("istandwithputin")
-            if "stopwarinukraine" not in tag_madre["pax"]:
-                tag_madre["pax"].append("stopwarinukraine")
+            tag_madre = load_tag_madre()
 
             # make query
             print(f"Tag madre used:\n{tag_madre}")
@@ -451,6 +437,7 @@ class SocialDB:
 @define
 class CategorizeUsers:
     user_ids: set = field(validator=validators.instance_of(set), repr=False)
+    pages: int = field(default=5, repr=False)
     users: dict = field(init=False)
 
     @users.default
@@ -459,19 +446,20 @@ class CategorizeUsers:
         results = {}
 
         for user_id in self.user_ids:
-            u = UserETL(id=user_id, pages=5)
+            u = UserETL(id=user_id, pages=self.pages)
 
             # classify tweets
             u.df = u.df[["id", "entities.hashtags", "author_id"]]
             u.df = u.df.dropna(subset=["entities.hashtags"])
             u.df["tags"] = u.df["entities.hashtags"].map(eval).map(extract_tags)
-            
+
             u.df["tweet_class"] = u.df["tags"].apply(
                 classify_tweet, root_tags=tag_madre
             )
             u.df["tweet_class"] = u.df["tweet_class"].astype("category")
 
-            # log.warning(u.df)
+            # we eliminate tweets with no majority:
+            u.df = u.df.dropna(subset=["tweet_class"])
 
             # classify users
             users_df = pd.DataFrame(
@@ -480,14 +468,10 @@ class CategorizeUsers:
             results[user_id] = users_df["tweet_class"].apply(
                 classify_user, root_tags=tag_madre
             )[0]
-            # what if no majority? [0] is suspect above
+            # [0] is a bit suspect above?
         return results
 
 
 if __name__ == "__main__":
-    a = CategorizeUsers(
-        user_ids=set(
-            (1011495440, 1363208713432145925, 357142859, 1492093926303580160, 142535879)
-        )
-    )
+    a = CategorizeUsers(user_ids=set((1107946333,)))
     print(a)
