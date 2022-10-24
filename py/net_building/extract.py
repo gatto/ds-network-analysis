@@ -106,25 +106,15 @@ def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
                         f"Wut? Category {category} doesn't exist\nuser's tweets are classified as: {user_tweets_categories}"
                     )
                     return "error"
-    list_score = []
-    care = 0
-    nocare = 0
-    for key, value in my_scores.items():
-        if key != "dontcare":
-            list_score.append(value)
-            care += value
-        else:
-            nocare += value
-    tot_score = care + nocare
-    my_max = max(list_score)
 
-    if care / tot_score >= 0.10:
-        for k, v in my_scores.items():
-            if v == my_max:
-                return k
+    care = my_scores["proukr"] + my_scores["prorus"] + my_scores["pax"]
+    nocare = my_scores["dontcare"]
 
-    else:
+    if care / (care + nocare) >= 0.07:
+        del my_scores["dontcare"]
         return get_unique_max(my_scores)
+    else:
+        return "dontcare"
 
 
 def construct_query_for_twarc(root_tags: dict) -> str:
@@ -152,7 +142,7 @@ def extract_tags(list_of_hashtags) -> list:
     return results
 
 
-def load_tag_madre(k: int = 250):
+def load_tag_madre(k: int = 1000):
     with open(Path().cwd() / "list_hashtags.json", "r") as f:
         tag_madre = json.load(f)
     tag_madre = {a: [x[0] for x in b[:k]] for a, b in tag_madre.items()}
