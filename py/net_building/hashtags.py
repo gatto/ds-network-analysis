@@ -27,7 +27,7 @@ def create_score(df: pd.DataFrame, one_hashtag: str, root_tags: dict) -> list:
     # is in the tweet. Takes one_hashtag, the hashtag to score, and
     # root_tags, a dict of {category: [hashtags]}
     # TODO: make it so it accepts a list of {category: [hashtags]} instead of just one
-    threshold_support = 0.5 * len(df) / 10000  # set the threshold_support here!!
+    threshold_support = 0.9 * len(df) / 10000  # set the threshold_support here!!
 
     if threshold_support < 1:
         threshold_support = 1
@@ -127,7 +127,7 @@ def do_search(tagmadre, pages):
 if __name__ == "__main__":
     # params
     top_results_to_take = 3
-    pages_to_do = 300
+    pages_to_do = 800
 
     # set the initial "parent" hashtags for each category
     tag_madre = {
