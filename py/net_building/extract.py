@@ -143,7 +143,7 @@ def extract_tags(list_of_hashtags) -> list:
 
 
 def load_tag_madre(k: int = 1000):
-    with open(Path().cwd() / "list_hashtags.json", "r") as f:
+    with open(Path().cwd() / "hashtag_final_lists", "r") as f:
         tag_madre = json.load(f)
     tag_madre = {a: [x[0] for x in b[:k]] for a, b in tag_madre.items()}
 
