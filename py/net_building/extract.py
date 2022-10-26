@@ -143,7 +143,7 @@ def extract_tags(list_of_hashtags) -> list:
 
 
 def load_tag_madre(k: int = 1000):
-    with open(Path().cwd() / "hashtag_final_lists", "r") as f:
+    with open(Path().cwd() / "hashtag_final_lists.json", "r") as f:
         tag_madre = json.load(f)
     tag_madre = {a: [x[0] for x in b[:k]] for a, b in tag_madre.items()}
 
@@ -200,7 +200,7 @@ class SocialETL:
                     2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
                 ),
                 end_time=datetime.datetime(
-                    2022, 6, 15, 0, 0, 0, 0, datetime.timezone.utc
+                    2022, 3, 15, 0, 0, 0, 0, datetime.timezone.utc
                 ),
             )
         converter = DataFrameConverter(
@@ -251,7 +251,7 @@ class Count:
             start_time=datetime.datetime(
                 2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
             ),
-            end_time=datetime.datetime(2022, 6, 15, 0, 0, 0, 0, datetime.timezone.utc),
+            end_time=datetime.datetime(2022, 3, 15, 0, 0, 0, 0, datetime.timezone.utc),
         )
         df = pd.DataFrame(
             self._unpack_counts(search_results),
@@ -296,7 +296,7 @@ class UserETL:
             start_time=datetime.datetime(
                 2022, 2, 15, 0, 0, 0, 0, datetime.timezone.utc
             ),
-            end_time=datetime.datetime(2022, 6, 15, 0, 0, 0, 0, datetime.timezone.utc),
+            end_time=datetime.datetime(2022, 3, 15, 0, 0, 0, 0, datetime.timezone.utc),
             max_results=self.max_results,
         )
         converter = DataFrameConverter(
