@@ -85,6 +85,10 @@
             0.9
         ],
         [
+            "kharkiv",
+            0.5387
+        ],
+        [
             "tory",
             1.0
         ],
@@ -147,6 +151,10 @@
         [
             "russiagohome",
             0.6471
+        ],
+        [
+            "crimea",
+            0.4286
         ],
         [
             "sotb",
@@ -341,6 +349,10 @@
             1.0
         ],
         [
+            "painting",
+            0.9286
+        ],
+        [
             "banrussianoil",
             0.9916
         ],
@@ -509,6 +521,10 @@
             0.8
         ],
         [
+            "eurovision",
+            0.6667
+        ],
+        [
             "socialmedia",
             0.5833
         ],
@@ -569,6 +585,10 @@
             1.0
         ],
         [
+            "lithuania",
+            1.0
+        ],
+        [
             "polske",
             1.0
         ],
@@ -598,6 +618,10 @@
         ],
         [
             "notmeus",
+            1.0
+        ],
+        [
+            "followbackfriday",
             1.0
         ],
         [
@@ -682,6 +706,10 @@
         ],
         [
             "poetry",
+            1.0
+        ],
+        [
+            "freesyria",
             1.0
         ],
         [
@@ -809,6 +837,10 @@
             0.9118
         ],
         [
+            "blacklivesmatter",
+            0.7333
+        ],
+        [
             "respect",
             0.9783
         ],
@@ -835,6 +867,10 @@
         [
             "z",
             0.6333
+        ],
+        [
+            "georgia",
+            1.0
         ],
         [
             "italy",
@@ -893,6 +929,10 @@
             0.7143
         ],
         [
+            "dogsoftwitter",
+            0.6
+        ],
+        [
             "fbpeparty",
             1.0
         ],
@@ -911,6 +951,10 @@
         [
             "godblessukraine",
             0.8571
+        ],
+        [
+            "tiktok",
+            0.6071
         ],
         [
             "noflyzoneoverukrainenow",
@@ -953,6 +997,10 @@
             0.8
         ],
         [
+            "azerbaijan",
+            1.0
+        ],
+        [
             "sniffergove",
             1.0
         ],
@@ -981,6 +1029,10 @@
             0.5529
         ],
         [
+            "usa",
+            0.8333
+        ],
+        [
             "cnbc",
             1.0
         ],
@@ -1007,6 +1059,10 @@
         [
             "ukrainiannews",
             1.0
+        ],
+        [
+            "polish",
+            0.5556
         ],
         [
             "nevergiveup",
@@ -1049,8 +1105,16 @@
             1.0
         ],
         [
+            "germany",
+            0.4737
+        ],
+        [
             "russians",
             0.4008
+        ],
+        [
+            "photography",
+            0.5
         ],
         [
             "hannity",
@@ -1079,6 +1143,10 @@
         [
             "anonops",
             1.0
+        ],
+        [
+            "newprofilepic",
+            0.9
         ],
         [
             "longcovid",
@@ -1293,6 +1361,10 @@
             1.0
         ],
         [
+            "europe",
+            0.4972
+        ],
+        [
             "russianassets",
             1.0
         ],
@@ -1339,6 +1411,10 @@
         [
             "nosurrender",
             1.0
+        ],
+        [
+            "catsoftwitter",
+            0.8235
         ],
         [
             "wearamask",
@@ -1525,6 +1601,10 @@
             0.8571
         ],
         [
+            "odessa",
+            0.6557
+        ],
+        [
             "nlaw",
             1.0
         ],
@@ -1539,6 +1619,10 @@
         [
             "johnsonout48",
             1.0
+        ],
+        [
+            "odesa",
+            0.7083
         ],
         [
             "tractor",
@@ -1641,6 +1725,10 @@
             0.9395
         ],
         [
+            "nftcollector",
+            0.7206
+        ],
+        [
             "syrians",
             0.75
         ],
@@ -1737,6 +1825,10 @@
             0.9464
         ],
         [
+            "infosec",
+            0.9444
+        ],
+        [
             "staypawsitive",
             1.0
         ],
@@ -1795,6 +1887,10 @@
         [
             "rusya",
             0.9677
+        ],
+        [
+            "fresh",
+            1.0
         ],
         [
             "theghostofkyiv",
@@ -1875,6 +1971,10 @@
         [
             "puckfutin",
             0.7778
+        ],
+        [
+            "finland",
+            0.9603
         ],
         [
             "starlink",
@@ -2221,6 +2321,10 @@
             1.0
         ],
         [
+            "turkey",
+            0.7778
+        ],
+        [
             "russiansoldiersstanddown",
             0.7
         ],
@@ -2239,6 +2343,10 @@
         [
             "worldwariii",
             0.4545
+        ],
+        [
+            "biden",
+            0.6286
         ],
         [
             "brexit",
@@ -2413,6 +2521,10 @@
             1.0
         ],
         [
+            "caturday",
+            0.8182
+        ],
+        [
             "lugrow",
             1.0
         ],
@@ -2493,6 +2605,10 @@
             0.7778
         ],
         [
+            "womensrightsarehumanrights",
+            1.0
+        ],
+        [
             "gaslighting",
             0.9412
         ],
@@ -2503,6 +2619,10 @@
         [
             "weareone",
             0.7083
+        ],
+        [
+            "lgbtq",
+            1.0
         ],
         [
             "putler",
@@ -2609,6 +2729,10 @@
             1.0
         ],
         [
+            "syria",
+            0.4483
+        ],
+        [
             "westandwithukriane",
             0.76
         ],
@@ -2641,12 +2765,20 @@
             0.8958
         ],
         [
+            "cats",
+            0.7273
+        ],
+        [
             "sdr4hackers",
             1.0
         ],
         [
             "cryptonews",
             0.8644
+        ],
+        [
+            "uk",
+            0.7895
         ],
         [
             "artforpeaceinukraine",
@@ -2681,6 +2813,10 @@
             1.0
         ],
         [
+            "karma",
+            0.7273
+        ],
+        [
             "demvoice1",
             1.0
         ],
@@ -2691,6 +2827,10 @@
         [
             "followback",
             1.0
+        ],
+        [
+            "estonia",
+            0.9846
         ],
         [
             "johnsonout47",
@@ -2865,8 +3005,16 @@
             0.9538
         ],
         [
+            "twitter",
+            0.7742
+        ],
+        [
             "fbfin",
             1.0
+        ],
+        [
+            "cryptoartist",
+            0.9307
         ],
         [
             "impfenstattschimpfen",
@@ -2887,6 +3035,10 @@
         [
             "loot",
             1.0
+        ],
+        [
+            "covidisnotover",
+            0.9688
         ],
         [
             "resistenza",
@@ -2991,6 +3143,10 @@
             0.8148
         ],
         [
+            "paris",
+            0.6667
+        ],
+        [
             "stopviolenceagainstwomen",
             0.9231
         ],
@@ -3063,6 +3219,10 @@
             0.8077
         ],
         [
+            "music",
+            0.5227
+        ],
+        [
             "poutineassassin",
             0.7
         ],
@@ -3073,6 +3233,10 @@
         [
             "stoprussian",
             1.0
+        ],
+        [
+            "arte",
+            0.6389
         ],
         [
             "armukraine",
@@ -3121,6 +3285,10 @@
         [
             "journalist",
             0.75
+        ],
+        [
+            "art",
+            0.7959
         ],
         [
             "standtogether",
@@ -3287,12 +3455,20 @@
             1.0
         ],
         [
+            "cryptoart",
+            0.6552
+        ],
+        [
             "belozerka",
             1.0
         ],
         [
             "gr1",
             1.0
+        ],
+        [
+            "collageart",
+            0.8571
         ],
         [
             "ukrainewarreport",
@@ -3317,6 +3493,10 @@
         [
             "fakenews",
             0.4167
+        ],
+        [
+            "nftcommunity",
+            0.6628
         ],
         [
             "russiantroopsout",
@@ -3381,6 +3561,10 @@
         [
             "kriegineuropa",
             1.0
+        ],
+        [
+            "nftproject",
+            0.9048
         ],
         [
             "sosukraine",
@@ -3487,6 +3671,10 @@
             0.525
         ],
         [
+            "donbass",
+            0.4211
+        ],
+        [
             "virus",
             1.0
         ],
@@ -3551,6 +3739,10 @@
             1.0
         ],
         [
+            "nftartist",
+            0.9474
+        ],
+        [
             "societa",
             1.0
         ],
@@ -3567,6 +3759,10 @@
             1.0
         ],
         [
+            "berlin",
+            0.6383
+        ],
+        [
             "brovary",
             0.5714
         ],
@@ -3575,8 +3771,16 @@
             1.0
         ],
         [
+            "contemporaryart",
+            0.5714
+        ],
+        [
             "audiobook_jeenekirah",
             1.0
+        ],
+        [
+            "metaverse",
+            0.7333
         ],
         [
             "referendum",
@@ -3605,6 +3809,10 @@
         [
             "hilfeukraine",
             1.0
+        ],
+        [
+            "kiev",
+            0.5928
         ],
         [
             "closesky",
@@ -3679,6 +3887,10 @@
             1.0
         ],
         [
+            "cryptocurrency",
+            0.6
+        ],
+        [
             "ansa",
             1.0
         ],
@@ -3727,6 +3939,10 @@
             1.0
         ],
         [
+            "indie",
+            1.0
+        ],
+        [
             "ucraniabajofuego",
             0.6852
         ],
@@ -3749,6 +3965,10 @@
         [
             "dniprorudne",
             0.8889
+        ],
+        [
+            "mariopaciolla",
+            1.0
         ],
         [
             "moldova",
@@ -3847,6 +4067,14 @@
             0.6111
         ],
         [
+            "nftcollectors",
+            0.9919
+        ],
+        [
+            "cybersecurity",
+            0.8438
+        ],
+        [
             "poutine",
             0.7321
         ],
@@ -3919,6 +4147,10 @@
             0.7073
         ],
         [
+            "animals",
+            0.8333
+        ],
+        [
             "donetsk",
             0.7812
         ],
@@ -3939,12 +4171,20 @@
             1.0
         ],
         [
+            "mariupol",
+            0.527
+        ],
+        [
             "eurocities",
             1.0
         ],
         [
             "albano",
             1.0
+        ],
+        [
+            "covid19",
+            0.8421
         ],
         [
             "indiemusic",
@@ -3971,8 +4211,16 @@
             0.8667
         ],
         [
+            "mosca",
+            0.9
+        ],
+        [
             "russe",
             0.7
+        ],
+        [
+            "moscow",
+            0.4653
         ],
         [
             "crimesagainsthumanity",
@@ -4011,12 +4259,20 @@
             0.8293
         ],
         [
+            "ucraine",
+            0.75
+        ],
+        [
             "serbian",
             0.9231
         ],
         [
             "ue",
             0.5263
+        ],
+        [
+            "italia",
+            0.9765
         ],
         [
             "vaccines",
@@ -4139,6 +4395,10 @@
             0.576
         ],
         [
+            "mondaythoughts",
+            0.75
+        ],
+        [
             "stoprussiaaggression",
             0.7424
         ],
@@ -4255,6 +4515,10 @@
             0.9533
         ],
         [
+            "spotify",
+            1.0
+        ],
+        [
             "helpukraine",
             0.6386
         ],
@@ -4345,6 +4609,10 @@
         [
             "westandwhitukraine",
             1.0
+        ],
+        [
+            "ukrain",
+            0.7222
         ],
         [
             "standwithukriane",
@@ -4475,6 +4743,10 @@
             1.0
         ],
         [
+            "ucraina",
+            0.9043
+        ],
+        [
             "versiperme",
             1.0
         ],
@@ -4489,6 +4761,10 @@
         [
             "guerraenucrania",
             1.0
+        ],
+        [
+            "nfts",
+            0.6598
         ],
         [
             "ucraniabajoataque",
@@ -4843,6 +5119,10 @@
             0.48
         ],
         [
+            "europa",
+            0.9688
+        ],
+        [
             "russiaukrainewar",
             0.7543
         ],
@@ -4873,6 +5153,10 @@
         [
             "digitalartwork",
             1.0
+        ],
+        [
+            "macron",
+            0.5455
         ],
         [
             "nonuclearwar",
@@ -4947,6 +5231,10 @@
             1.0
         ],
         [
+            "bbc",
+            0.6667
+        ],
+        [
             "ucranialibre",
             0.6216
         ],
@@ -4999,6 +5287,10 @@
             0.875
         ],
         [
+            "japan",
+            0.4286
+        ],
+        [
             "protectuasky",
             0.9
         ],
@@ -5036,6 +5328,10 @@
         ],
         [
             "noflyzon",
+            1.0
+        ],
+        [
+            "giulioregeni",
             1.0
         ],
         [
@@ -5153,6 +5449,10 @@
         [
             "deutschalsfremdsprache",
             1.0
+        ],
+        [
+            "nft",
+            0.6628
         ],
         [
             "genocide",
@@ -5312,590 +5612,6 @@
         ]
     ],
     "prorus": [
-        [
-            "europeanparliament",
-            0.7692
-        ],
-        [
-            "belarus",
-            0.6565
-        ],
-        [
-            "stophatingrussians",
-            0.4696
-        ],
-        [
-            "russieukraine",
-            0.9722
-        ],
-        [
-            "otancriminal",
-            0.9583
-        ],
-        [
-            "stopbombingdonbass",
-            1.0
-        ],
-        [
-            "maryamnawaz",
-            1.0
-        ],
-        [
-            "internationalwomensday",
-            0.7895
-        ],
-        [
-            "iraq",
-            0.6429
-        ],
-        [
-            "lugansk",
-            0.4444
-        ],
-        [
-            "halamadrid",
-            0.9333
-        ],
-        [
-            "istandwithrussian",
-            1.0
-        ],
-        [
-            "lahore",
-            1.0
-        ],
-        [
-            "donbassgenocide",
-            1.0
-        ],
-        [
-            "africansinukraine",
-            0.8605
-        ],
-        [
-            "istandwithjkrowling",
-            1.0
-        ],
-        [
-            "unitedstates",
-            0.7895
-        ],
-        [
-            "jeffreypyatt",
-            1.0
-        ],
-        [
-            "2014ukrainecoup",
-            1.0
-        ],
-        [
-            "westandwithrussia",
-            0.9
-        ],
-        [
-            "alllivesmatter",
-            0.6667
-        ],
-        [
-            "dunyanew",
-            1.0
-        ],
-        [
-            "media",
-            0.6667
-        ],
-        [
-            "russophobia",
-            0.9231
-        ],
-        [
-            "ukrainewarcrimes",
-            0.8333
-        ],
-        [
-            "azovbattalion",
-            0.5
-        ],
-        [
-            "beograd",
-            1.0
-        ],
-        [
-            "westernhypocrisy",
-            0.7857
-        ],
-        [
-            "warcrimesofukraine",
-            1.0
-        ],
-        [
-            "naziukraine",
-            0.9831
-        ],
-        [
-            "babarazam",
-            1.0
-        ],
-        [
-            "mytwitteranniversary",
-            0.75
-        ],
-        [
-            "indiavspakistan",
-            1.0
-        ],
-        [
-            "isupportputin",
-            1.0
-        ],
-        [
-            "palestine",
-            0.6129
-        ],
-        [
-            "slavarossii",
-            1.0
-        ],
-        [
-            "wemetontwitter",
-            1.0
-        ],
-        [
-            "kleptocapture",
-            1.0
-        ],
-        [
-            "ftm",
-            1.0
-        ],
-        [
-            "stopnato",
-            1.0
-        ],
-        [
-            "draghivattenesubito",
-            0.6667
-        ],
-        [
-            "empireoflies",
-            1.0
-        ],
-        [
-            "stopnatoexpansion",
-            0.8
-        ],
-        [
-            "isupportrussia",
-            1.0
-        ],
-        [
-            "bidenisadisgrace",
-            0.8182
-        ],
-        [
-            "victorianuland",
-            1.0
-        ],
-        [
-            "governocriminale",
-            0.6667
-        ],
-        [
-            "f1",
-            0.9333
-        ],
-        [
-            "___",
-            0.5714
-        ],
-        [
-            "norche",
-            1.0
-        ],
-        [
-            "freebiafranow",
-            1.0
-        ],
-        [
-            "kremlinrussia_e",
-            0.8571
-        ],
-        [
-            "weekend",
-            0.8571
-        ],
-        [
-            "supportrussia",
-            1.0
-        ],
-        [
-            "donbas",
-            0.875
-        ],
-        [
-            "psl2022",
-            1.0
-        ],
-        [
-            "cwc22",
-            1.0
-        ],
-        [
-            "palestineunderattack",
-            0.9167
-        ],
-        [
-            "women",
-            0.8824
-        ],
-        [
-            "africom",
-            1.0
-        ],
-        [
-            "corsica",
-            1.0
-        ],
-        [
-            "lnr",
-            1.0
-        ],
-        [
-            "biolabs",
-            0.9375
-        ],
-        [
-            "nomore",
-            0.9901
-        ],
-        [
-            "nwo",
-            1.0
-        ],
-        [
-            "warcrime",
-            0.493
-        ],
-        [
-            "european",
-            0.7647
-        ],
-        [
-            "girls",
-            0.8824
-        ],
-        [
-            "nomore_us_intervention",
-            1.0
-        ],
-        [
-            "pakistan",
-            0.6364
-        ],
-        [
-            "karachi",
-            1.0
-        ],
-        [
-            "pmln",
-            1.0
-        ],
-        [
-            "btc",
-            0.4444
-        ],
-        [
-            "istandwithbiden",
-            0.5714
-        ],
-        [
-            "us",
-            0.5
-        ],
-        [
-            "istandwithrussia",
-            0.999
-        ],
-        [
-            "arynewsurdu",
-            1.0
-        ],
-        [
-            "serbia",
-            0.9028
-        ],
-        [
-            "hypocrisy",
-            0.84
-        ],
-        [
-            "iostoconputin",
-            1.0
-        ],
-        [
-            "terrorism",
-            0.8409
-        ],
-        [
-            "ukraineterror",
-            1.0
-        ],
-        [
-            "ausvspak",
-            1.0
-        ],
-        [
-            "biolabsinukraine",
-            0.76
-        ],
-        [
-            "racistukraine",
-            0.9091
-        ],
-        [
-            "endisraeliaparthieh",
-            1.0
-        ],
-        [
-            "america",
-            0.6923
-        ],
-        [
-            "imrankhan",
-            1.0
-        ],
-        [
-            "ucraniarussia",
-            0.6667
-        ],
-        [
-            "e",
-            1.0
-        ],
-        [
-            "usbiolabs",
-            0.875
-        ],
-        [
-            "srbija",
-            0.9512
-        ],
-        [
-            "auratmarch2022",
-            1.0
-        ],
-        [
-            "arseniyyatsenyuk",
-            1.0
-        ],
-        [
-            "nazi",
-            0.55
-        ],
-        [
-            "standwithputin",
-            0.925
-        ],
-        [
-            "italexit",
-            1.0
-        ],
-        [
-            "awamimarch",
-            1.0
-        ],
-        [
-            "hypocritewest",
-            1.0
-        ],
-        [
-            "pakistanis",
-            1.0
-        ],
-        [
-            "zelenskywarcriminal",
-            0.9474
-        ],
-        [
-            "nomore_nato_expansion",
-            1.0
-        ],
-        [
-            "americahasbiolabs",
-            1.0
-        ],
-        [
-            "denazifyukraine",
-            1.0
-        ],
-        [
-            "west",
-            0.75
-        ],
-        [
-            "facebook",
-            0.4167
-        ],
-        [
-            "facts",
-            0.9375
-        ],
-        [
-            "nomore_africom",
-            1.0
-        ],
-        [
-            "imrankhanpti",
-            1.0
-        ],
-        [
-            "desinformation",
-            0.9
-        ],
-        [
-            "specialmilitaryoperation",
-            1.0
-        ],
-        [
-            "natoexit",
-            1.0
-        ],
-        [
-            "sindh",
-            1.0
-        ],
-        [
-            "russianukrainianwar",
-            0.4397
-        ],
-        [
-            "stopukraine",
-            1.0
-        ],
-        [
-            "uel",
-            1.0
-        ],
-        [
-            "realmadrid",
-            1.0
-        ],
-        [
-            "behindyouskipper",
-            1.0
-        ],
-        [
-            "emanet",
-            1.0
-        ],
-        [
-            "stopcensure",
-            0.6154
-        ],
-        [
-            "victoryanukovych",
-            1.0
-        ],
-        [
-            "savesheikhjarrah",
-            1.0
-        ],
-        [
-            "yarg",
-            1.0
-        ],
-        [
-            "americaguilty",
-            1.0
-        ],
-        [
-            "nomore_western_double_standard",
-            1.0
-        ],
-        [
-            "srbi",
-            1.0
-        ],
-        [
-            "dnr",
-            1.0
-        ],
-        [
-            "israelicrimes",
-            1.0
-        ],
-        [
-            "standwithrussia",
-            0.9517
-        ],
-        [
-            "draghistan",
-            0.5
-        ],
-        [
-            "jerusalem",
-            0.6429
-        ],
-        [
-            "tulsi2024",
-            1.0
-        ],
-        [
-            "istandwithrussians",
-            1.0
-        ],
-        [
-            "ppp",
-            1.0
-        ],
-        [
-            "nawazsharif",
-            1.0
-        ],
-        [
-            "doublestandards",
-            0.9091
-        ],
-        [
-            "israel",
-            0.4839
-        ],
-        [
-            "standwithrussian",
-            1.0
-        ],
-        [
-            "free",
-            0.6667
-        ],
-        [
-            "real",
-            0.75
-        ],
-        [
-            "barcavgs",
-            1.0
-        ],
-        [
-            "denazification",
-            0.6667
-        ],
-        [
-            "istandwithputin",
-            1.0
-        ],
-        [
-            "guerreukraine",
-            1.0
-        ],
-        [
-            "maryam",
-            1.0
-        ],
-        [
-            "nowarindonbass",
-            1.0
-        ],
         [
             "europeanparliament",
             0.7692
