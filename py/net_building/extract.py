@@ -110,7 +110,7 @@ def classify_user(user_tweets_categories: list, root_tags: dict) -> str:
     care = my_scores["proukr"] + my_scores["prorus"] + my_scores["pax"]
     nocare = my_scores["dontcare"]
 
-    if care / (care + nocare) >= 0.07:
+    if care / (care + nocare) > 0.10:
         del my_scores["dontcare"]
         return get_unique_max(my_scores)
     else:
@@ -142,8 +142,8 @@ def extract_tags(list_of_hashtags) -> list:
     return results
 
 
-def load_tag_madre(k: int = 1000):
-    with open(Path().cwd() / "hashtag_final_lists.json", "r") as f:
+def load_tag_madre(k: int = 10000):
+    with open(Path().cwd() / "hashtags_final.json", "r") as f:
         tag_madre = json.load(f)
     tag_madre = {a: [x[0] for x in b[:k]] for a, b in tag_madre.items()}
 
