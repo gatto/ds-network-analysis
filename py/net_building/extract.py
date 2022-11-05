@@ -1,8 +1,6 @@
 import datetime
 import json
 import logging
-import os
-import platform
 import random
 import unicodedata
 from pathlib import Path
@@ -12,9 +10,10 @@ import pkg_resources
 from attrs import define, field, validators
 from rich import print
 from rich.logging import RichHandler
-from rich.progress import Progress, track
+from rich.progress import (BarColumn, MofNCompleteColumn, Progress,
+                           SpinnerColumn, TaskProgressColumn, TextColumn,
+                           TimeRemainingColumn, track)
 from twarc.client2 import Twarc2
-from twarc.expansions import ensure_flattened
 from twarc_csv import DataFrameConverter
 
 try:
@@ -161,7 +160,6 @@ def _get_local_credentials():
     my_secret_path = Path().cwd().parent.parent / "data/my_secrets.yaml"
     try:
         with open(my_secret_path) as f:
-            print(f"Reading secret from {my_secret_path}…")
             miao = f.readline().rstrip("\n").lstrip("api_key: ")
             return miao
     except FileNotFoundError:
@@ -303,22 +301,19 @@ class UserETL:
             extra_input_columns="edit_history_tweet_ids,edit_controls.edits_remaining,edit_controls.editable_until,edit_controls.is_edit_eligible"
         )
 
-        with Progress() as progress:
-            task = progress.add_task("Downloading 🐦…", total=self.pages)
-            i = 1
+        i = 1
 
-            for page in search_results:
-                miao = converter.process([page])
+        for page in search_results:
+            miao = converter.process([page])
 
-                try:
-                    df = pd.concat([df, miao], ignore_index=True)
-                except NameError:
-                    df = miao
+            try:
+                df = pd.concat([df, miao], ignore_index=True)
+            except NameError:
+                df = miao
 
-                progress.update(task, advance=1, refresh=True)
-                if i == self.pages:
-                    break
-                i += 1
+            if i == self.pages:
+                break
+            i += 1
 
         # TODO: transformation
 
@@ -435,30 +430,42 @@ class CategorizeUsers:
         tag_madre = load_tag_madre()
         results = {}
 
-        for user_id in self.user_ids:
-            u = UserETL(id=user_id, pages=self.pages)
+        with Progress(
+            TextColumn("[progress.description]{task.description}"),
+            SpinnerColumn(),
+            BarColumn(),
+            MofNCompleteColumn(),
+            TaskProgressColumn(),
+            TimeRemainingColumn(),
+        ) as progress:
+            task = progress.add_task("Users 🐦…", total=len(self.user_ids))
 
-            # classify tweets
-            u.df = u.df[["id", "entities.hashtags", "author_id"]]
-            u.df = u.df.dropna(subset=["entities.hashtags"])
-            u.df["tags"] = u.df["entities.hashtags"].map(eval).map(extract_tags)
+            for user_id in self.user_ids:
+                u = UserETL(id=user_id, pages=self.pages)
 
-            u.df["tweet_class"] = u.df["tags"].apply(
-                classify_tweet, root_tags=tag_madre
-            )
-            u.df["tweet_class"] = u.df["tweet_class"].astype("category")
+                # classify tweets
+                u.df = u.df[["id", "entities.hashtags", "author_id"]]
+                u.df = u.df.dropna(subset=["entities.hashtags"])
+                u.df["tags"] = u.df["entities.hashtags"].map(eval).map(extract_tags)
 
-            # we eliminate tweets with no majority:
-            u.df = u.df.dropna(subset=["tweet_class"])
+                u.df["tweet_class"] = u.df["tags"].apply(
+                    classify_tweet, root_tags=tag_madre
+                )
+                u.df["tweet_class"] = u.df["tweet_class"].astype("category")
 
-            # classify users
-            users_df = pd.DataFrame(
-                u.df.groupby("author_id")["tweet_class"].apply(list)
-            )
-            results[user_id] = users_df["tweet_class"].apply(
-                classify_user, root_tags=tag_madre
-            )[0]
-            # [0] is a bit suspect above?
+                # we eliminate tweets with no majority:
+                u.df = u.df.dropna(subset=["tweet_class"])
+
+                # classify users
+                users_df = pd.DataFrame(
+                    u.df.groupby("author_id")["tweet_class"].apply(list)
+                )
+                results[user_id] = users_df["tweet_class"].apply(
+                    classify_user, root_tags=tag_madre
+                )[0]
+                # [0] is a bit suspect above?
+                progress.update(task, advance=1, refresh=True)
+
         return results
 
 
