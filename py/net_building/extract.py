@@ -275,7 +275,7 @@ class Count:
 class UserETL:
     id: int = field()
     pages: int = field(default=1)  # each page is max_results tweets
-    max_results: int = field(init=False, default=100)
+    max_results: int = field(init=False, default=10)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
 
