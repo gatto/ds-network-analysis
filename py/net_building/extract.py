@@ -10,9 +10,16 @@ import pkg_resources
 from attrs import define, field, validators
 from rich import print
 from rich.logging import RichHandler
-from rich.progress import (BarColumn, MofNCompleteColumn, Progress,
-                           SpinnerColumn, TaskProgressColumn, TextColumn,
-                           TimeRemainingColumn, track)
+from rich.progress import (
+    BarColumn,
+    MofNCompleteColumn,
+    Progress,
+    SpinnerColumn,
+    TaskProgressColumn,
+    TextColumn,
+    TimeRemainingColumn,
+    track,
+)
 from twarc.client2 import Twarc2
 from twarc_csv import DataFrameConverter
 
@@ -275,7 +282,7 @@ class Count:
 class UserETL:
     id: int = field()
     pages: int = field(default=1)  # each page is max_results tweets
-    max_results: int = field(init=False, default=10)
+    max_results: int = field(init=False, default=100)
     secret: str = field(default=None, repr=False)
     df: pd.DataFrame = field(init=False, repr=lambda x: "pd.DataFrame")
 
@@ -469,6 +476,43 @@ class CategorizeUsers:
         return results
 
 
+@define
+class DownloadTweets:
+    tweet_ids: set = field(validator=validators.instance_of(set), repr=False)
+    texts: dict = field(validator=validators.instance_of(dict), init=False)
+    # struttura di texts:
+    # { id_tweet:int : (id_utente:int, "tweet_text":str) }
+
+    @texts.default
+    def _texts_default(self):
+        results = {}
+        t = Twarc2(bearer_token=_get_local_credentials())
+
+        with Progress(
+            TextColumn("[progress.description]{task.description}"),
+            SpinnerColumn(),
+            BarColumn(),
+            MofNCompleteColumn(),
+            TaskProgressColumn(),
+            TimeRemainingColumn(),
+        ) as progress:
+            task = progress.add_task("Tweets 🐦…", total=len(self.tweet_ids))
+            pages = t.tweet_lookup(self.tweet_ids)
+            for page in pages:
+                for tweet in page["data"]:
+                    results[int(tweet["id"])] = (int(tweet["author_id"]), tweet["text"])
+                    progress.update(task, advance=1, refresh=True)
+        return results
+
+    def to_csv(self):
+        df = pd.DataFrame.from_dict(
+            self.texts, orient="index", columns=["author_id", "text"]
+        ).to_csv(f"DownloadTweets_{len(tweet_ids)}.csv")
+
+
 if __name__ == "__main__":
-    a = CategorizeUsers(user_ids=set((1107946333,)))
+    a = DownloadTweets(set((20, 200, 2000)))
     print(a)
+
+    # a.texts # to access the dict of data
+    # a.to_csv()  # to write the data to DownloadTweets_{len}.csv
